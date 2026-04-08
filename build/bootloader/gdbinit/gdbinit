@@ -1,0 +1,2 @@
+source C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader/gdbinit/symbols
+source C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader/gdbinit/connect

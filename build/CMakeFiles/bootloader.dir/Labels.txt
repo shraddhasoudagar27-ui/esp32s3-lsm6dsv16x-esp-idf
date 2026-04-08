@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/LSM6D_intern/imu_demo_lsm6d/build/CMakeFiles/bootloader
+C:/LSM6D_intern/imu_demo_lsm6d/build/CMakeFiles/bootloader.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/CMakeFiles/bootloader-complete.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/LSM6D_intern/imu_demo_lsm6d/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
