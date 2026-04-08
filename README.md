@@ -1,4 +1,4 @@
-# LSM6DSV16X IMU Interface with ESP-IDF
+# LSM6DSV16X IMU Interface with ESP32S3 using ESP-IDF
 
 This project demonstrates interfacing the **LSM6DSV16X IMU** (Accelerometer + Gyroscope) with an ESP32 using **I2C** and ESP-IDF.
 
