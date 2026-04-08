@@ -2,6 +2,26 @@
 
 This project demonstrates interfacing the **LSM6DSV16X IMU** (Accelerometer + Gyroscope) with an ESP32 using **I2C** and ESP-IDF.
 
+### Hardware components
+
+<table align="center">
+<tr>
+<td align="center" style="padding-right:40px;">
+<img src="docs/images/ESP32-S3.jpg" width="100"><br>
+ESP32-S3
+</td>
+
+<td align="center">
+<img src="docs/images/LSM6DSV16X.jpg" width="200"><br>
+LSM6DSV16X IMU Sensor
+</td>
+</tr>
+</table>
+
+- ESP32S3 Development Board: https://www.amazon.in/SparkFun-WRL-24408-Thing-Plus-ESP32-S3/dp/B0D1BB79SM
+- LSM6DSV16X IMU sensor module: https://evelta.com/sparkfun-micro-6dof-imu-breakout-lsm6dsv16x/
+- qwiic cable: https://amzn.in/d/0cWzXpmK
+
 
 ## Features
 
