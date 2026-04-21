@@ -18,7 +18,7 @@ set(HEAD_HASH)
 file(READ "C:/LSM6D_intern/imu_demo_lsm6d/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "C:/esp_idf/.espressif/v6.0/esp-idf/.git")
+set(GIT_DIR "C:/LSM6D_intern/imu_demo_lsm6d/.git")
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)

@@ -1,0 +1,2580 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM7'
+[LIVE] AX=0.127 AY=-0.996 AZ=0.007 | GX=-0.192 GY=-0.289 GZ=0.201 | t=1650 ms
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x38 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037c3ab
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0acf8h ( 44280) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001ad20 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001de04 vaddr=40374000 size=02214h (  8724) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149ach ( 84396) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=000349d4 vaddr=40376214 size=0b2e8h ( 45800) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0003fcc4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (160) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (171) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (175) app_init: Compile time:     Apr  9 2026 13:12:20[0m
+[0;32mI (180) app_init: ELF file SHA256:  b0f8384d3...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC96D20 len 000529F0 (330 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (246) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (256) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (262) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+LSM6DSV16X at 0x6B (WHO_AM_I=0x70)
+[MOTION] TILTED
+[LABEL] TILT
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=-3.089 GY=-0.954 GZ=0.674 | t=65 ms
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[MOTION] TILTED
+[FIFO] Drained 51 words, ring depth=17, samples=17
+[MOTION] TILTED
+[MOTION] TILTED
+[FIFO] Drained 6 words, ring depth=19, samples=19
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=20, samples=20
+[LIVE] AX=0.126 AY=-0.998 AZ=0.001 | GX=0.035 GY=-0.201 GZ=0.210 | t=97 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=21, samples=21
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=22, samples=22
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=0.630 GY=-0.053 GZ=0.087 | t=125 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=23, samples=23
+[LIVE] AX=0.127 AY=-0.997 AZ=0.003 | GX=0.219 GY=-0.114 GZ=0.184 | t=142 ms
+IMU write failed: CTRL3_REG (0x12) = 0x01: ESP_ERR_TIMEOUT
+ERROR: IMU configure failed
+[0;32mI (389) main_task: Returned from app_main()[0m
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=24, samples=24
+[FIFO] Drained 1 words, ring depth=24, samples=24
+[MOTION] TILTED
+[FIFO] Drained 2 words, ring depth=25, samples=25
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=0.184 GY=-0.140 GZ=0.192 | t=176 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=26, samples=26
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=0.481 GY=-0.140 GZ=0.140 | t=192 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=27, samples=27
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=28, samples=28
+[LIVE] AX=0.125 AY=-0.997 AZ=0.003 | GX=0.298 GY=-0.123 GZ=0.166 | t=225 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=29, samples=29
+[LIVE] AX=0.127 AY=-0.997 AZ=0.003 | GX=0.201 GY=-0.175 GZ=0.105 | t=242 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=30, samples=30
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=31, samples=31
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=0.166 GY=-0.157 GZ=0.123 | t=275 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=32, samples=32
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=0.210 GY=-0.184 GZ=0.114 | t=292 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=33, samples=33
+[LIVE] AX=0.126 AY=-0.997 AZ=0.004 | GX=0.280 GY=-0.149 GZ=0.114 | t=308 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=34, samples=34
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=0.026 GY=-0.192 GZ=0.114 | t=325 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=35, samples=35
+[LIVE] AX=0.126 AY=-0.997 AZ=0.004 | GX=-0.149 GY=-0.210 GZ=0.149 | t=341 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=36, samples=36
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=37, samples=37
+[LIVE] AX=0.126 AY=-0.998 AZ=0.004 | GX=-0.333 GY=-0.306 GZ=0.166 | t=375 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=38, samples=38
+[LIVE] AX=0.126 AY=-0.996 AZ=0.004 | GX=-0.534 GY=-0.333 GZ=0.175 | t=391 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=39, samples=39
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=40, samples=40
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.735 GY=-0.359 GZ=0.245 | t=425 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=41, samples=41
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.674 GY=-0.350 GZ=0.201 | t=441 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=42, samples=42
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.796 GY=-0.341 GZ=0.236 | t=458 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=43, samples=43
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.910 GY=-0.385 GZ=0.201 | t=475 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=44, samples=44
+[LIVE] AX=0.126 AY=-0.998 AZ=0.003 | GX=-1.059 GY=-0.438 GZ=0.280 | t=491 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=45, samples=45
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=46, samples=46
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.718 GY=-0.324 GZ=0.184 | t=525 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=47, samples=47
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.639 GY=-0.271 GZ=0.157 | t=541 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=48, samples=48
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.788 GY=-0.324 GZ=0.210 | t=558 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=49, samples=49
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.105 GY=-0.140 GZ=0.061 | t=574 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=50, samples=50
+[LIVE] AX=0.126 AY=-0.997 AZ=0.001 | GX=0.403 GY=-0.061 GZ=-0.026 | t=591 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=51, samples=51
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=52, samples=52
+[LIVE] AX=0.126 AY=-0.997 AZ=0.001 | GX=-0.087 GY=-0.140 GZ=0.149 | t=625 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=53, samples=53
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=0.262 GY=-0.053 GZ=0.096 | t=641 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=54, samples=54
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=55, samples=55
+[LIVE] AX=0.125 AY=-0.997 AZ=0.003 | GX=0.385 GY=-0.018 GZ=0.053 | t=674 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=56, samples=56
+[LIVE] AX=0.126 AY=-0.997 AZ=0.001 | GX=1.050 GY=0.166 GZ=-0.166 | t=691 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=57, samples=57
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=58, samples=58
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=0.980 GY=0.079 GZ=-0.140 | t=724 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=59, samples=59
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=1.260 GY=0.166 GZ=-0.262 | t=741 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=60, samples=60
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=61, samples=61
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=0.070 GY=-0.061 GZ=-0.123 | t=774 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=62, samples=62
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.114 GY=-0.166 GZ=-0.096 | t=791 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=63, samples=63
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=64, samples=64
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.831 GY=0.096 GZ=-0.236 | t=824 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=65, samples=65
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=1.059 GY=0.131 GZ=-0.298 | t=841 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=66, samples=66
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=67, samples=67
+[LIVE] AX=0.127 AY=-0.998 AZ=0.005 | GX=1.076 GY=0.123 GZ=-0.306 | t=874 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=68, samples=68
+[LIVE] AX=0.127 AY=-0.996 AZ=0.006 | GX=1.059 GY=0.149 GZ=-0.315 | t=891 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=69, samples=69
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=0.490 GY=-0.061 GZ=-0.192 | t=907 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=70, samples=70
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=0.814 GY=0.070 GZ=-0.289 | t=924 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=71, samples=71
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=0.333 GY=-0.079 GZ=-0.175 | t=940 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=72, samples=72
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=73, samples=73
+[LIVE] AX=0.128 AY=-0.996 AZ=0.009 | GX=0.149 GY=-0.123 GZ=-0.114 | t=974 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=74, samples=74
+[LIVE] AX=0.128 AY=-0.998 AZ=0.006 | GX=0.123 GY=-0.096 GZ=-0.096 | t=991 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=75, samples=75
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=76, samples=76
+[LIVE] AX=0.128 AY=-0.997 AZ=0.007 | GX=0.289 GY=-0.096 GZ=-0.228 | t=1024 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=77, samples=77
+[LIVE] AX=0.128 AY=-0.997 AZ=0.008 | GX=-0.385 GY=-0.236 GZ=0.018 | t=1040 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=78, samples=78
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=79, samples=79
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=1.041 GY=0.070 GZ=-0.236 | t=1073 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=80, samples=80
+[LIVE] AX=0.129 AY=-0.997 AZ=0.007 | GX=0.656 GY=-0.123 GZ=-0.044 | t=1090 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=81, samples=81
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=82, samples=82
+[LIVE] AX=0.128 AY=-0.996 AZ=0.010 | GX=-0.683 GY=-0.359 GZ=0.175 | t=1124 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=83, samples=83
+[LIVE] AX=0.128 AY=-0.997 AZ=0.008 | GX=-0.577 GY=-0.298 GZ=0.105 | t=1140 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=84, samples=84
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=85, samples=85
+[LIVE] AX=0.129 AY=-0.997 AZ=0.009 | GX=0.140 GY=-0.175 GZ=0.009 | t=1174 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=86, samples=86
+[LIVE] AX=0.129 AY=-0.997 AZ=0.009 | GX=-0.481 GY=-0.341 GZ=0.219 | t=1190 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=87, samples=87
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=88, samples=88
+[LIVE] AX=0.128 AY=-0.997 AZ=0.010 | GX=0.192 GY=-0.228 GZ=0.061 | t=1224 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=89, samples=89
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=0.175 GY=-0.175 GZ=0.070 | t=1240 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=90, samples=90
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=91, samples=91
+[LIVE] AX=0.129 AY=-0.997 AZ=0.009 | GX=-0.394 GY=-0.306 GZ=0.157 | t=1273 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=92, samples=92
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=93, samples=93
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=-0.306 GY=-0.350 GZ=0.184 | t=1306 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=94, samples=94
+[LIVE] AX=0.128 AY=-0.996 AZ=0.009 | GX=-0.385 GY=-0.315 GZ=0.184 | t=1323 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=95, samples=95
+[LIVE] AX=0.128 AY=-0.997 AZ=0.008 | GX=-0.254 GY=-0.280 GZ=0.175 | t=1340 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=96, samples=96
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=97, samples=97
+[LIVE] AX=0.129 AY=-0.997 AZ=0.008 | GX=-0.018 GY=-0.228 GZ=0.184 | t=1373 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=98, samples=98
+[LIVE] AX=0.129 AY=-0.997 AZ=0.009 | GX=-0.044 GY=-0.245 GZ=0.210 | t=1390 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=99, samples=99
+[LIVE] AX=0.128 AY=-0.997 AZ=0.008 | GX=-0.114 GY=-0.280 GZ=0.201 | t=1407 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=100, samples=100
+[LIVE] AX=0.129 AY=-0.997 AZ=0.010 | GX=-0.245 GY=-0.333 GZ=0.236 | t=1423 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=101, samples=101
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=-0.481 GY=-0.350 GZ=0.289 | t=1440 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=102, samples=102
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=103, samples=103
+[LIVE] AX=0.128 AY=-0.996 AZ=0.009 | GX=-0.718 GY=-0.438 GZ=0.350 | t=1473 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=104, samples=104
+[LIVE] AX=0.129 AY=-0.997 AZ=0.008 | GX=-0.613 GY=-0.376 GZ=0.333 | t=1490 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=105, samples=105
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=-0.709 GY=-0.420 GZ=0.455 | t=1507 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=106, samples=106
+[LIVE] AX=0.128 AY=-0.998 AZ=0.007 | GX=1.076 GY=-0.166 GZ=0.192 | t=1523 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=107, samples=107
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=108, samples=108
+[LIVE] AX=0.128 AY=-0.996 AZ=0.011 | GX=-3.168 GY=-0.989 GZ=0.831 | t=1556 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=109, samples=109
+[LIVE] AX=0.127 AY=-0.997 AZ=0.007 | GX=-4.506 GY=-1.269 GZ=1.059 | t=1573 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=110, samples=110
+[LIVE] AX=0.127 AY=-0.998 AZ=0.004 | GX=-3.351 GY=-1.146 GZ=0.840 | t=1590 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=111, samples=111
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-1.067 GY=-0.525 GZ=0.376 | t=1606 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=112, samples=112
+[LIVE] AX=0.127 AY=-0.996 AZ=0.007 | GX=-2.301 GY=-0.822 GZ=0.805 | t=1623 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=113, samples=113
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=114, samples=114
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-1.094 GY=-0.525 GZ=0.525 | t=1656 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=115, samples=115
+[LIVE] AX=0.127 AY=-0.998 AZ=0.003 | GX=-0.954 GY=-0.516 GZ=0.490 | t=1673 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=116, samples=116
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=117, samples=117
+[LIVE] AX=0.127 AY=-0.997 AZ=0.003 | GX=-1.452 GY=-0.630 GZ=0.543 | t=1706 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=118, samples=118
+[LIVE] AX=0.127 AY=-0.996 AZ=0.005 | GX=-2.476 GY=-0.796 GZ=0.744 | t=1723 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=119, samples=119
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=120, samples=120
+[LIVE] AX=0.126 AY=-0.998 AZ=-0.001 | GX=-2.564 GY=-0.656 GZ=0.788 | t=1756 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=121, samples=121
+[LIVE] AX=0.125 AY=-0.999 AZ=-0.001 | GX=0.411 GY=-0.184 GZ=0.271 | t=1773 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=122, samples=122
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=123, samples=123
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=2.546 GY=0.298 GZ=-0.166 | t=1806 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=124, samples=124
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.245 GY=-0.061 GZ=0.210 | t=1823 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=125, samples=125
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=126, samples=126
+[LIVE] AX=0.126 AY=-0.998 AZ=0.001 | GX=-0.280 GY=-0.219 GZ=0.254 | t=1856 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=127, samples=127
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=1.312 GY=0.035 GZ=-0.018 | t=1873 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=128, samples=128
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=129, samples=129
+[LIVE] AX=0.126 AY=-0.996 AZ=0.005 | GX=1.076 GY=0.061 GZ=0.018 | t=1906 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=130, samples=130
+[LIVE] AX=0.126 AY=-0.998 AZ=0.003 | GX=-0.385 GY=-0.271 GZ=0.298 | t=1922 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=131, samples=131
+[LIVE] AX=0.126 AY=-0.997 AZ=0.004 | GX=0.114 GY=-0.114 GZ=0.140 | t=1939 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=132, samples=132
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=0.254 GY=-0.236 GZ=0.140 | t=1956 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=133, samples=133
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.595 GY=-0.009 GZ=0.087 | t=1973 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=134, samples=134
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=135, samples=135
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=0.271 GY=-0.123 GZ=0.087 | t=2005 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=136, samples=136
+[LIVE] AX=0.126 AY=-0.997 AZ=0.004 | GX=-0.788 GY=-0.403 GZ=0.280 | t=2022 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=137, samples=137
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=138, samples=138
+[LIVE] AX=0.126 AY=-0.998 AZ=0.003 | GX=-0.210 GY=-0.271 GZ=0.166 | t=2055 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=139, samples=139
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.009 GY=-0.131 GZ=0.061 | t=2072 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=140, samples=140
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=141, samples=141
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=-0.744 GY=-0.333 GZ=0.192 | t=2106 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=142, samples=142
+[LIVE] AX=0.126 AY=-0.998 AZ=0.003 | GX=-0.761 GY=-0.385 GZ=0.254 | t=2122 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=143, samples=143
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=144, samples=144
+[LIVE] AX=0.125 AY=-0.997 AZ=0.004 | GX=-1.374 GY=-0.499 GZ=0.333 | t=2155 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=145, samples=145
+[LIVE] AX=0.126 AY=-0.998 AZ=0.003 | GX=-1.164 GY=-0.420 GZ=0.271 | t=2172 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=146, samples=146
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-1.181 GY=-0.438 GZ=0.262 | t=2189 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=147, samples=147
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=-0.543 GY=-0.315 GZ=0.166 | t=2205 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=148, samples=148
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.595 GY=-0.324 GZ=0.140 | t=2222 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=149, samples=149
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=150, samples=150
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.534 GY=-0.254 GZ=0.114 | t=2255 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=151, samples=151
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.691 GY=-0.350 GZ=0.175 | t=2272 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=152, samples=152
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=153, samples=153
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=-0.691 GY=-0.359 GZ=0.166 | t=2305 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=154, samples=154
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=0.219 GY=-0.149 GZ=0.000 | t=2322 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=155, samples=155
+[LIVE] AX=0.126 AY=-0.997 AZ=0.002 | GX=0.070 GY=-0.157 GZ=0.026 | t=2339 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=156, samples=156
+[LIVE] AX=0.125 AY=-0.997 AZ=0.002 | GX=-0.131 GY=-0.070 GZ=-0.044 | t=2355 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=157, samples=157
+[LIVE] AX=0.126 AY=-0.996 AZ=0.003 | GX=-1.855 GY=-0.569 GZ=0.516 | t=2371 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=158, samples=158
+[FIFO] Drained 1 words, ring depth=158, samples=158
+[MOTION] TILTED
+[FIFO] Drained 2 words, ring depth=159, samples=159
+[LIVE] AX=0.126 AY=-0.996 AZ=0.006 | GX=2.257 GY=0.385 GZ=-0.236 | t=2405 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=160, samples=160
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=0.341 GY=-0.096 GZ=0.096 | t=2422 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=161, samples=161
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=162, samples=162
+[LIVE] AX=0.126 AY=-0.998 AZ=0.000 | GX=0.962 GY=0.079 GZ=-0.192 | t=2455 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=163, samples=163
+[LIVE] AX=0.126 AY=-0.996 AZ=0.006 | GX=0.691 GY=0.009 GZ=-0.123 | t=2472 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=164, samples=164
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=165, samples=165
+[LIVE] AX=0.126 AY=-0.996 AZ=0.007 | GX=-0.210 GY=-0.131 GZ=-0.009 | t=2505 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=166, samples=166
+[LIVE] AX=0.126 AY=-0.998 AZ=0.001 | GX=-0.770 GY=-0.411 GZ=0.175 | t=2521 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=167, samples=167
+[LIVE] AX=0.126 AY=-0.996 AZ=0.005 | GX=0.298 GY=-0.035 GZ=-0.053 | t=2538 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=168, samples=168
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=-0.315 GY=-0.289 GZ=0.140 | t=2555 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=169, samples=169
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=0.341 GY=-0.044 GZ=-0.026 | t=2571 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=170, samples=170
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=171, samples=171
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=0.507 GY=0.000 GZ=-0.105 | t=2605 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=172, samples=172
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-1.076 GY=-0.324 GZ=0.175 | t=2621 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=173, samples=173
+[LIVE] AX=0.126 AY=-0.998 AZ=0.002 | GX=-0.394 GY=-0.306 GZ=0.219 | t=2638 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=174, samples=174
+[LIVE] AX=0.127 AY=-0.998 AZ=0.003 | GX=2.783 GY=0.481 GZ=-0.464 | t=2655 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=175, samples=175
+[LIVE] AX=0.127 AY=-0.996 AZ=0.008 | GX=1.654 GY=0.131 GZ=-0.123 | t=2671 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=176, samples=176
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=177, samples=177
+[LIVE] AX=0.127 AY=-0.997 AZ=0.007 | GX=-0.656 GY=-0.324 GZ=0.184 | t=2705 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=178, samples=178
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.770 GY=-0.324 GZ=0.149 | t=2721 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=179, samples=179
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=180, samples=180
+[LIVE] AX=0.126 AY=-0.997 AZ=0.003 | GX=-0.131 GY=-0.192 GZ=0.087 | t=2755 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=181, samples=181
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.333 GY=-0.298 GZ=0.140 | t=2771 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=182, samples=182
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=183, samples=183
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.079 GY=-0.228 GZ=0.079 | t=2804 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=184, samples=184
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.245 GY=-0.114 GZ=0.053 | t=2821 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=185, samples=185
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=186, samples=186
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=0.096 GY=-0.192 GZ=0.070 | t=2855 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=187, samples=187
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=-0.298 GY=-0.254 GZ=0.149 | t=2871 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=188, samples=188
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=189, samples=189
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.210 GY=-0.271 GZ=0.114 | t=2905 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=190, samples=190
+[LIVE] AX=0.126 AY=-0.996 AZ=0.006 | GX=-0.543 GY=-0.289 GZ=0.166 | t=2921 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=191, samples=191
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=192, samples=192
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=-0.070 GY=-0.219 GZ=0.140 | t=2954 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=193, samples=193
+[LIVE] AX=0.127 AY=-0.997 AZ=0.003 | GX=0.035 GY=-0.210 GZ=0.105 | t=2971 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=194, samples=194
+[LIVE] AX=0.127 AY=-0.996 AZ=0.005 | GX=0.175 GY=-0.131 GZ=0.061 | t=2987 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=195, samples=195
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.490 GY=-0.324 GZ=0.166 | t=3004 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=196, samples=196
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=-0.507 GY=-0.254 GZ=0.210 | t=3021 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=197, samples=197
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=198, samples=198
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=0.289 GY=-0.079 GZ=0.018 | t=3054 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=199, samples=199
+[LIVE] AX=0.126 AY=-0.997 AZ=0.004 | GX=-0.534 GY=-0.315 GZ=0.210 | t=3071 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=200, samples=200
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=0.026 GY=-0.166 GZ=0.087 | t=3087 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=201, samples=201
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=0.254 GY=-0.157 GZ=0.105 | t=3104 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=202, samples=202
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=0.157 GY=-0.166 GZ=0.044 | t=3120 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=203, samples=203
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=204, samples=204
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.333 GY=-0.236 GZ=0.114 | t=3154 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=205, samples=205
+[LIVE] AX=0.126 AY=-0.998 AZ=0.004 | GX=-0.201 GY=-0.298 GZ=0.105 | t=3171 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=206, samples=206
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=207, samples=207
+[LIVE] AX=0.127 AY=-0.998 AZ=0.004 | GX=-0.822 GY=-0.341 GZ=0.236 | t=3204 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=208, samples=208
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.411 GY=-0.254 GZ=0.201 | t=3220 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=209, samples=209
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=210, samples=210
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=0.411 GY=-0.079 GZ=0.061 | t=3254 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=211, samples=211
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=0.157 GY=-0.131 GZ=0.131 | t=3270 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=212, samples=212
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=213, samples=213
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=0.018 GY=-0.184 GZ=0.079 | t=3304 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=214, samples=214
+[LIVE] AX=0.127 AY=-0.997 AZ=0.006 | GX=-0.271 GY=-0.271 GZ=0.114 | t=3320 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=215, samples=215
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=216, samples=216
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=-0.525 GY=-0.333 GZ=0.175 | t=3353 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=217, samples=217
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.315 GY=-0.271 GZ=0.123 | t=3370 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=218, samples=218
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=219, samples=219
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.114 GY=-0.219 GZ=0.157 | t=3403 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=220, samples=220
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.236 GY=-0.201 GZ=0.157 | t=3420 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=221, samples=221
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=222, samples=222
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.131 GY=-0.245 GZ=0.131 | t=3453 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=223, samples=223
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=0.009 GY=-0.219 GZ=0.079 | t=3470 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=224, samples=224
+[LIVE] AX=0.126 AY=-0.997 AZ=0.005 | GX=-0.087 GY=-0.210 GZ=0.131 | t=3487 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=225, samples=225
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.201 GY=-0.236 GZ=0.105 | t=3504 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=226, samples=226
+[LIVE] AX=0.127 AY=-0.998 AZ=0.006 | GX=-0.333 GY=-0.245 GZ=0.157 | t=3520 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=227, samples=227
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=228, samples=228
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.219 GY=-0.228 GZ=0.123 | t=3553 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=229, samples=229
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.157 GY=-0.219 GZ=0.123 | t=3570 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=230, samples=230
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=231, samples=231
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=-0.210 GY=-0.219 GZ=0.149 | t=3603 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=232, samples=232
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.201 GY=-0.192 GZ=0.131 | t=3620 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=233, samples=233
+[LIVE] AX=0.127 AY=-0.998 AZ=0.005 | GX=-0.131 GY=-0.210 GZ=0.157 | t=3636 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=234, samples=234
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=-0.053 GY=-0.201 GZ=0.087 | t=3653 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=235, samples=235
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=236, samples=236
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.289 GY=-0.254 GZ=0.166 | t=3686 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=237, samples=237
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.184 GY=-0.219 GZ=0.096 | t=3703 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=238, samples=238
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=239, samples=239
+[LIVE] AX=0.127 AY=-0.996 AZ=0.004 | GX=-0.368 GY=-0.271 GZ=0.175 | t=3736 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=240, samples=240
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.262 GY=-0.228 GZ=0.131 | t=3753 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=241, samples=241
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.061 GY=-0.210 GZ=0.114 | t=3770 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=242, samples=242
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.105 GY=-0.210 GZ=0.105 | t=3787 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=243, samples=243
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.123 GY=-0.184 GZ=0.149 | t=3803 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=244, samples=244
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=245, samples=245
+[LIVE] AX=0.127 AY=-0.997 AZ=0.004 | GX=-0.044 GY=-0.210 GZ=0.131 | t=3836 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=246, samples=246
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.105 GY=-0.201 GZ=0.079 | t=3853 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=247, samples=247
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=248, samples=248
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.201 GY=-0.236 GZ=0.123 | t=3886 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=249, samples=249
+[LIVE] AX=0.126 AY=-0.997 AZ=0.006 | GX=-0.157 GY=-0.219 GZ=0.105 | t=3903 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=250, samples=250
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=251, samples=251
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.280 GY=-0.245 GZ=0.105 | t=3936 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=252, samples=252
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.245 GY=-0.262 GZ=0.140 | t=3952 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=253, samples=253
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.096 GY=-0.228 GZ=0.079 | t=3969 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=254, samples=254
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.131 GY=-0.210 GZ=0.149 | t=3986 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=255, samples=255
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.087 GY=-0.236 GZ=0.087 | t=4003 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=256
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=257
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.201 GY=-0.228 GZ=0.114 | t=4036 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=258
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.228 GY=-0.245 GZ=0.123 | t=4052 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=259
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=260
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.149 GY=-0.236 GZ=0.105 | t=4086 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=261
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.114 GY=-0.192 GZ=0.114 | t=4102 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=262
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.219 GY=-0.228 GZ=0.087 | t=4119 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=263
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.140 GY=-0.175 GZ=0.096 | t=4136 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=264
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.201 GY=-0.254 GZ=0.105 | t=4153 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=265
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=266
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=-0.149 GY=-0.236 GZ=0.096 | t=4186 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=267
+[LIVE] AX=0.127 AY=-0.997 AZ=0.005 | GX=0.140 GY=-0.149 GZ=-0.026 | t=4203 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=268
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=269
+[LIVE] AX=0.127 AY=-0.995 AZ=0.007 | GX=-1.024 GY=-0.149 GZ=-0.140 | t=4235 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=270
+[LIVE] AX=0.127 AY=-0.998 AZ=0.002 | GX=-2.879 GY=-0.770 GZ=0.630 | t=4252 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=271
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=272
+[LIVE] AX=0.128 AY=-0.994 AZ=0.013 | GX=6.589 GY=1.418 GZ=-1.173 | t=4286 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=273
+[LIVE] AX=0.128 AY=-0.997 AZ=0.009 | GX=-0.779 GY=-0.560 GZ=0.411 | t=4302 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=274
+[LIVE] AX=0.128 AY=-0.996 AZ=0.009 | GX=-0.910 GY=-0.131 GZ=-0.035 | t=4319 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=275
+[LIVE] AX=0.128 AY=-0.998 AZ=0.005 | GX=-2.398 GY=-0.928 GZ=0.411 | t=4335 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=276
+[LIVE] AX=0.128 AY=-0.995 AZ=0.009 | GX=0.577 GY=0.368 GZ=0.035 | t=4352 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=277
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=278
+[LIVE] AX=0.131 AY=-0.980 AZ=0.037 | GX=0.315 GY=1.794 GZ=-0.770 | t=4385 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=279
+[LIVE] AX=0.125 AY=-1.008 AZ=-0.018 | GX=-26.854 GY=-8.802 GZ=5.932 | t=4402 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=280
+[FIFO] Drained 2 words, ring depth=256, samples=280
+[MOTION] TILTED
+[FIFO] Drained 1 words, ring depth=256, samples=281
+[LIVE] AX=0.126 AY=-1.001 AZ=-0.007 | GX=-10.246 GY=-5.224 GZ=3.255 | t=4436 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=282
+[LIVE] AX=0.128 AY=-0.996 AZ=0.002 | GX=23.817 GY=7.648 GZ=-5.381 | t=4452 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=283
+[LIVE] AX=0.128 AY=-0.988 AZ=0.029 | GX=-16.791 GY=-6.160 GZ=5.066 | t=4469 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=284
+[LIVE] AX=0.125 AY=-1.012 AZ=-0.030 | GX=12.757 GY=4.331 GZ=-2.931 | t=4485 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=285
+[LIVE] AX=0.129 AY=-0.978 AZ=0.047 | GX=-8.811 GY=-2.940 GZ=2.572 | t=4502 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=286
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=287
+[LIVE] AX=0.130 AY=-0.976 AZ=0.050 | GX=2.783 GY=1.067 GZ=-0.709 | t=4535 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=288
+[LIVE] AX=0.124 AY=-1.015 AZ=-0.033 | GX=-6.142 GY=-2.599 GZ=1.400 | t=4551 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=289
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=290
+[LIVE] AX=0.125 AY=-1.012 AZ=-0.027 | GX=-12.959 GY=-5.014 GZ=3.264 | t=4585 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=291
+[LIVE] AX=0.128 AY=-0.988 AZ=0.022 | GX=14.516 GY=5.101 GZ=-3.640 | t=4602 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=292
+[LIVE] AX=0.127 AY=-1.000 AZ=-0.004 | GX=-11.139 GY=-4.681 GZ=2.888 | t=4619 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=293
+[LIVE] AX=0.127 AY=-0.995 AZ=0.007 | GX=7.061 GY=2.888 GZ=-2.030 | t=4635 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=294
+[LIVE] AX=0.128 AY=-0.998 AZ=0.002 | GX=-6.615 GY=-2.713 GZ=1.628 | t=4652 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=295
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=296
+[LIVE] AX=0.127 AY=-0.999 AZ=0.002 | GX=-5.653 GY=-2.319 GZ=1.470 | t=4685 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=297
+[LIVE] AX=0.129 AY=-0.996 AZ=0.000 | GX=5.477 GY=1.873 GZ=-1.409 | t=4701 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=298
+[LIVE] AX=0.128 AY=-0.987 AZ=0.013 | GX=-12.057 GY=-1.356 GZ=4.646 | t=4718 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=299
+[LIVE] AX=0.127 AY=-0.996 AZ=-0.029 | GX=4.174 GY=0.262 GZ=8.663 | t=4735 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=300
+[LIVE] AX=0.126 AY=-0.980 AZ=0.059 | GX=-0.280 GY=8.094 GZ=5.906 | t=4752 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=301
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=302
+[LIVE] AX=0.137 AY=-1.221 AZ=-0.232 | GX=190.890 GY=104.134 GZ=-10.168 | t=4785 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=303
+[LIVE] AX=0.073 AY=-0.870 AZ=0.273 | GX=93.397 GY=90.344 GZ=-3.798 | t=4802 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=304
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=305
+[LIVE] AX=0.105 AY=-1.038 AZ=0.092 | GX=84.927 GY=34.711 GZ=-15.330 | t=4834 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=306
+[LIVE] AX=0.086 AY=-0.938 AZ=0.064 | GX=20.440 GY=18.979 GZ=-11.113 | t=4851 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=307
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=308
+[LIVE] AX=0.083 AY=-1.001 AZ=0.061 | GX=14.674 GY=12.171 GZ=2.039 | t=4884 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=309
+[LIVE] AX=0.081 AY=-1.012 AZ=0.080 | GX=7.315 GY=6.300 GZ=7.332 | t=4901 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=310
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=311
+[LIVE] AX=0.106 AY=-1.005 AZ=0.066 | GX=16.695 GY=7.262 GZ=6.869 | t=4934 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=312
+[LIVE] AX=0.087 AY=-0.992 AZ=0.115 | GX=34.991 GY=5.915 GZ=5.128 | t=4951 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=313
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=314
+[LIVE] AX=0.096 AY=-0.996 AZ=0.111 | GX=21.044 GY=1.619 GZ=1.076 | t=4985 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=315
+[LIVE] AX=0.099 AY=-0.992 AZ=0.123 | GX=18.594 GY=1.584 GZ=0.683 | t=5001 ms
+[FIFO] Drained 2 words, ring depth=256, samples=315
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 1 words, ring depth=256, samples=316
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=317
+[LIVE] AX=0.095 AY=-0.993 AZ=0.134 | GX=23.135 GY=2.791 GZ=2.188 | t=5034 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=318
+[LIVE] AX=0.106 AY=-0.988 AZ=0.134 | GX=22.881 GY=4.191 GZ=2.704 | t=5051 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=319
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=320
+[LIVE] AX=0.103 AY=-0.972 AZ=0.210 | GX=63.210 GY=19.513 GZ=-19.136 | t=5084 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=321
+[LIVE] AX=0.238 AY=-1.174 AZ=0.196 | GX=11.760 GY=14.280 GZ=-8.243 | t=5101 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=322
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=323
+[LIVE] AX=0.101 AY=-0.999 AZ=0.157 | GX=-51.188 GY=9.363 GZ=11.926 | t=5134 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=324
+[LIVE] AX=0.107 AY=-0.973 AZ=0.235 | GX=-13.536 GY=3.649 GZ=3.806 | t=5151 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=325
+[LIVE] AX=0.112 AY=-0.990 AZ=0.194 | GX=23.100 GY=1.741 GZ=0.324 | t=5167 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=326
+[LIVE] AX=0.268 AY=-0.909 AZ=0.245 | GX=17.885 GY=-26.565 GZ=-6.965 | t=5184 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=327
+[LIVE] AX=-0.006 AY=-0.942 AZ=0.260 | GX=-286.685 GY=-124.897 GZ=-179.926 | t=5201 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=328
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=329
+[LIVE] AX=0.171 AY=-1.060 AZ=-0.054 | GX=110.075 GY=21.499 GZ=-9.581 | t=5234 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=330
+[LIVE] AX=0.197 AY=-0.906 AZ=0.276 | GX=158.777 GY=32.524 GZ=-3.911 | t=5251 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=331
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=332
+[LIVE] AX=0.224 AY=-1.110 AZ=0.112 | GX=98.954 GY=-23.153 GZ=-31.045 | t=5284 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=333
+[LIVE] AX=0.189 AY=-0.891 AZ=0.254 | GX=44.572 GY=-40.565 GZ=-22.339 | t=5301 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=334
+[LIVE] AX=0.164 AY=-0.927 AZ=0.214 | GX=-12.495 GY=-24.211 GZ=-6.886 | t=5317 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=335
+[LIVE] AX=0.250 AY=-0.969 AZ=0.128 | GX=-27.825 GY=-26.827 GZ=8.969 | t=5334 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=336
+[LIVE] AX=0.244 AY=-1.092 AZ=0.225 | GX=47.110 GY=-38.229 GZ=-18.664 | t=5351 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=337
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=338
+[LIVE] AX=0.357 AY=-0.394 AZ=0.697 | GX=-286.685 GY=-101.640 GZ=150.342 | t=5384 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=339
+[LIVE] AX=0.076 AY=-1.017 AZ=-0.081 | GX=-286.685 GY=-184.704 GZ=229.600 | t=5400 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=340
+[LIVE] AX=0.036 AY=-1.036 AZ=-0.534 | GX=-286.685 GY=-134.601 GZ=120.671 | t=5417 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=341
+[LIVE] AX=-0.380 AY=-1.248 AZ=-1.739 | GX=286.685 GY=0.621 GZ=-85.855 | t=5434 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=342
+[LIVE] AX=-0.089 AY=-0.472 AZ=-0.778 | GX=286.685 GY=286.685 GZ=-286.685 | t=5450 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=343
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=344
+[LIVE] AX=0.191 AY=-0.975 AZ=0.006 | GX=-286.685 GY=-100.677 GZ=77.936 | t=5484 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=345
+[LIVE] AX=0.215 AY=-1.122 AZ=0.209 | GX=85.225 GY=15.041 GZ=22.234 | t=5500 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=346
+[LIVE] AX=0.155 AY=-0.802 AZ=0.231 | GX=9.345 GY=-11.314 GZ=-0.630 | t=5517 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=347
+[LIVE] AX=0.152 AY=-1.050 AZ=0.211 | GX=52.342 GY=-2.922 GZ=4.148 | t=5534 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=348
+[LIVE] AX=0.247 AY=-0.867 AZ=0.185 | GX=76.029 GY=3.054 GZ=9.371 | t=5550 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=349
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=350
+[LIVE] AX=0.213 AY=-0.905 AZ=0.277 | GX=100.660 GY=6.694 GZ=21.604 | t=5584 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=351
+[LIVE] AX=0.206 AY=-0.887 AZ=0.252 | GX=103.889 GY=1.549 GZ=23.336 | t=5600 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=352
+[LIVE] AX=0.115 AY=-0.977 AZ=0.472 | GX=39.261 GY=6.912 GZ=21.122 | t=5617 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=353
+[LIVE] AX=0.116 AY=-0.953 AZ=0.349 | GX=24.334 GY=1.540 GZ=-2.844 | t=5633 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=354
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=355
+[LIVE] AX=0.155 AY=-0.861 AZ=0.492 | GX=100.476 GY=-2.826 GZ=-9.030 | t=5666 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=356
+[LIVE] AX=0.164 AY=-0.944 AZ=0.376 | GX=1.741 GY=3.054 GZ=-17.596 | t=5683 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=357
+[LIVE] AX=0.142 AY=-0.895 AZ=0.409 | GX=91.577 GY=15.610 GZ=-24.115 | t=5700 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=358
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=359
+[LIVE] AX=0.159 AY=-0.872 AZ=0.481 | GX=-28.140 GY=-6.108 GZ=-25.550 | t=5734 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=360
+[LIVE] AX=0.207 AY=-0.859 AZ=0.462 | GX=-53.261 GY=0.429 GZ=-25.436 | t=5750 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=361
+[LIVE] AX=0.202 AY=-0.882 AZ=0.507 | GX=-109.489 GY=26.066 GZ=-1.645 | t=5767 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=362
+[LIVE] AX=0.117 AY=-0.422 AZ=0.702 | GX=286.685 GY=137.646 GZ=-22.164 | t=5783 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=363
+[LIVE] AX=0.065 AY=-0.404 AZ=1.365 | GX=242.489 GY=-78.207 GZ=183.356 | t=5800 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=364
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=365
+[LIVE] AX=0.126 AY=-0.909 AZ=0.505 | GX=-186.235 GY=122.106 GZ=19.801 | t=5833 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=366
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=367
+[LIVE] AX=0.051 AY=-0.869 AZ=0.610 | GX=-23.100 GY=57.181 GZ=42.254 | t=5866 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=368
+[LIVE] AX=-0.026 AY=-1.008 AZ=0.473 | GX=-19.267 GY=50.951 GZ=60.104 | t=5883 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=369
+[LIVE] AX=0.029 AY=-0.836 AZ=1.168 | GX=272.545 GY=-151.996 GZ=131.661 | t=5900 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=370
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=371
+[LIVE] AX=-0.380 AY=0.090 AZ=1.999 | GX=286.685 GY=-286.685 GZ=286.685 | t=5933 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=372
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=373
+[LIVE] AX=0.170 AY=-0.736 AZ=0.688 | GX=-165.550 GY=-54.373 GZ=77.158 | t=5966 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=374
+[LIVE] AX=0.080 AY=-0.907 AZ=0.989 | GX=40.206 GY=-74.541 GZ=44.888 | t=5983 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=375
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=376
+[LIVE] AX=0.050 AY=-0.752 AZ=0.511 | GX=-214.900 GY=-200.384 GZ=-49.026 | t=6016 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=377
+[LIVE] AX=0.126 AY=-0.654 AZ=0.079 | GX=-200.270 GY=-120.496 GZ=2.503 | t=6033 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=378
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=379
+[LIVE] AX=0.203 AY=-0.858 AZ=0.460 | GX=-153.921 GY=-181.055 GZ=-256.673 | t=6066 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=380
+[LIVE] AX=0.231 AY=-0.849 AZ=-0.055 | GX=-31.491 GY=-25.725 GZ=-232.759 | t=6083 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=381
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=382
+[LIVE] AX=0.390 AY=-0.349 AZ=0.710 | GX=62.615 GY=-80.001 GZ=-286.685 | t=6116 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=383
+[LIVE] AX=0.387 AY=-0.726 AZ=0.600 | GX=139.247 GY=-149.363 GZ=-154.026 | t=6133 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=384
+[LIVE] AX=0.526 AY=-0.408 AZ=0.441 | GX=182.796 GY=-86.643 GZ=-230.807 | t=6149 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=385
+[LIVE] AX=0.663 AY=-0.569 AZ=0.493 | GX=-28.595 GY=0.429 GZ=-95.952 | t=6166 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=386
+[LIVE] AX=0.600 AY=-0.700 AZ=0.405 | GX=-34.597 GY=-14.438 GZ=-120.864 | t=6182 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=387
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=388
+[LIVE] AX=0.647 AY=-0.561 AZ=0.519 | GX=6.650 GY=-22.750 GZ=-84.639 | t=6216 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=389
+[LIVE] AX=0.579 AY=-0.559 AZ=0.600 | GX=71.820 GY=-10.903 GZ=-72.870 | t=6232 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=390
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=391
+[LIVE] AX=0.763 AY=-0.485 AZ=0.559 | GX=242.559 GY=-0.394 GZ=-154.770 | t=6266 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=392
+[LIVE] AX=0.794 AY=-0.399 AZ=0.577 | GX=238.429 GY=-19.250 GZ=-153.309 | t=6282 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=393
+[LIVE] AX=0.769 AY=-0.362 AZ=0.549 | GX=253.173 GY=-10.946 GZ=-153.947 | t=6299 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=394
+[LIVE] AX=0.765 AY=-0.326 AZ=0.472 | GX=286.685 GY=62.449 GZ=-192.806 | t=6316 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=395
+[LIVE] AX=0.759 AY=-0.042 AZ=0.753 | GX=286.685 GY=130.401 GZ=-227.719 | t=6332 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=396
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=397
+[LIVE] AX=0.683 AY=0.126 AZ=0.664 | GX=286.685 GY=57.111 GZ=-195.072 | t=6366 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=398
+[LIVE] AX=0.681 AY=0.367 AZ=0.655 | GX=286.685 GY=72.634 GZ=-202.974 | t=6382 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=399
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=400
+[LIVE] AX=0.633 AY=0.688 AZ=0.386 | GX=286.685 GY=82.084 GZ=-126.796 | t=6415 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=401
+[LIVE] AX=0.537 AY=0.669 AZ=0.383 | GX=286.685 GY=62.912 GZ=-111.309 | t=6432 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=402
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=403
+[LIVE] AX=0.558 AY=0.718 AZ=0.361 | GX=162.514 GY=3.868 GZ=-68.066 | t=6466 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=404
+[LIVE] AX=0.551 AY=0.791 AZ=0.331 | GX=116.471 GY=-3.622 GZ=-45.447 | t=6482 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=405
+[LIVE] AX=0.505 AY=0.804 AZ=0.226 | GX=88.935 GY=-4.541 GZ=-16.625 | t=6499 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=406
+[LIVE] AX=0.504 AY=0.811 AZ=0.265 | GX=62.510 GY=5.889 GZ=-7.166 | t=6515 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=407
+[LIVE] AX=0.523 AY=0.768 AZ=0.238 | GX=71.820 GY=-0.245 GZ=-12.810 | t=6532 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=408
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=409
+[LIVE] AX=0.532 AY=0.825 AZ=0.210 | GX=55.746 GY=9.485 GZ=-2.284 | t=6566 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=410
+[LIVE] AX=0.522 AY=0.813 AZ=0.225 | GX=44.222 GY=14.368 GZ=3.168 | t=6582 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=411
+[LIVE] AX=0.519 AY=0.802 AZ=0.238 | GX=51.783 GY=14.009 GZ=4.681 | t=6598 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=412
+[LIVE] AX=0.527 AY=0.832 AZ=0.193 | GX=45.544 GY=8.312 GZ=5.670 | t=6615 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=413
+[LIVE] AX=0.528 AY=0.826 AZ=0.185 | GX=30.730 GY=6.466 GZ=8.951 | t=6632 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=414
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=415
+[LIVE] AX=0.543 AY=0.811 AZ=0.195 | GX=-4.323 GY=2.161 GZ=6.046 | t=6665 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=416
+[LIVE] AX=0.546 AY=0.811 AZ=0.195 | GX=-12.136 GY=1.671 GZ=7.341 | t=6682 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=417
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=418
+[LIVE] AX=0.529 AY=0.814 AZ=0.188 | GX=-30.074 GY=2.056 GZ=12.110 | t=6715 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=419
+[LIVE] AX=0.521 AY=0.808 AZ=0.202 | GX=-44.529 GY=7.184 GZ=22.794 | t=6732 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=420
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=421
+[LIVE] AX=0.561 AY=0.786 AZ=0.218 | GX=-48.807 GY=10.544 GZ=24.176 | t=6765 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=422
+[LIVE] AX=0.560 AY=0.753 AZ=0.269 | GX=-44.292 GY=15.837 GZ=25.025 | t=6782 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=423
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=424
+[LIVE] AX=0.557 AY=0.733 AZ=0.277 | GX=-41.510 GY=8.068 GZ=19.434 | t=6815 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=425
+[LIVE] AX=0.550 AY=0.732 AZ=0.285 | GX=-35.280 GY=2.984 GZ=10.325 | t=6832 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=426
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=427
+[LIVE] AX=0.585 AY=0.750 AZ=0.260 | GX=-33.731 GY=9.538 GZ=6.720 | t=6865 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=428
+[LIVE] AX=0.582 AY=0.740 AZ=0.308 | GX=-35.114 GY=26.163 GZ=10.491 | t=6882 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=429
+[LIVE] AX=0.565 AY=0.745 AZ=0.301 | GX=-53.585 GY=22.689 GZ=13.869 | t=6898 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=430
+[LIVE] AX=0.562 AY=0.727 AZ=0.318 | GX=-63.009 GY=20.737 GZ=5.863 | t=6915 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=431
+[LIVE] AX=0.569 AY=0.735 AZ=0.320 | GX=-81.786 GY=27.379 GZ=1.374 | t=6932 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=432
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=433
+[LIVE] AX=0.571 AY=0.724 AZ=0.423 | GX=-84.866 GY=32.673 GZ=-6.492 | t=6965 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=434
+[LIVE] AX=0.561 AY=0.732 AZ=0.415 | GX=-92.645 GY=32.996 GZ=-6.974 | t=6982 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=435
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=436
+[LIVE] AX=0.550 AY=0.715 AZ=0.488 | GX=-119.499 GY=46.778 GZ=-16.319 | t=7015 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=437
+[LIVE] AX=0.530 AY=0.660 AZ=0.544 | GX=-110.539 GY=51.231 GZ=-10.255 | t=7031 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=438
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=439
+[LIVE] AX=0.515 AY=0.634 AZ=0.568 | GX=-99.978 GY=73.202 GZ=-10.771 | t=7064 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=440
+[LIVE] AX=0.489 AY=0.587 AZ=0.618 | GX=-54.031 GY=89.688 GZ=-27.090 | t=7081 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=441
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=442
+[LIVE] AX=0.472 AY=0.647 AZ=0.639 | GX=-60.498 GY=92.908 GZ=-14.166 | t=7115 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=443
+[LIVE] AX=0.417 AY=0.584 AZ=0.689 | GX=-41.475 GY=75.084 GZ=-11.436 | t=7131 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=444
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=445
+[LIVE] AX=0.428 AY=0.599 AZ=0.700 | GX=-40.154 GY=64.382 GZ=-10.211 | t=7164 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=446
+[LIVE] AX=0.377 AY=0.615 AZ=0.711 | GX=-90.685 GY=51.713 GZ=2.564 | t=7181 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=447
+[LIVE] AX=0.358 AY=0.506 AZ=0.777 | GX=-79.371 GY=52.255 GZ=6.484 | t=7198 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=448
+[LIVE] AX=0.317 AY=0.530 AZ=0.735 | GX=-37.704 GY=38.404 GZ=-29.505 | t=7215 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=449
+[LIVE] AX=0.345 AY=0.567 AZ=0.761 | GX=-12.810 GY=51.616 GZ=-38.395 | t=7231 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=450
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=451
+[LIVE] AX=0.327 AY=0.575 AZ=0.817 | GX=2.844 GY=47.276 GZ=-24.990 | t=7264 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=452
+[LIVE] AX=0.379 AY=0.573 AZ=0.778 | GX=-9.634 GY=33.670 GZ=-19.513 | t=7281 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=453
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=454
+[LIVE] AX=0.257 AY=0.522 AZ=0.821 | GX=-12.635 GY=16.538 GZ=-15.269 | t=7314 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=455
+[LIVE] AX=0.263 AY=0.587 AZ=0.789 | GX=22.855 GY=25.506 GZ=-27.580 | t=7331 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=456
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=457
+[LIVE] AX=0.267 AY=0.617 AZ=0.787 | GX=45.307 GY=32.375 GZ=-28.193 | t=7364 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=458
+[LIVE] AX=0.263 AY=0.611 AZ=0.791 | GX=35.884 GY=18.139 GZ=-19.416 | t=7381 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=459
+[LIVE] AX=0.251 AY=0.595 AZ=0.777 | GX=31.211 GY=12.932 GZ=-19.504 | t=7398 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=460
+[LIVE] AX=0.246 AY=0.620 AZ=0.749 | GX=24.622 GY=17.054 GZ=-21.726 | t=7414 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=461
+[LIVE] AX=0.222 AY=0.608 AZ=0.757 | GX=22.138 GY=16.424 GZ=-19.434 | t=7430 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=462
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=463
+[LIVE] AX=0.216 AY=0.588 AZ=0.753 | GX=26.819 GY=21.114 GZ=-22.173 | t=7464 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=464
+[LIVE] AX=0.230 AY=0.613 AZ=0.747 | GX=23.905 GY=26.775 GZ=-20.878 | t=7481 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=465
+[LIVE] AX=0.212 AY=0.637 AZ=0.748 | GX=4.428 GY=42.175 GZ=-15.488 | t=7497 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=466
+[LIVE] AX=0.191 AY=0.623 AZ=0.749 | GX=-24.448 GY=43.356 GZ=-3.806 | t=7514 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=467
+[LIVE] AX=0.167 AY=0.611 AZ=0.747 | GX=-33.845 GY=41.983 GZ=-9.363 | t=7531 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=468
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=469
+[LIVE] AX=0.157 AY=0.611 AZ=0.812 | GX=-38.202 GY=56.700 GZ=-10.701 | t=7564 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=470
+[LIVE] AX=0.158 AY=0.607 AZ=0.813 | GX=-24.771 GY=33.897 GZ=-14.945 | t=7581 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=471
+[LIVE] AX=0.131 AY=0.615 AZ=0.787 | GX=-24.237 GY=31.693 GZ=-11.086 | t=7597 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=472
+[LIVE] AX=0.115 AY=0.602 AZ=0.808 | GX=-26.871 GY=34.274 GZ=-8.374 | t=7614 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=473
+[LIVE] AX=0.102 AY=0.597 AZ=0.811 | GX=-17.334 GY=34.834 GZ=-6.895 | t=7630 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=474
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=475
+[LIVE] AX=0.102 AY=0.577 AZ=0.846 | GX=-14.788 GY=27.151 GZ=-3.973 | t=7663 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=476
+[LIVE] AX=0.085 AY=0.583 AZ=0.810 | GX=-38.570 GY=29.286 GZ=2.030 | t=7680 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=477
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=478
+[LIVE] AX=0.081 AY=0.570 AZ=0.844 | GX=-30.336 GY=25.550 GZ=-0.368 | t=7713 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=479
+[LIVE] AX=0.071 AY=0.572 AZ=0.849 | GX=-15.181 GY=24.728 GZ=-1.234 | t=7730 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=480
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=481
+[LIVE] AX=0.059 AY=0.519 AZ=0.852 | GX=-23.739 GY=24.789 GZ=0.472 | t=7764 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=482
+[LIVE] AX=0.050 AY=0.510 AZ=0.858 | GX=-13.134 GY=17.911 GZ=-5.863 | t=7780 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=483
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=484
+[LIVE] AX=0.053 AY=0.511 AZ=0.872 | GX=-1.680 GY=13.650 GZ=-10.238 | t=7813 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=485
+[LIVE] AX=0.051 AY=0.547 AZ=0.860 | GX=7.070 GY=4.016 GZ=-10.920 | t=7830 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=486
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=487
+[LIVE] AX=0.028 AY=0.537 AZ=0.850 | GX=1.837 GY=3.098 GZ=-6.843 | t=7864 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=488
+[LIVE] AX=0.025 AY=0.548 AZ=0.831 | GX=-3.868 GY=7.324 GZ=-2.231 | t=7880 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=489
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=490
+[LIVE] AX=0.032 AY=0.524 AZ=0.862 | GX=-19.661 GY=7.875 GZ=-0.892 | t=7913 ms
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=491
+[LIVE] AX=0.020 AY=0.524 AZ=0.856 | GX=-9.581 GY=4.226 GZ=-6.423 | t=7930 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=492
+[LIVE] AX=0.014 AY=0.518 AZ=0.851 | GX=-7.114 GY=4.436 GZ=-6.466 | t=7947 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=493
+[LIVE] AX=0.016 AY=0.512 AZ=0.855 | GX=-9.398 GY=6.195 GZ=-6.046 | t=7963 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=494
+[LIVE] AX=0.020 AY=0.520 AZ=0.863 | GX=-4.734 GY=4.471 GZ=-9.030 | t=7980 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=495
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=496
+[LIVE] AX=0.016 AY=0.523 AZ=0.863 | GX=-1.234 GY=0.157 GZ=-9.415 | t=8013 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=497
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=498
+[LIVE] AX=0.000 AY=0.508 AZ=0.860 | GX=1.041 GY=1.768 GZ=-9.520 | t=8046 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=499
+[LIVE] AX=0.013 AY=0.516 AZ=0.874 | GX=-3.036 GY=3.771 GZ=-7.997 | t=8063 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=500
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=501
+[LIVE] AX=0.014 AY=0.510 AZ=0.894 | GX=-17.579 GY=4.034 GZ=-0.831 | t=8096 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=502
+[LIVE] AX=0.007 AY=0.525 AZ=0.891 | GX=-10.115 GY=1.129 GZ=-3.062 | t=8113 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=503
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=504
+[LIVE] AX=0.002 AY=0.514 AZ=0.890 | GX=2.161 GY=0.796 GZ=-5.758 | t=8146 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=505
+[LIVE] AX=0.005 AY=0.521 AZ=0.883 | GX=5.819 GY=0.901 GZ=-5.224 | t=8163 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=506
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=507
+[LIVE] AX=-0.000 AY=0.509 AZ=0.865 | GX=4.279 GY=0.543 GZ=-2.861 | t=8196 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=508
+[LIVE] AX=0.000 AY=0.509 AZ=0.866 | GX=2.774 GY=0.560 GZ=-2.975 | t=8213 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=509
+[LIVE] AX=-0.001 AY=0.509 AZ=0.865 | GX=6.099 GY=-0.901 GZ=-4.769 | t=8230 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=510
+[LIVE] AX=-0.005 AY=0.508 AZ=0.860 | GX=10.999 GY=-2.135 GZ=-6.930 | t=8246 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=511
+[LIVE] AX=-0.007 AY=0.512 AZ=0.854 | GX=9.047 GY=-0.324 GZ=-6.300 | t=8263 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=512
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=513
+[LIVE] AX=-0.003 AY=0.517 AZ=0.856 | GX=8.172 GY=-0.420 GZ=-6.326 | t=8296 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=514
+[LIVE] AX=-0.007 AY=0.527 AZ=0.851 | GX=6.878 GY=-0.018 GZ=-5.661 | t=8313 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=515
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=516
+[LIVE] AX=-0.012 AY=0.535 AZ=0.853 | GX=4.130 GY=0.376 GZ=-4.392 | t=8346 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=517
+[LIVE] AX=-0.019 AY=0.520 AZ=0.853 | GX=9.363 GY=-0.866 GZ=-7.149 | t=8362 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=518
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=519
+[LIVE] AX=-0.009 AY=0.550 AZ=0.860 | GX=13.965 GY=-0.315 GZ=-8.330 | t=8396 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=520
+[LIVE] AX=-0.005 AY=0.549 AZ=0.862 | GX=9.424 GY=-0.446 GZ=-4.856 | t=8413 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=521
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=522
+[LIVE] AX=-0.016 AY=0.539 AZ=0.854 | GX=0.788 GY=0.543 GZ=0.490 | t=8446 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=523
+[LIVE] AX=-0.018 AY=0.539 AZ=0.850 | GX=8.794 GY=-1.024 GZ=-3.588 | t=8462 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=524
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=525
+[LIVE] AX=-0.014 AY=0.539 AZ=0.848 | GX=5.749 GY=-0.464 GZ=-2.922 | t=8496 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=526
+[LIVE] AX=-0.015 AY=0.538 AZ=0.849 | GX=4.532 GY=0.507 GZ=-2.170 | t=8512 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=527
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=528
+[LIVE] AX=-0.019 AY=0.551 AZ=0.838 | GX=2.616 GY=0.805 GZ=-0.752 | t=8546 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=529
+[LIVE] AX=-0.018 AY=0.557 AZ=0.833 | GX=0.551 GY=1.479 GZ=0.105 | t=8562 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=530
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=531
+[LIVE] AX=-0.013 AY=0.550 AZ=0.847 | GX=2.905 GY=1.295 GZ=-0.306 | t=8596 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=532
+[LIVE] AX=-0.022 AY=0.539 AZ=0.843 | GX=2.555 GY=0.858 GZ=-0.770 | t=8612 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=533
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=534
+[LIVE] AX=-0.016 AY=0.563 AZ=0.848 | GX=4.331 GY=0.131 GZ=-3.255 | t=8645 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=535
+[LIVE] AX=-0.021 AY=0.564 AZ=0.841 | GX=4.524 GY=0.131 GZ=-1.540 | t=8662 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=536
+[LIVE] AX=-0.024 AY=0.557 AZ=0.837 | GX=7.026 GY=0.507 GZ=-2.319 | t=8679 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=537
+[LIVE] AX=-0.020 AY=0.556 AZ=0.841 | GX=8.295 GY=0.683 GZ=-3.115 | t=8696 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=538
+[LIVE] AX=-0.023 AY=0.555 AZ=0.837 | GX=8.418 GY=0.954 GZ=-3.439 | t=8712 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=539
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=540
+[LIVE] AX=-0.018 AY=0.562 AZ=0.840 | GX=8.890 GY=-0.087 GZ=-5.390 | t=8745 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=541
+[LIVE] AX=-0.022 AY=0.565 AZ=0.836 | GX=6.466 GY=-0.035 GZ=-3.955 | t=8762 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=542
+[LIVE] AX=-0.030 AY=0.565 AZ=0.827 | GX=7.595 GY=-0.516 GZ=-4.410 | t=8779 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=543
+[LIVE] AX=-0.027 AY=0.577 AZ=0.824 | GX=8.076 GY=0.018 GZ=-4.734 | t=8795 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=544
+[LIVE] AX=-0.025 AY=0.580 AZ=0.829 | GX=3.412 GY=1.916 GZ=-1.251 | t=8812 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=545
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=546
+[LIVE] AX=-0.026 AY=0.567 AZ=0.836 | GX=1.015 GY=2.756 GZ=-0.420 | t=8845 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=547
+[LIVE] AX=-0.027 AY=0.571 AZ=0.836 | GX=2.126 GY=1.925 GZ=-0.831 | t=8862 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=548
+[LIVE] AX=-0.030 AY=0.571 AZ=0.831 | GX=2.993 GY=1.067 GZ=-1.566 | t=8878 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=549
+[LIVE] AX=-0.029 AY=0.568 AZ=0.831 | GX=3.071 GY=0.700 GZ=-2.293 | t=8895 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=550
+[LIVE] AX=-0.032 AY=0.571 AZ=0.823 | GX=3.500 GY=0.858 GZ=-1.969 | t=8912 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=551
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=552
+[LIVE] AX=-0.033 AY=0.577 AZ=0.819 | GX=0.892 GY=1.592 GZ=0.403 | t=8945 ms
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=553
+[LIVE] AX=-0.034 AY=0.575 AZ=0.822 | GX=1.654 GY=1.190 GZ=-0.306 | t=8962 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=554
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=555
+[LIVE] AX=-0.031 AY=0.575 AZ=0.828 | GX=-0.455 GY=0.455 GZ=-0.752 | t=8995 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=556
+[LIVE] AX=-0.037 AY=0.572 AZ=0.826 | GX=-1.418 GY=0.464 GZ=-0.236 | t=9012 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=557
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=558
+[LIVE] AX=-0.034 AY=0.578 AZ=0.828 | GX=0.385 GY=-0.236 GZ=-1.050 | t=9045 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=559
+[LIVE] AX=-0.035 AY=0.577 AZ=0.827 | GX=2.371 GY=-0.805 GZ=-1.645 | t=9061 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=560
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=561
+[LIVE] AX=-0.034 AY=0.577 AZ=0.828 | GX=2.188 GY=-0.376 GZ=-1.558 | t=9095 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=562
+[LIVE] AX=-0.035 AY=0.571 AZ=0.828 | GX=2.433 GY=-0.192 GZ=-1.575 | t=9112 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=563
+[LIVE] AX=-0.036 AY=0.579 AZ=0.823 | GX=2.721 GY=-0.123 GZ=-1.724 | t=9128 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=564
+[LIVE] AX=-0.035 AY=0.578 AZ=0.823 | GX=2.179 GY=0.157 GZ=-1.347 | t=9145 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=565
+[LIVE] AX=-0.034 AY=0.578 AZ=0.825 | GX=1.129 GY=0.455 GZ=-1.006 | t=9161 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=566
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=567
+[LIVE] AX=-0.035 AY=0.580 AZ=0.819 | GX=1.164 GY=-0.026 GZ=-1.418 | t=9195 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=568
+[LIVE] AX=-0.040 AY=0.578 AZ=0.817 | GX=5.355 GY=-0.621 GZ=-2.949 | t=9211 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=569
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=570
+[LIVE] AX=-0.038 AY=0.580 AZ=0.820 | GX=3.544 GY=-0.350 GZ=-1.549 | t=9245 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=571
+[LIVE] AX=-0.040 AY=0.581 AZ=0.818 | GX=3.019 GY=-0.009 GZ=-1.435 | t=9261 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=572
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=573
+[LIVE] AX=-0.037 AY=0.586 AZ=0.821 | GX=1.977 GY=-0.018 GZ=-1.356 | t=9295 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=574
+[LIVE] AX=-0.038 AY=0.587 AZ=0.818 | GX=5.915 GY=-0.788 GZ=-2.441 | t=9311 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=575
+[LIVE] AX=-0.043 AY=0.586 AZ=0.814 | GX=5.224 GY=-0.639 GZ=-2.546 | t=9328 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=576
+[LIVE] AX=-0.046 AY=0.582 AZ=0.813 | GX=1.050 GY=1.566 GZ=-0.543 | t=9344 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=577
+[LIVE] AX=-0.038 AY=0.584 AZ=0.821 | GX=3.832 GY=0.621 GZ=-2.564 | t=9361 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=578
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=579
+[LIVE] AX=-0.042 AY=0.592 AZ=0.816 | GX=0.490 GY=0.516 GZ=-0.647 | t=9394 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=580
+[LIVE] AX=-0.042 AY=0.594 AZ=0.814 | GX=1.689 GY=0.018 GZ=-0.831 | t=9411 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=581
+[LIVE] AX=-0.041 AY=0.591 AZ=0.816 | GX=1.820 GY=-0.403 GZ=-0.744 | t=9428 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=582
+[LIVE] AX=-0.042 AY=0.585 AZ=0.815 | GX=-1.181 GY=0.499 GZ=0.490 | t=9444 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=583
+[LIVE] AX=-0.044 AY=0.583 AZ=0.813 | GX=0.298 GY=0.149 GZ=-0.551 | t=9461 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=584
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=585
+[LIVE] AX=-0.041 AY=0.591 AZ=0.817 | GX=-0.096 GY=0.385 GZ=-0.228 | t=9494 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=586
+[LIVE] AX=-0.044 AY=0.586 AZ=0.817 | GX=-1.890 GY=1.041 GZ=0.490 | t=9511 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=587
+[LIVE] AX=-0.044 AY=0.589 AZ=0.818 | GX=-3.325 GY=1.549 GZ=0.700 | t=9528 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=588
+[LIVE] AX=-0.041 AY=0.594 AZ=0.820 | GX=-2.975 GY=1.339 GZ=0.718 | t=9544 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=589
+[LIVE] AX=-0.044 AY=0.591 AZ=0.817 | GX=-0.245 GY=0.403 GZ=-0.254 | t=9561 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=590
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=591
+[LIVE] AX=-0.045 AY=0.585 AZ=0.813 | GX=0.219 GY=0.403 GZ=-0.306 | t=9594 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=592
+[LIVE] AX=-0.046 AY=0.582 AZ=0.814 | GX=1.680 GY=-0.236 GZ=-0.971 | t=9611 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=593
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=594
+[LIVE] AX=-0.043 AY=0.592 AZ=0.816 | GX=2.389 GY=-0.245 GZ=-1.435 | t=9644 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=595
+[LIVE] AX=-0.046 AY=0.586 AZ=0.818 | GX=0.858 GY=0.175 GZ=-0.779 | t=9660 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=596
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=597
+[LIVE] AX=-0.045 AY=0.594 AZ=0.816 | GX=0.805 GY=-0.359 GZ=-1.199 | t=9694 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=598
+[LIVE] AX=-0.047 AY=0.590 AZ=0.812 | GX=1.400 GY=-0.359 GZ=-1.076 | t=9710 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=599
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=600
+[LIVE] AX=-0.046 AY=0.589 AZ=0.811 | GX=-0.376 GY=0.735 GZ=0.166 | t=9744 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=601
+[LIVE] AX=-0.046 AY=0.590 AZ=0.811 | GX=0.577 GY=0.123 GZ=-0.455 | t=9761 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=602
+[LIVE] AX=-0.044 AY=0.595 AZ=0.814 | GX=0.875 GY=-0.464 GZ=-0.849 | t=9777 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=603
+[LIVE] AX=-0.048 AY=0.590 AZ=0.814 | GX=0.569 GY=-0.490 GZ=-0.438 | t=9793 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=604
+[LIVE] AX=-0.047 AY=0.589 AZ=0.811 | GX=2.537 GY=-0.945 GZ=-1.942 | t=9810 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=605
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=606
+[LIVE] AX=-0.048 AY=0.592 AZ=0.811 | GX=1.295 GY=-0.333 GZ=-0.245 | t=9844 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=607
+[LIVE] AX=-0.049 AY=0.589 AZ=0.810 | GX=2.642 GY=-1.094 GZ=-1.015 | t=9860 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=608
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=609
+[LIVE] AX=-0.046 AY=0.595 AZ=0.814 | GX=1.207 GY=-0.683 GZ=-0.376 | t=9894 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=610
+[LIVE] AX=-0.046 AY=0.596 AZ=0.814 | GX=0.516 GY=-0.350 GZ=-0.306 | t=9910 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=611
+[LIVE] AX=-0.047 AY=0.597 AZ=0.811 | GX=1.566 GY=-0.368 GZ=-0.735 | t=9927 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=612
+[LIVE] AX=-0.046 AY=0.594 AZ=0.811 | GX=2.188 GY=-0.298 GZ=-0.971 | t=9944 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=613
+[LIVE] AX=-0.047 AY=0.594 AZ=0.809 | GX=0.560 GY=0.507 GZ=-0.131 | t=9960 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=614
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=615
+[LIVE] AX=-0.047 AY=0.602 AZ=0.810 | GX=0.376 GY=0.123 GZ=-0.490 | t=9993 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=616
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=617
+[LIVE] AX=-0.051 AY=0.591 AZ=0.808 | GX=-1.523 GY=0.271 GZ=-0.087 | t=10027 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=618
+[LIVE] AX=-0.048 AY=0.596 AZ=0.810 | GX=0.691 GY=-0.394 GZ=-1.347 | t=10043 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=619
+[LIVE] AX=-0.045 AY=0.599 AZ=0.812 | GX=-1.409 GY=0.779 GZ=0.350 | t=10060 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=620
+[LIVE] AX=-0.048 AY=0.595 AZ=0.810 | GX=-1.759 GY=0.630 GZ=0.534 | t=10077 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=621
+[LIVE] AX=-0.048 AY=0.595 AZ=0.811 | GX=-1.286 GY=0.438 GZ=0.376 | t=10093 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=622
+[LIVE] AX=-0.049 AY=0.590 AZ=0.812 | GX=-1.391 GY=0.551 GZ=0.149 | t=10110 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=623
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=624
+[LIVE] AX=-0.045 AY=0.602 AZ=0.814 | GX=-3.456 GY=0.796 GZ=1.006 | t=10143 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=625
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=626
+[LIVE] AX=-0.048 AY=0.590 AZ=0.812 | GX=-6.414 GY=1.050 GZ=2.599 | t=10176 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=627
+[LIVE] AX=-0.048 AY=0.586 AZ=0.815 | GX=-8.671 GY=1.304 GZ=3.071 | t=10193 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=628
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=629
+[LIVE] AX=-0.048 AY=0.592 AZ=0.818 | GX=-12.145 GY=2.082 GZ=4.497 | t=10226 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=630
+[LIVE] AX=-0.049 AY=0.591 AZ=0.821 | GX=-17.185 GY=3.281 GZ=7.105 | t=10243 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=631
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=632
+[LIVE] AX=-0.052 AY=0.576 AZ=0.823 | GX=-31.640 GY=4.883 GZ=7.665 | t=10276 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=633
+[LIVE] AX=-0.043 AY=0.566 AZ=0.837 | GX=-47.906 GY=8.767 GZ=11.515 | t=10293 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=634
+[LIVE] AX=-0.043 AY=0.560 AZ=0.845 | GX=-69.956 GY=12.828 GZ=17.657 | t=10310 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=635
+[LIVE] AX=-0.044 AY=0.525 AZ=0.864 | GX=-91.901 GY=14.936 GZ=22.837 | t=10326 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=636
+[LIVE] AX=-0.038 AY=0.517 AZ=0.882 | GX=-106.881 GY=8.873 GZ=19.407 | t=10343 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=637
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=638
+[LIVE] AX=-0.035 AY=0.453 AZ=0.923 | GX=-216.825 GY=13.291 GZ=49.131 | t=10376 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=639
+[LIVE] AX=-0.048 AY=0.331 AZ=0.953 | GX=-240.196 GY=10.141 GZ=49.350 | t=10393 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=640
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=641
+[LIVE] AX=-0.045 AY=0.248 AZ=0.961 | GX=-134.181 GY=1.199 GZ=3.342 | t=10426 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=642
+[LIVE] AX=-0.030 AY=0.236 AZ=0.987 | GX=-128.739 GY=2.476 GZ=2.013 | t=10443 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=643
+[LIVE] AX=-0.028 AY=0.217 AZ=1.008 | GX=-145.792 GY=3.237 GZ=10.955 | t=10460 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=644
+[LIVE] AX=-0.033 AY=0.203 AZ=1.031 | GX=-171.229 GY=-1.085 GZ=24.754 | t=10476 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=645
+[LIVE] AX=-0.018 AY=0.184 AZ=1.062 | GX=-249.594 GY=-17.211 GZ=63.026 | t=10493 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=646
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=647
+[LIVE] AX=-0.038 AY=-0.119 AZ=0.947 | GX=-277.594 GY=-39.795 GZ=82.416 | t=10526 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=648
+[LIVE] AX=-0.012 AY=-0.144 AZ=0.988 | GX=-231.000 GY=-27.221 GZ=55.423 | t=10543 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=649
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=650
+[LIVE] AX=0.026 AY=-0.261 AZ=1.025 | GX=-286.685 GY=-65.118 GZ=80.719 | t=10576 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=651
+[LIVE] AX=0.028 AY=-0.360 AZ=0.976 | GX=-286.685 GY=-85.706 GZ=111.720 | t=10592 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=652
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=653
+[LIVE] AX=0.035 AY=-0.568 AZ=0.807 | GX=-286.685 GY=-120.558 GZ=125.501 | t=10626 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=654
+[LIVE] AX=0.040 AY=-0.690 AZ=0.688 | GX=-286.685 GY=-100.774 GZ=131.845 | t=10643 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=655
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=656
+[LIVE] AX=0.009 AY=-0.881 AZ=0.441 | GX=-286.685 GY=-47.294 GZ=84.018 | t=10676 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=657
+[LIVE] AX=-0.007 AY=-0.957 AZ=0.319 | GX=-286.685 GY=-21.604 GZ=66.745 | t=10692 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=658
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=659
+[LIVE] AX=-0.013 AY=-0.971 AZ=0.100 | GX=-286.685 GY=-6.615 GZ=18.646 | t=10726 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=660
+[LIVE] AX=-0.020 AY=-0.978 AZ=0.044 | GX=-187.014 GY=-7.726 GZ=15.750 | t=10742 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=661
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=662
+[LIVE] AX=-0.017 AY=-1.001 AZ=-0.017 | GX=-99.365 GY=-1.479 GZ=9.975 | t=10776 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=663
+[LIVE] AX=-0.019 AY=-1.008 AZ=-0.025 | GX=-103.154 GY=-2.922 GZ=9.538 | t=10792 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=664
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=665
+[LIVE] AX=-0.024 AY=-0.998 AZ=-0.094 | GX=-78.050 GY=1.487 GZ=8.759 | t=10825 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=666
+[LIVE] AX=-0.036 AY=-0.985 AZ=-0.123 | GX=-65.424 GY=3.894 GZ=6.904 | t=10842 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=667
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=668
+[LIVE] AX=-0.032 AY=-0.991 AZ=-0.153 | GX=-35.123 GY=10.124 GZ=4.244 | t=10875 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=669
+[LIVE] AX=-0.040 AY=-0.984 AZ=-0.141 | GX=-27.055 GY=11.165 GZ=2.581 | t=10892 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=670
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=671
+[LIVE] AX=-0.035 AY=-0.993 AZ=-0.161 | GX=-19.329 GY=3.229 GZ=2.284 | t=10925 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=672
+[LIVE] AX=-0.034 AY=-0.988 AZ=-0.170 | GX=-32.112 GY=3.955 GZ=3.404 | t=10942 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=673
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=674
+[LIVE] AX=-0.038 AY=-0.977 AZ=-0.171 | GX=-21.849 GY=5.871 GZ=2.433 | t=10975 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=675
+[LIVE] AX=-0.035 AY=-0.981 AZ=-0.194 | GX=-13.738 GY=6.370 GZ=1.864 | t=10992 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=676
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=677
+[LIVE] AX=-0.035 AY=-0.981 AZ=-0.198 | GX=-7.350 GY=4.121 GZ=1.435 | t=11025 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=678
+[LIVE] AX=-0.027 AY=-0.991 AZ=-0.236 | GX=-5.784 GY=7.429 GZ=-1.645 | t=11042 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=679
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=680
+[LIVE] AX=-0.032 AY=-0.984 AZ=-0.192 | GX=-3.255 GY=3.299 GZ=1.033 | t=11075 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=681
+[LIVE] AX=-0.031 AY=-0.981 AZ=-0.208 | GX=-5.267 GY=3.229 GZ=1.575 | t=11092 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=682
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=683
+[LIVE] AX=-0.035 AY=-0.983 AZ=-0.203 | GX=-4.900 GY=3.465 GZ=1.654 | t=11125 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=684
+[LIVE] AX=-0.034 AY=-0.977 AZ=-0.211 | GX=-6.151 GY=3.964 GZ=-0.035 | t=11142 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=685
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=686
+[LIVE] AX=-0.034 AY=-0.982 AZ=-0.211 | GX=-8.033 GY=2.537 GZ=0.962 | t=11175 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=687
+[LIVE] AX=-0.033 AY=-0.977 AZ=-0.217 | GX=-11.323 GY=2.301 GZ=1.628 | t=11192 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=688
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=689
+[LIVE] AX=-0.035 AY=-0.975 AZ=-0.218 | GX=-9.896 GY=2.118 GZ=1.759 | t=11225 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=690
+[LIVE] AX=-0.036 AY=-0.974 AZ=-0.224 | GX=-7.193 GY=1.111 GZ=0.998 | t=11242 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=691
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=692
+[LIVE] AX=-0.033 AY=-0.977 AZ=-0.227 | GX=-3.789 GY=3.010 GZ=1.181 | t=11275 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=693
+[LIVE] AX=-0.036 AY=-0.975 AZ=-0.224 | GX=-4.209 GY=2.511 GZ=1.383 | t=11291 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=694
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=695
+[LIVE] AX=-0.034 AY=-0.975 AZ=-0.227 | GX=-5.766 GY=1.715 GZ=0.884 | t=11325 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=696
+[LIVE] AX=-0.035 AY=-0.971 AZ=-0.232 | GX=-4.340 GY=1.820 GZ=0.674 | t=11341 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=697
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=698
+[LIVE] AX=-0.034 AY=-0.974 AZ=-0.232 | GX=-2.879 GY=2.765 GZ=0.718 | t=11375 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=699
+[LIVE] AX=-0.037 AY=-0.972 AZ=-0.235 | GX=-1.216 GY=3.544 GZ=0.411 | t=11391 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=700
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=701
+[LIVE] AX=-0.038 AY=-0.973 AZ=-0.231 | GX=0.788 GY=2.467 GZ=-0.175 | t=11425 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=702
+[LIVE] AX=-0.034 AY=-0.975 AZ=-0.232 | GX=4.182 GY=1.785 GZ=-0.516 | t=11441 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=703
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=704
+[LIVE] AX=-0.033 AY=-0.973 AZ=-0.233 | GX=8.391 GY=1.566 GZ=-1.041 | t=11474 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=705
+[LIVE] AX=-0.032 AY=-0.975 AZ=-0.228 | GX=12.688 GY=2.328 GZ=-1.146 | t=11491 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=706
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=707
+[LIVE] AX=-0.028 AY=-0.973 AZ=-0.214 | GX=36.085 GY=4.707 GZ=-3.763 | t=11524 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=708
+[LIVE] AX=-0.024 AY=-0.981 AZ=-0.196 | GX=47.451 GY=3.176 GZ=-5.679 | t=11541 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=709
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=710
+[LIVE] AX=-0.017 AY=-0.987 AZ=-0.171 | GX=62.361 GY=-2.914 GZ=-9.240 | t=11574 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=711
+[LIVE] AX=-0.001 AY=-1.007 AZ=-0.189 | GX=72.074 GY=-4.524 GZ=-15.584 | t=11591 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=712
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=713
+[LIVE] AX=-0.017 AY=-0.984 AZ=-0.085 | GX=97.825 GY=-7.446 GZ=-13.501 | t=11624 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=714
+[LIVE] AX=-0.013 AY=-0.993 AZ=-0.061 | GX=126.201 GY=-8.969 GZ=-15.059 | t=11641 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=715
+[LIVE] AX=-0.008 AY=-0.992 AZ=-0.042 | GX=171.780 GY=-10.448 GZ=-17.036 | t=11658 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=716
+[LIVE] AX=-0.010 AY=-0.985 AZ=0.012 | GX=254.660 GY=-12.828 GZ=-22.514 | t=11674 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=717
+[LIVE] AX=-0.005 AY=-0.983 AZ=0.080 | GX=286.685 GY=-20.344 GZ=-29.330 | t=11691 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=718
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=719
+[LIVE] AX=0.031 AY=-0.952 AZ=0.364 | GX=286.685 GY=3.439 GZ=-67.279 | t=11724 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=720
+[LIVE] AX=0.055 AY=-0.891 AZ=0.493 | GX=286.685 GY=3.255 GZ=-76.029 | t=11741 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=721
+[LIVE] AX=0.075 AY=-0.835 AZ=0.592 | GX=286.685 GY=11.078 GZ=-63.525 | t=11758 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=722
+[LIVE] AX=0.089 AY=-0.793 AZ=0.649 | GX=286.685 GY=8.995 GZ=-66.290 | t=11774 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=723
+[LIVE] AX=0.089 AY=-0.724 AZ=0.713 | GX=286.685 GY=6.501 GZ=-80.692 | t=11791 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=724
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=725
+[LIVE] AX=0.107 AY=-0.571 AZ=0.830 | GX=286.685 GY=-8.243 GZ=-99.802 | t=11824 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=726
+[LIVE] AX=0.144 AY=-0.495 AZ=0.880 | GX=273.122 GY=-18.174 GZ=-88.357 | t=11841 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=727
+[LIVE] AX=0.173 AY=-0.435 AZ=0.927 | GX=264.355 GY=-20.239 GZ=-92.776 | t=11857 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=728
+[LIVE] AX=0.160 AY=-0.368 AZ=0.939 | GX=279.335 GY=-18.253 GZ=-93.231 | t=11874 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=729
+[LIVE] AX=0.170 AY=-0.300 AZ=0.951 | GX=286.685 GY=-21.070 GZ=-107.783 | t=11891 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=730
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=731
+[LIVE] AX=0.179 AY=-0.078 AZ=0.906 | GX=286.685 GY=2.389 GZ=-142.616 | t=11924 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=732
+[LIVE] AX=0.203 AY=0.259 AZ=1.118 | GX=286.685 GY=24.780 GZ=-128.852 | t=11940 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=733
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=734
+[LIVE] AX=0.227 AY=0.518 AZ=0.943 | GX=286.685 GY=-103.512 GZ=-78.269 | t=11974 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=735
+[LIVE] AX=0.209 AY=0.692 AZ=0.646 | GX=286.685 GY=-129.071 GZ=-64.374 | t=11991 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=736
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=737
+[LIVE] AX=0.203 AY=0.723 AZ=0.436 | GX=253.286 GY=-30.739 GZ=-14.586 | t=12024 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=738
+[LIVE] AX=0.242 AY=0.798 AZ=0.516 | GX=126.980 GY=-2.301 GZ=-2.844 | t=12041 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=739
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=740
+[LIVE] AX=0.235 AY=0.817 AZ=0.479 | GX=28.385 GY=-5.303 GZ=-5.740 | t=12073 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=741
+[LIVE] AX=0.231 AY=0.828 AZ=0.472 | GX=22.750 GY=-11.524 GZ=-8.505 | t=12090 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=742
+[LIVE] AX=0.237 AY=0.847 AZ=0.457 | GX=18.778 GY=-15.549 GZ=-9.196 | t=12107 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=743
+[LIVE] AX=0.236 AY=0.852 AZ=0.462 | GX=10.185 GY=-18.673 GZ=-7.140 | t=12124 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=744
+[LIVE] AX=0.246 AY=0.854 AZ=0.488 | GX=-3.824 GY=-20.965 GZ=-2.126 | t=12140 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=745
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=746
+[LIVE] AX=0.270 AY=0.886 AZ=0.581 | GX=-97.247 GY=-17.859 GZ=20.090 | t=12174 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=747
+[LIVE] AX=0.294 AY=0.883 AZ=0.607 | GX=-260.916 GY=-10.203 GZ=21.087 | t=12190 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=748
+[LIVE] AX=0.396 AY=1.063 AZ=0.959 | GX=-286.685 GY=-51.643 GZ=79.065 | t=12207 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=749
+[LIVE] AX=0.195 AY=1.938 AZ=0.771 | GX=-286.685 GY=-286.685 GZ=286.685 | t=12223 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=750
+[LIVE] AX=-0.357 AY=-0.612 AZ=-1.999 | GX=-132.335 GY=-201.810 GZ=286.685 | t=12240 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=751
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=752
+[LIVE] AX=-0.704 AY=0.260 AZ=-0.151 | GX=-200.821 GY=286.685 GZ=286.685 | t=12274 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=753
+[LIVE] AX=0.383 AY=-1.246 AZ=1.999 | GX=286.685 GY=286.685 GZ=31.903 | t=12290 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=754
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=755
+[LIVE] AX=0.141 AY=-0.883 AZ=-0.394 | GX=-199.106 GY=-61.040 GZ=187.180 | t=12323 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=756
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=757
+[LIVE] AX=0.187 AY=-0.726 AZ=0.790 | GX=-69.387 GY=-16.021 GZ=27.134 | t=12357 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=758
+[LIVE] AX=0.176 AY=-0.723 AZ=0.648 | GX=18.935 GY=0.053 GZ=-1.304 | t=12373 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=759
+[LIVE] AX=0.184 AY=-0.702 AZ=0.697 | GX=-43.382 GY=-8.453 GZ=3.290 | t=12390 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=760
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=761
+[LIVE] AX=0.183 AY=-0.720 AZ=0.688 | GX=-16.809 GY=-3.491 GZ=-0.656 | t=12423 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=762
+[LIVE] AX=0.181 AY=-0.715 AZ=0.704 | GX=-17.552 GY=-2.739 GZ=-1.601 | t=12439 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=763
+[LIVE] AX=0.187 AY=-0.726 AZ=0.681 | GX=-17.946 GY=-3.045 GZ=-0.604 | t=12456 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=764
+[LIVE] AX=0.185 AY=-0.731 AZ=0.677 | GX=-12.136 GY=-1.496 GZ=-0.420 | t=12473 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=765
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=766
+[LIVE] AX=0.186 AY=-0.736 AZ=0.672 | GX=-8.523 GY=-0.945 GZ=0.219 | t=12506 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=767
+[LIVE] AX=0.187 AY=-0.730 AZ=0.684 | GX=-3.736 GY=-0.735 GZ=-0.157 | t=12523 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=768
+[LIVE] AX=0.187 AY=-0.732 AZ=0.678 | GX=-3.412 GY=-0.726 GZ=-0.192 | t=12539 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=769
+[LIVE] AX=0.187 AY=-0.734 AZ=0.677 | GX=-4.113 GY=-0.752 GZ=0.053 | t=12556 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=770
+[LIVE] AX=0.187 AY=-0.733 AZ=0.677 | GX=-2.984 GY=-0.613 GZ=0.044 | t=12573 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=771
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=772
+[LIVE] AX=0.187 AY=-0.735 AZ=0.676 | GX=-1.409 GY=-0.359 GZ=0.149 | t=12606 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=773
+[LIVE] AX=0.187 AY=-0.735 AZ=0.676 | GX=-1.601 GY=-0.376 GZ=0.236 | t=12623 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=774
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=775
+[LIVE] AX=0.187 AY=-0.735 AZ=0.675 | GX=-1.601 GY=-0.359 GZ=0.192 | t=12656 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=776
+[LIVE] AX=0.187 AY=-0.735 AZ=0.675 | GX=-1.592 GY=-0.411 GZ=0.131 | t=12672 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=777
+[LIVE] AX=0.187 AY=-0.736 AZ=0.675 | GX=-1.558 GY=-0.446 GZ=0.149 | t=12689 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=778
+[LIVE] AX=0.187 AY=-0.736 AZ=0.675 | GX=-1.523 GY=-0.481 GZ=0.105 | t=12706 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=779
+[LIVE] AX=0.187 AY=-0.736 AZ=0.673 | GX=-1.435 GY=-0.429 GZ=0.114 | t=12723 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=780
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=781
+[LIVE] AX=0.187 AY=-0.736 AZ=0.674 | GX=-1.347 GY=-0.376 GZ=0.149 | t=12756 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=782
+[LIVE] AX=0.187 AY=-0.737 AZ=0.673 | GX=-1.269 GY=-0.429 GZ=0.105 | t=12773 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=783
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=784
+[LIVE] AX=0.188 AY=-0.738 AZ=0.672 | GX=-1.768 GY=-0.577 GZ=0.157 | t=12806 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=785
+[LIVE] AX=0.188 AY=-0.738 AZ=0.672 | GX=-1.418 GY=-0.472 GZ=0.070 | t=12822 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=786
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=787
+[LIVE] AX=0.187 AY=-0.739 AZ=0.671 | GX=-2.240 GY=-0.665 GZ=0.280 | t=12856 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=788
+[LIVE] AX=0.188 AY=-0.738 AZ=0.671 | GX=-1.365 GY=-0.490 GZ=0.035 | t=12872 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=789
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=790
+[LIVE] AX=0.188 AY=-0.739 AZ=0.671 | GX=-1.750 GY=-0.543 GZ=0.140 | t=12906 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=791
+[LIVE] AX=0.188 AY=-0.740 AZ=0.671 | GX=-1.514 GY=-0.472 GZ=0.096 | t=12923 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=792
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=793
+[LIVE] AX=0.188 AY=-0.740 AZ=0.670 | GX=-1.829 GY=-0.647 GZ=0.192 | t=12956 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=794
+[LIVE] AX=0.187 AY=-0.740 AZ=0.670 | GX=-1.601 GY=-0.499 GZ=0.087 | t=12972 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=795
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=796
+[LIVE] AX=0.188 AY=-0.740 AZ=0.669 | GX=-1.803 GY=-0.507 GZ=0.079 | t=13006 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=797
+[LIVE] AX=0.188 AY=-0.741 AZ=0.668 | GX=-1.750 GY=-0.525 GZ=0.087 | t=13022 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=798
+[LIVE] AX=0.188 AY=-0.741 AZ=0.669 | GX=-1.776 GY=-0.647 GZ=0.157 | t=13039 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=799
+[LIVE] AX=0.189 AY=-0.742 AZ=0.668 | GX=-2.021 GY=-0.822 GZ=0.350 | t=13055 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=800
+[LIVE] AX=0.189 AY=-0.743 AZ=0.666 | GX=-2.266 GY=-0.726 GZ=0.315 | t=13072 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=801
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=802
+[LIVE] AX=0.189 AY=-0.743 AZ=0.667 | GX=-1.619 GY=-0.534 GZ=0.166 | t=13105 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=803
+[LIVE] AX=0.189 AY=-0.743 AZ=0.666 | GX=-1.242 GY=-0.464 GZ=0.123 | t=13122 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=804
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=805
+[LIVE] AX=0.189 AY=-0.743 AZ=0.665 | GX=-1.330 GY=-0.472 GZ=0.096 | t=13155 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=806
+[LIVE] AX=0.189 AY=-0.744 AZ=0.664 | GX=-0.971 GY=-0.368 GZ=0.096 | t=13172 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=807
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=808
+[LIVE] AX=0.188 AY=-0.744 AZ=0.665 | GX=-0.962 GY=-0.394 GZ=0.105 | t=13205 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=809
+[LIVE] AX=0.189 AY=-0.744 AZ=0.665 | GX=-0.971 GY=-0.368 GZ=0.105 | t=13222 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=810
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=811
+[LIVE] AX=0.189 AY=-0.744 AZ=0.665 | GX=-0.770 GY=-0.341 GZ=0.149 | t=13255 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=812
+[LIVE] AX=0.189 AY=-0.744 AZ=0.664 | GX=-0.849 GY=-0.368 GZ=0.140 | t=13272 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=813
+[LIVE] AX=0.189 AY=-0.745 AZ=0.664 | GX=-0.726 GY=-0.350 GZ=0.140 | t=13288 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=814
+[LIVE] AX=0.189 AY=-0.744 AZ=0.664 | GX=-0.700 GY=-0.394 GZ=0.157 | t=13305 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=815
+[LIVE] AX=0.189 AY=-0.744 AZ=0.665 | GX=-0.639 GY=-0.315 GZ=0.175 | t=13321 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=816
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=817
+[LIVE] AX=0.189 AY=-0.745 AZ=0.664 | GX=-0.595 GY=-0.280 GZ=0.157 | t=13355 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=818
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.613 GY=-0.306 GZ=0.131 | t=13372 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=819
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=820
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.647 GY=-0.289 GZ=0.131 | t=13405 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=821
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.613 GY=-0.262 GZ=0.140 | t=13422 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=822
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=823
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.595 GY=-0.280 GZ=0.131 | t=13455 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=824
+[LIVE] AX=0.188 AY=-0.746 AZ=0.662 | GX=-0.516 GY=-0.228 GZ=0.149 | t=13471 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=825
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.534 GY=-0.254 GZ=0.157 | t=13488 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=826
+[LIVE] AX=0.189 AY=-0.746 AZ=0.662 | GX=-0.586 GY=-0.350 GZ=0.123 | t=13505 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=827
+[LIVE] AX=0.189 AY=-0.746 AZ=0.663 | GX=-0.735 GY=-0.306 GZ=0.140 | t=13521 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=828
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=829
+[LIVE] AX=0.189 AY=-0.746 AZ=0.662 | GX=-0.647 GY=-0.298 GZ=0.131 | t=13555 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=830
+[LIVE] AX=0.189 AY=-0.745 AZ=0.663 | GX=-0.656 GY=-0.289 GZ=0.149 | t=13572 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=831
+[LIVE] AX=0.188 AY=-0.746 AZ=0.662 | GX=-0.613 GY=-0.289 GZ=0.140 | t=13588 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=832
+[LIVE] AX=0.190 AY=-0.746 AZ=0.663 | GX=-0.639 GY=-0.289 GZ=0.157 | t=13604 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=833
+[LIVE] AX=0.189 AY=-0.746 AZ=0.662 | GX=-0.647 GY=-0.306 GZ=0.166 | t=13621 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=834
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=835
+[LIVE] AX=0.189 AY=-0.746 AZ=0.662 | GX=-0.613 GY=-0.280 GZ=0.140 | t=13655 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=836
+[LIVE] AX=0.189 AY=-0.747 AZ=0.662 | GX=-0.595 GY=-0.306 GZ=0.149 | t=13671 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=837
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=838
+[LIVE] AX=0.189 AY=-0.746 AZ=0.662 | GX=-0.604 GY=-0.289 GZ=0.105 | t=13704 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=839
+[LIVE] AX=0.189 AY=-0.747 AZ=0.661 | GX=-0.788 GY=-0.359 GZ=0.131 | t=13721 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=840
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=841
+[LIVE] AX=0.189 AY=-0.746 AZ=0.660 | GX=-0.919 GY=-0.394 GZ=0.114 | t=13754 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=842
+[LIVE] AX=0.189 AY=-0.747 AZ=0.662 | GX=-1.076 GY=-0.438 GZ=0.166 | t=13771 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=843
+[LIVE] AX=0.190 AY=-0.747 AZ=0.661 | GX=-0.971 GY=-0.438 GZ=0.210 | t=13788 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=844
+[LIVE] AX=0.189 AY=-0.747 AZ=0.660 | GX=-0.814 GY=-0.359 GZ=0.149 | t=13804 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=845
+[LIVE] AX=0.189 AY=-0.748 AZ=0.661 | GX=-0.752 GY=-0.341 GZ=0.131 | t=13821 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=846
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=847
+[LIVE] AX=0.189 AY=-0.747 AZ=0.660 | GX=-0.901 GY=-0.324 GZ=0.123 | t=13854 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=848
+[LIVE] AX=0.190 AY=-0.748 AZ=0.660 | GX=-0.866 GY=-0.341 GZ=0.166 | t=13871 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=849
+[LIVE] AX=0.190 AY=-0.748 AZ=0.660 | GX=-0.752 GY=-0.368 GZ=0.166 | t=13887 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=850
+[LIVE] AX=0.190 AY=-0.748 AZ=0.660 | GX=-0.621 GY=-0.333 GZ=0.140 | t=13904 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=851
+[LIVE] AX=0.190 AY=-0.747 AZ=0.661 | GX=-0.543 GY=-0.385 GZ=0.228 | t=13921 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=852
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=853
+[LIVE] AX=0.190 AY=-0.748 AZ=0.660 | GX=-0.219 GY=-0.289 GZ=0.123 | t=13954 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=854
+[LIVE] AX=0.189 AY=-0.749 AZ=0.658 | GX=-0.446 GY=-0.298 GZ=0.149 | t=13971 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=855
+[LIVE] AX=0.190 AY=-0.749 AZ=0.659 | GX=-0.691 GY=-0.298 GZ=0.131 | t=13988 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=856
+[LIVE] AX=0.189 AY=-0.748 AZ=0.659 | GX=-0.394 GY=-0.271 GZ=0.114 | t=14004 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=857
+[LIVE] AX=0.190 AY=-0.749 AZ=0.660 | GX=-0.429 GY=-0.306 GZ=0.123 | t=14021 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=858
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=859
+[LIVE] AX=0.190 AY=-0.749 AZ=0.659 | GX=-0.577 GY=-0.298 GZ=0.140 | t=14054 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=860
+[LIVE] AX=0.190 AY=-0.749 AZ=0.659 | GX=-0.543 GY=-0.289 GZ=0.140 | t=14071 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=861
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=862
+[LIVE] AX=0.190 AY=-0.749 AZ=0.658 | GX=-0.543 GY=-0.298 GZ=0.131 | t=14104 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=863
+[LIVE] AX=0.190 AY=-0.749 AZ=0.658 | GX=-0.595 GY=-0.289 GZ=0.140 | t=14120 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=864
+[LIVE] AX=0.190 AY=-0.750 AZ=0.659 | GX=-0.560 GY=-0.254 GZ=0.123 | t=14137 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=865
+[LIVE] AX=0.190 AY=-0.749 AZ=0.658 | GX=-0.543 GY=-0.306 GZ=0.114 | t=14154 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=866
+[LIVE] AX=0.190 AY=-0.750 AZ=0.658 | GX=-0.534 GY=-0.324 GZ=0.140 | t=14170 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=867
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=868
+[LIVE] AX=0.190 AY=-0.749 AZ=0.658 | GX=-0.429 GY=-0.271 GZ=0.105 | t=14204 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=869
+[LIVE] AX=0.190 AY=-0.749 AZ=0.658 | GX=-0.569 GY=-0.289 GZ=0.131 | t=14220 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=870
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=871
+[LIVE] AX=0.190 AY=-0.749 AZ=0.657 | GX=-0.709 GY=-0.350 GZ=0.123 | t=14254 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=872
+[LIVE] AX=0.190 AY=-0.750 AZ=0.658 | GX=-0.901 GY=-0.350 GZ=0.157 | t=14270 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=873
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=874
+[LIVE] AX=0.190 AY=-0.750 AZ=0.657 | GX=-0.822 GY=-0.376 GZ=0.157 | t=14303 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=875
+[LIVE] AX=0.190 AY=-0.750 AZ=0.657 | GX=-1.085 GY=-0.438 GZ=0.192 | t=14320 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=876
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=877
+[LIVE] AX=0.190 AY=-0.750 AZ=0.658 | GX=-0.884 GY=-0.455 GZ=0.166 | t=14353 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=878
+[LIVE] AX=0.190 AY=-0.751 AZ=0.656 | GX=-1.251 GY=-0.613 GZ=0.289 | t=14370 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=879
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=880
+[LIVE] AX=0.191 AY=-0.751 AZ=0.656 | GX=-1.383 GY=-0.385 GZ=0.184 | t=14403 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=881
+[LIVE] AX=0.190 AY=-0.751 AZ=0.656 | GX=-1.059 GY=-0.438 GZ=0.175 | t=14420 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=882
+[LIVE] AX=0.190 AY=-0.752 AZ=0.656 | GX=-1.199 GY=-0.507 GZ=0.271 | t=14437 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=883
+[LIVE] AX=0.190 AY=-0.752 AZ=0.656 | GX=-0.735 GY=-0.350 GZ=0.131 | t=14453 ms
+[FIFO] Drained 1 words, ring depth=256, samples=883
+[MOTION] TILTED
+[FIFO] Drained 2 words, ring depth=256, samples=884
+[LIVE] AX=0.190 AY=-0.751 AZ=0.656 | GX=-0.936 GY=-0.420 GZ=0.157 | t=14471 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=885
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=886
+[LIVE] AX=0.191 AY=-0.752 AZ=0.656 | GX=-0.700 GY=-0.324 GZ=0.105 | t=14503 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=887
+[LIVE] AX=0.190 AY=-0.752 AZ=0.655 | GX=-0.613 GY=-0.341 GZ=0.123 | t=14520 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=888
+[LIVE] AX=0.190 AY=-0.751 AZ=0.656 | GX=-1.347 GY=-0.647 GZ=0.429 | t=14536 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=889
+[LIVE] AX=0.191 AY=-0.753 AZ=0.653 | GX=-1.111 GY=-0.586 GZ=0.333 | t=14553 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=890
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=891
+[LIVE] AX=0.191 AY=-0.752 AZ=0.655 | GX=-0.140 GY=-0.271 GZ=0.131 | t=14586 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=892

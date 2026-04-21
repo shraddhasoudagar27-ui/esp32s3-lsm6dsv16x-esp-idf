@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "imu_demo_lsm6d",
-    "project_version":    "1",
+    "project_version":    "a469f5e-dirty",
     "project_path":       "C:/LSM6D_intern/imu_demo_lsm6d",
     "idf_path":           "C:/esp_idf/.espressif/v6.0/esp-idf",
     "build_dir":          "C:/LSM6D_intern/imu_demo_lsm6d/build",

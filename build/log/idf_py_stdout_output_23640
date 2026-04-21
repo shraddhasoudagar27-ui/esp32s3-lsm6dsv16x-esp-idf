@@ -1,0 +1,303 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x38 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4201299b
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0a8h ( 45224) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b0d0 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e1b4 vaddr=40374000 size=01e64h (  7780) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=152b4h ( 86708) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=000352dc vaddr=40375e64 size=0b6f8h ( 46840) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=000409dc vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (172) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (176) app_init: Compile time:     Apr  9 2026 13:12:20[0m
+[0;32mI (181) app_init: ELF file SHA256:  8c19f5278...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC98950 len 00050DC0 (323 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;33mW (235) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+
+=== Smart Hydration Bottle — LSM6DSV16X SFLP ===
+[BOOT] Found LSM6DSV16X @ 0x6B (WHO_AM_I=0x70)
+[IMU] Active: accel+gyro+SFLP @ 30 Hz
+[IMU] SFLP game rotation @ 30 Hz, watermark=32, stream mode
+[IMU] Events: wake-up | sleep | 6D | free-fall | tap | emb-tilt → INT1
+[IMU] Thresholds: sip>30° (500ms) | chug>60° (1500ms)
+[IMU] Register readback:
+  0x10 = 0x04
+  0x11 = 0x04
+  0x12 = 0x44
+  0x15 = 0x04
+  0x17 = 0x01
+  0x07 = 0x20
+  0x08 = 0x00
+  0x09 = 0x44
+  0x0A = 0x06
+  0x0D = 0x08
+  0x5E = 0xFC
+  0x54 = 0xB1
+  0x55 = 0x02
+  0x59 = 0x48
+  0x5B = 0x82
+  0x5D = 0x33
+[FIFO] Raw accel/gyro words seen (1 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[DRINK] Bottle lifted (pitch=-26.7°)
+[BOOT] INT1 already high — initial service triggered
+[BOOT] Pipeline armed. Monitoring for drinking events.
+
+[0;32mI (350) main_task: Returned from app_main()[0m
+[LIVE] pitch= -26.7° roll= -45.7° yaw=  +91.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.7° yaw=  +91.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.7° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.7° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.7° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=446 quats=148 ring=148 overruns=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=899 quats=299 ring=256 overruns=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=1352 quats=450 ring=256 overruns=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.5° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] Raw accel/gyro words seen (1024 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[LIVE] pitch= -26.7° roll= -45.6° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.6° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.8° roll= -45.6° yaw=  +91.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.3° roll= -38.5° yaw=  +89.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -24.2° roll= -12.4° yaw=  +66.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -18.4° roll= -13.7° yaw=  +33.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=1805 quats=601 ring=256 overruns=0
+[LIVE] pitch=  -1.0° roll= -12.4° yaw=  +28.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.6° roll= -12.4° yaw=  +27.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.4° roll= -12.2° yaw=  +26.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.4° roll= -12.2° yaw=  +26.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.6° roll= -12.5° yaw=  +25.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.6° roll= -12.4° yaw=  +25.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.6° roll= -12.3° yaw=  +25.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.6° roll= -12.3° yaw=  +25.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.9° roll= -12.6° yaw=  +25.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= -12.8° roll=  +8.5° yaw=  +24.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-15.1°)
+[FIFO] words=2258 quats=752 ring=256 overruns=0
+[LIVE] pitch= -16.0° roll= +33.7° yaw=  +20.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -17.6° roll= +38.0° yaw=  +19.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -17.0° roll= +38.2° yaw=  +19.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -16.9° roll= +38.3° yaw=  +19.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -17.1° roll= +38.4° yaw=  +20.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -17.5° roll= +39.8° yaw=  +20.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -18.6° roll= +43.8° yaw=  +20.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -19.7° roll= +47.7° yaw=  +21.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -20.2° roll= +50.0° yaw=  +20.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -20.8° roll= +52.5° yaw=  +20.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=2711 quats=903 ring=256 overruns=0
+[LIVE] pitch= -21.2° roll= +54.7° yaw=  +19.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -22.0° roll= +57.3° yaw=  +18.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -22.3° roll= +58.2° yaw=  +18.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -22.8° roll= +59.3° yaw=  +18.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.1° roll= +59.8° yaw=  +18.3° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.4° roll= +61.0° yaw=  +17.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.5° roll= +62.0° yaw=  +17.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.6° roll= +63.1° yaw=  +17.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] Raw accel/gyro words seen (2048 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[LIVE] pitch= -23.9° roll= +64.2° yaw=  +16.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.9° roll= +66.4° yaw=  +16.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=3164 quats=1054 ring=256 overruns=0
+[LIVE] pitch= -24.1° roll= +67.4° yaw=  +15.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -24.0° roll= +69.2° yaw=  +15.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.9° roll= +69.9° yaw=  +15.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -27.1° roll= +40.7° yaw=  +19.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  -7.4° roll= -11.2° yaw=  +31.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.1° roll= -14.4° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.2° roll= -13.4° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.3° roll= -13.0° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.3° roll= -12.8° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.3° roll= -12.7° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=3617 quats=1205 ring=256 overruns=0
+[LIVE] pitch=  -1.2° roll= -12.7° yaw=  +30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -7.1° roll=  -4.6° yaw=  +29.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-15.6°)
+[LIVE] pitch= -21.2° roll= +29.8° yaw=  +23.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -27.8° roll= +45.4° yaw=  +20.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -28.9° roll= +47.3° yaw=  +19.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -29.7° roll= +48.7° yaw=  +19.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[DRINK] Tilt started (pitch=-30.1°)
+[LIVE] pitch= -30.5° roll= +51.7° yaw=  +18.5° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=0 chugs=0
+[DRINK] *** SIP  detected! pitch=30.6° held 532 ms | total=1
+[LIVE] pitch= -30.9° roll= +53.6° yaw=  +18.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -31.6° roll= +55.2° yaw=  +17.9° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -32.2° roll= +56.2° yaw=  +17.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -32.5° roll= +57.6° yaw=  +17.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[FIFO] words=4070 quats=1356 ring=256 overruns=0
+[LIVE] pitch= -32.9° roll= +59.3° yaw=  +16.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -31.7° roll= +52.4° yaw=  +16.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -8.2° roll=  +0.6° yaw=  +27.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -2.6° roll= -12.5° yaw=  +27.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.4° roll= -12.9° yaw=  +27.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.5° roll= -12.8° yaw=  +27.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.6° roll= -12.8° yaw=  +27.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.6° roll= -12.8° yaw=  +27.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.6° roll= -11.8° yaw=  +27.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[DRINK] Bottle lifted (pitch=-15.6°)
+[LIVE] pitch= -17.8° roll= +23.9° yaw=  +21.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[FIFO] words=4523 quats=1507 ring=256 overruns=0
+[LIVE] pitch= -26.8° roll= +45.7° yaw=  +17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[FIFO] Raw accel/gyro words seen (3072 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[LIVE] pitch= -29.2° roll= +50.3° yaw=  +16.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[DRINK] Tilt started (pitch=-30.0°)
+[LIVE] pitch= -30.1° roll= +51.9° yaw=  +16.7° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=1 chugs=0
+[DRINK] Tilt aborted after 166 ms (peak=30.1°)
+[DRINK] Tilt started (pitch=-30.0°)
+[DRINK] Tilt aborted after 99 ms (peak=30.1°)
+[DRINK] Tilt started (pitch=-30.1°)
+[LIVE] pitch= -30.2° roll= +53.8° yaw=  +15.9° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=1 chugs=0
+[DRINK] *** SIP  detected! pitch=30.4° held 533 ms | total=2
+[LIVE] pitch= -30.3° roll= +55.1° yaw=  +15.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -30.9° roll= +56.1° yaw=  +15.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -31.0° roll= +56.7° yaw=  +15.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -31.7° roll= +57.3° yaw=  +14.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -32.0° roll= +58.3° yaw=  +14.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -33.0° roll= +59.0° yaw=  +13.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[FIFO] words=4976 quats=1658 ring=256 overruns=0
+[LIVE] pitch= -34.5° roll= +58.9° yaw=  +13.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.8° roll= +60.2° yaw=  +12.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.7° roll= +60.8° yaw=  +12.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.9° roll= +61.2° yaw=  +12.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -35.1° roll= +61.3° yaw=  +12.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -35.6° roll= +61.2° yaw=  +12.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.6° roll= +31.9° yaw=  +19.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.4° roll= +30.1° yaw=  +20.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.2° roll= +30.6° yaw=  +19.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.4° roll= +31.0° yaw=  +19.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[FIFO] words=5429 quats=1809 ring=256 overruns=0
+[LIVE] pitch= -34.4° roll= +31.4° yaw=  +19.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.5° roll= +31.5° yaw=  +19.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.5° roll= +31.7° yaw=  +19.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -34.5° roll= +31.7° yaw=  +19.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -37.6° roll= +49.6° yaw=  +14.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -37.6° roll= +59.6° yaw=   +9.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -38.2° roll= +56.5° yaw=  +10.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= -12.4° roll=  +2.0° yaw=  +26.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -6.7° roll=  -9.3° yaw=  +25.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.2° roll= -12.0° yaw=  +25.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=5882 quats=1960 ring=256 overruns=0
+[LIVE] pitch=  -3.0° roll= -12.0° yaw=  +25.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -2.0° roll= -12.5° yaw=  +26.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -2.0° roll= -12.4° yaw=  +26.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch= -14.3° roll=  +2.5° yaw=  +24.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[DRINK] Bottle lifted (pitch=-16.7°)
+[DRINK] Tilt started (pitch=-30.8°)
+[LIVE] pitch= -38.8° roll= +51.3° yaw=  +14.1° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=2 chugs=0
+[DRINK] *** SIP  detected! pitch=42.2° held 533 ms | total=3
+[FIFO] Raw accel/gyro words seen (4096 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[LIVE] pitch= -41.3° roll= +58.5° yaw=  +13.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.2° roll= +57.8° yaw=  +13.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.5° roll= +58.5° yaw=  +13.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.5° roll= +58.9° yaw=  +13.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.4° roll= +59.3° yaw=  +14.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[FIFO] words=6335 quats=2111 ring=256 overruns=0
+[LIVE] pitch= -41.4° roll= +59.6° yaw=  +14.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.2° roll= +59.9° yaw=  +14.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.2° roll= +59.7° yaw=  +14.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.3° roll= +60.3° yaw=  +13.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -41.1° roll= +59.6° yaw=  +13.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -28.2° roll= +20.6° yaw=  +27.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -10.3° roll= -12.2° yaw=  +28.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -3.6° roll= -12.3° yaw=  +27.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[LIVE] pitch=  -1.5° roll= -12.7° yaw=  +28.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[LIVE] pitch=  -1.5° roll= -12.7° yaw=  +28.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[FIFO] words=6788 quats=2262 ring=256 overruns=0
+[LIVE] pitch= -13.8° roll=  +1.2° yaw=  +29.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[DRINK] Bottle lifted (pitch=-15.9°)
+[LIVE] pitch= -25.6° roll= +21.6° yaw=  +23.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=3 chugs=0
+[LIVE] pitch= -28.7° roll= +29.3° yaw=  +21.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=3 chugs=0
+[DRINK] Tilt started (pitch=-30.2°)
+[LIVE] pitch= -31.9° roll= +36.1° yaw=  +20.0° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=3 chugs=0
+[DRINK] *** SIP  detected! pitch=33.8° held 532 ms | total=4
+[LIVE] pitch= -34.9° roll= +42.4° yaw=  +19.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -36.5° roll= +45.7° yaw=  +20.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -38.9° roll= +51.0° yaw=  +19.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -40.3° roll= +55.2° yaw=  +18.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -42.2° roll= +59.1° yaw=  +17.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -43.2° roll= +60.8° yaw=  +18.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[FIFO] words=7241 quats=2413 ring=256 overruns=0
+[LIVE] pitch= -40.4° roll= +34.9° yaw=  +28.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -25.3° roll=  +6.2° yaw=  +36.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -7.4° roll= -10.6° yaw=  +36.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  +2.5° roll= -13.6° yaw=  +62.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch= +13.1° roll=  +3.5° yaw=  +83.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  +2.8° roll=  +2.4° yaw=  +83.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  -9.6° roll= -10.1° yaw= +100.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  -6.2° roll=  -7.5° yaw=  +98.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch= -10.7° roll=  -7.1° yaw=  +99.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[FIFO] Raw accel/gyro words seen (5120 total) — SFLP tag 0x13 expected. Check EMB_FUNC_EN_A.
+[LIVE] pitch= -10.8° roll=  -7.5° yaw=  +99.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[FIFO] words=7694 quats=2564 ring=256 overruns=0

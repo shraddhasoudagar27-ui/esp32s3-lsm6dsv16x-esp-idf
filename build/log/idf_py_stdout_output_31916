@@ -1,0 +1,323 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x3b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40376c35
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0d8h ( 45272) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b100 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e1e4 vaddr=40374000 size=01e34h (  7732) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=15404h ( 87044) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=0003542c vaddr=40375e34 size=0b728h ( 46888) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00040b5c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (172) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (176) app_init: Compile time:     Apr 16 2026 13:08:10[0m
+[0;32mI (181) app_init: ELF file SHA256:  547afb660...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC98960 len 00050DB0 (323 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;33mW (235) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+
+=== Smart Hydration Bottle — LSM6DSV16X SFLP ===
+[BOOT] Found LSM6DSV16X @ 0x6B (WHO_AM_I=0x70)
+[IMU] Active: accel+gyro+SFLP @ 30 Hz
+[IMU] SFLP game rotation @ 30 Hz, watermark=32, stream mode
+[IMU] Events: wake-up | sleep | 6D | free-fall | tap | emb-tilt → INT1
+[IMU] Thresholds: sip>30° (500ms) | chug>60° (1500ms)
+[IMU] Register readback:
+  0x10 = 0x04
+  0x11 = 0x04
+  0x12 = 0x44
+  0x15 = 0x04
+  0x17 = 0x01
+  0x07 = 0x20
+  0x08 = 0x00
+  0x09 = 0x00
+  0x0A = 0x06
+  0x0D = 0x08
+  0x5E = 0xFC
+  0x54 = 0xB1
+  0x55 = 0x02
+  0x59 = 0x48
+  0x5B = 0x82
+  0x5D = 0x33
+[IMU] Idle orientation baseline captured
+[DRINK] Bottle lifted (pitch=85.2°)
+[BOOT] INT1 already high — initial service triggered
+[BOOT] Pipeline armed. Monitoring for drinking events.
+
+[0;32mI (350) main_task: Returned from app_main()[0m
+[LIVE @ 597 ms] pitch=  -0.2° roll=  -0.1° yaw=   +0.2° | state=IDLE
+[LIVE @ 1097 ms] pitch=  -0.2° roll=  -0.1° yaw=   +0.3° | state=IDLE
+[LIVE @ 1597 ms] pitch=  -0.2° roll=  -0.2° yaw=   +0.4° | state=IDLE
+[LIVE @ 2097 ms] pitch=  -0.2° roll=  -0.2° yaw=   +0.5° | state=IDLE
+[LIVE @ 2597 ms] pitch=  -0.3° roll=  -0.3° yaw=   +0.5° | state=IDLE
+[LIVE @ 3097 ms] pitch=  -0.3° roll=  -0.3° yaw=   +0.5° | state=IDLE
+[LIVE @ 3597 ms] pitch=  -0.2° roll=  -0.3° yaw=   +0.5° | state=IDLE
+[LIVE @ 4096 ms] pitch=  -1.0° roll=  -0.3° yaw=   +0.4° | state=IDLE
+[LIVE @ 4596 ms] pitch= +14.4° roll=  -4.0° yaw=   +3.1° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.9°)
+[DRINK] Tilt started (pitch=30.4°)
+[FIFO] words=150 quats=150 ring=150 overruns=0
+[LIVE @ 5097 ms] pitch= +32.5° roll=  -2.3° yaw=  +17.7° | state=TILTING
+[DRINK] *** SIP  detected! pitch=39.2° held 532 ms | total=1
+[LIVE @ 5596 ms] pitch= +39.2° roll=  +0.0° yaw=  +23.2° | state=SIP_OK
+[LIVE @ 6097 ms] pitch= +39.2° roll=  -0.8° yaw=  +23.0° | state=SIP_OK
+[LIVE @ 6597 ms] pitch= +39.5° roll=  -1.3° yaw=  +23.1° | state=SIP_OK
+[LIVE @ 7097 ms] pitch= +39.7° roll=  -1.9° yaw=  +23.2° | state=SIP_OK
+[LIVE @ 7597 ms] pitch= +42.9° roll=  -1.0° yaw=  +25.9° | state=SIP_OK
+[LIVE @ 8097 ms] pitch= +40.8° roll=  -1.4° yaw=  +24.9° | state=SIP_OK
+[LIVE @ 8596 ms] pitch= +17.8° roll= -10.7° yaw=   +8.4° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 9096 ms] pitch=  +8.6° roll= -11.7° yaw=   +4.4° | state=IDLE
+[LIVE @ 9597 ms] pitch=  +7.8° roll= -11.6° yaw=   +3.9° | state=IDLE
+[FIFO] words=301 quats=301 ring=256 overruns=0
+[LIVE @ 10097 ms] pitch=  +8.4° roll= -11.6° yaw=   +3.9° | state=IDLE
+[LIVE @ 10597 ms] pitch=  +8.6° roll= -11.6° yaw=   +3.9° | state=IDLE
+[LIVE @ 11097 ms] pitch=  +8.6° roll= -11.6° yaw=   +3.9° | state=IDLE
+[LIVE @ 11596 ms] pitch=  +8.8° roll= -11.6° yaw=   +3.7° | state=IDLE
+[LIVE @ 12097 ms] pitch=  +9.1° roll= -11.3° yaw=   +3.6° | state=IDLE
+[LIVE @ 12597 ms] pitch=  +9.1° roll= -11.1° yaw=   +3.5° | state=IDLE
+[LIVE @ 13097 ms] pitch=  +9.3° roll= -11.0° yaw=   +3.2° | state=IDLE
+[LIVE @ 13596 ms] pitch= +12.9° roll= -11.2° yaw=   +4.0° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.4°)
+[LIVE @ 14096 ms] pitch= +17.9° roll= -11.2° yaw=   +7.1° | state=LIFTED
+[LIVE @ 14596 ms] pitch= +18.1° roll= -11.5° yaw=   +7.1° | state=LIFTED
+[FIFO] words=452 quats=452 ring=256 overruns=0
+[LIVE @ 15097 ms] pitch= +18.2° roll= -11.7° yaw=   +7.0° | state=LIFTED
+[LIVE @ 15597 ms] pitch= +17.7° roll= -11.7° yaw=   +6.8° | state=LIFTED
+[LIVE @ 16097 ms] pitch= +17.2° roll= -11.8° yaw=   +6.6° | state=LIFTED
+[LIVE @ 16597 ms] pitch= +16.4° roll= -11.9° yaw=   +5.9° | state=LIFTED
+[LIVE @ 17097 ms] pitch=  +8.9° roll= -12.1° yaw=   +4.1° | state=IDLE
+[LIVE @ 17596 ms] pitch=  +6.4° roll= -12.2° yaw=   +2.7° | state=IDLE
+[LIVE @ 18097 ms] pitch=  +6.6° roll= -12.0° yaw=   +2.7° | state=IDLE
+[LIVE @ 18597 ms] pitch=  +5.6° roll= -10.9° yaw=   +1.0° | state=IDLE
+[LIVE @ 19096 ms] pitch=  -0.5° roll=  -9.0° yaw=   +0.2° | state=IDLE
+[LIVE @ 19597 ms] pitch=  -3.4° roll=  -2.0° yaw=   -2.6° | state=IDLE
+[LIVE @ 20097 ms] pitch=  -3.9° roll=  -2.2° yaw=   -0.6° | state=IDLE
+[FIFO] words=603 quats=603 ring=256 overruns=0
+[LIVE @ 20597 ms] pitch=  -3.2° roll=  -2.2° yaw=   -0.8° | state=IDLE
+[LIVE @ 21097 ms] pitch=  -3.0° roll=  -2.2° yaw=   -0.9° | state=IDLE
+[LIVE @ 21596 ms] pitch=  -2.9° roll=  -2.2° yaw=   -1.1° | state=IDLE
+[LIVE @ 22097 ms] pitch=  -3.2° roll=  -2.2° yaw=   -1.3° | state=IDLE
+[LIVE @ 22597 ms] pitch=  -3.3° roll=  -2.2° yaw=   -1.4° | state=IDLE
+[LIVE @ 23097 ms] pitch=  -3.3° roll=  -2.3° yaw=   -1.4° | state=IDLE
+[LIVE @ 23596 ms] pitch=  -3.4° roll=  -2.3° yaw=   -1.2° | state=IDLE
+[LIVE @ 24097 ms] pitch=  -3.4° roll=  -2.4° yaw=   -1.2° | state=IDLE
+[LIVE @ 24597 ms] pitch=  -3.3° roll=  -2.4° yaw=   -1.3° | state=IDLE
+[LIVE @ 25097 ms] pitch=  -3.4° roll=  -2.4° yaw=   -1.5° | state=IDLE
+[FIFO] words=754 quats=754 ring=256 overruns=0
+[LIVE @ 25596 ms] pitch=  -4.6° roll=  -4.3° yaw=   -9.5° | state=IDLE
+[LIVE @ 26096 ms] pitch=  +5.3° roll=  -5.6° yaw=   +1.4° | state=IDLE
+[LIVE @ 26597 ms] pitch=  +3.5° roll=  -3.6° yaw=   +1.7° | state=IDLE
+[LIVE @ 27097 ms] pitch=  +3.0° roll=  -3.8° yaw=   +1.2° | state=IDLE
+[LIVE @ 27597 ms] pitch=  +4.0° roll=  -3.5° yaw=   +1.6° | state=IDLE
+[LIVE @ 28096 ms] pitch= +11.8° roll=  +5.6° yaw=  +30.2° | state=IDLE
+[LIVE @ 28597 ms] pitch=  +8.2° roll=  +7.6° yaw=  +41.1° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.5°)
+[LIVE @ 29097 ms] pitch= +18.9° roll= +10.3° yaw=  +42.6° | state=LIFTED
+[DRINK] Tilt started (pitch=30.4°)
+[LIVE @ 29597 ms] pitch= +30.4° roll= +10.9° yaw=  +32.8° | state=TILTING
+[DRINK] *** SIP  detected! pitch=37.5° held 500 ms | total=2
+[LIVE @ 30097 ms] pitch= +37.5° roll=  +7.1° yaw=  +20.6° | state=SIP_OK
+[FIFO] words=905 quats=905 ring=256 overruns=0
+[LIVE @ 30597 ms] pitch= +37.0° roll=  -4.0° yaw=   -1.7° | state=SIP_OK
+[LIVE @ 31097 ms] pitch= +25.2° roll=  -7.2° yaw=  -15.1° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 31597 ms] pitch=  +9.2° roll=  -5.1° yaw=  -24.3° | state=IDLE
+[LIVE @ 32097 ms] pitch=  +2.3° roll=  -4.8° yaw=  -31.1° | state=IDLE
+[LIVE @ 32597 ms] pitch=  +1.4° roll=  -4.5° yaw=  -32.8° | state=IDLE
+[LIVE @ 33097 ms] pitch=  +1.2° roll=  -4.4° yaw=  -32.8° | state=IDLE
+[LIVE @ 33597 ms] pitch=  +1.4° roll=  +1.2° yaw=  -12.7° | state=IDLE
+[LIVE @ 34097 ms] pitch=  +5.7° roll=  +2.1° yaw=  +20.9° | state=IDLE
+[LIVE @ 34597 ms] pitch=  +6.2° roll=  +2.1° yaw=  +18.9° | state=IDLE
+[LIVE @ 35096 ms] pitch=  +6.7° roll=  +2.3° yaw=  +17.2° | state=IDLE
+[FIFO] words=1056 quats=1056 ring=256 overruns=0
+[LIVE @ 35597 ms] pitch=  +9.3° roll=  +0.2° yaw=   +4.3° | state=IDLE
+[LIVE @ 36097 ms] pitch=  +9.2° roll=  -5.3° yaw=  -31.0° | state=IDLE
+[LIVE @ 36597 ms] pitch=  +9.5° roll=  -4.1° yaw=  -31.3° | state=IDLE
+[LIVE @ 37097 ms] pitch=  +9.8° roll=  -3.6° yaw=  -30.2° | state=IDLE
+[LIVE @ 37597 ms] pitch= +10.4° roll=  -4.4° yaw=  -29.2° | state=IDLE
+[LIVE @ 38097 ms] pitch= +11.0° roll=  -4.6° yaw=  -27.4° | state=IDLE
+[LIVE @ 38597 ms] pitch=  +9.9° roll=  -3.4° yaw=  -25.0° | state=IDLE
+[LIVE @ 39097 ms] pitch= +11.0° roll=  +0.8° yaw=   -9.5° | state=IDLE
+[LIVE @ 39597 ms] pitch=  +4.2° roll=  +6.6° yaw=  +16.4° | state=IDLE
+[LIVE @ 40097 ms] pitch=  +5.3° roll=  +6.4° yaw=  +13.8° | state=IDLE
+[FIFO] words=1207 quats=1207 ring=256 overruns=0
+[LIVE @ 40597 ms] pitch=  +5.1° roll=  +6.2° yaw=  +12.9° | state=IDLE
+[LIVE @ 41097 ms] pitch=  +4.9° roll=  +6.2° yaw=  +11.1° | state=IDLE
+[LIVE @ 41597 ms] pitch=  +5.3° roll=  +0.1° yaw=  -17.2° | state=IDLE
+[LIVE @ 42097 ms] pitch=  +5.4° roll=  -3.3° yaw=  -39.8° | state=IDLE
+[LIVE @ 42597 ms] pitch=  +5.7° roll=  -2.7° yaw=  -39.1° | state=IDLE
+[LIVE @ 43097 ms] pitch=  +5.5° roll=  -0.9° yaw=  -35.4° | state=IDLE
+[LIVE @ 43596 ms] pitch=  -1.0° roll= +10.8° yaw=   +8.2° | state=IDLE
+[LIVE @ 44097 ms] pitch=  -2.1° roll=  +9.1° yaw=  +11.9° | state=IDLE
+[LIVE @ 44597 ms] pitch=  +7.9° roll=  +4.0° yaw=  -13.2° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.2°)
+[LIVE @ 45097 ms] pitch= +15.4° roll=  -5.3° yaw=  -33.9° | state=LIFTED
+[FIFO] words=1358 quats=1358 ring=256 overruns=0
+[LIVE @ 45597 ms] pitch= +14.7° roll=  -9.6° yaw=  -50.7° | state=LIFTED
+[LIVE @ 46097 ms] pitch= +14.2° roll=  -8.7° yaw=  -50.8° | state=LIFTED
+[LIVE @ 46596 ms] pitch=  +5.0° roll=  +4.9° yaw=  -25.6° | state=IDLE
+[LIVE @ 47097 ms] pitch=  -6.5° roll= +10.1° yaw=   +7.0° | state=IDLE
+[LIVE @ 47596 ms] pitch=  -4.0° roll= +10.8° yaw=   +4.6° | state=IDLE
+[LIVE @ 48096 ms] pitch=  -3.9° roll= +10.3° yaw=   +4.0° | state=IDLE
+[LIVE @ 48597 ms] pitch=  -3.5° roll=  +9.5° yaw=   +2.8° | state=IDLE
+[LIVE @ 49097 ms] pitch=  -4.1° roll=  +9.6° yaw=   +2.3° | state=IDLE
+[LIVE @ 49597 ms] pitch=  -4.6° roll=  +9.7° yaw=   +2.4° | state=IDLE
+[LIVE @ 50096 ms] pitch=  -4.5° roll=  +9.9° yaw=   +2.3° | state=IDLE
+[FIFO] words=1509 quats=1509 ring=256 overruns=0
+[LIVE @ 50597 ms] pitch=  -4.4° roll=  +9.8° yaw=   +2.4° | state=IDLE
+[LIVE @ 51097 ms] pitch=  -4.4° roll=  +9.8° yaw=   +2.2° | state=IDLE
+[LIVE @ 51597 ms] pitch=  -4.2° roll=  +9.9° yaw=   +2.1° | state=IDLE
+[LIVE @ 52097 ms] pitch=  -4.0° roll=  +9.9° yaw=   +2.1° | state=IDLE
+[LIVE @ 52597 ms] pitch=  +5.8° roll= +11.3° yaw=   +6.8° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.7°)
+[LIVE @ 53097 ms] pitch= +20.0° roll= +14.2° yaw=  +12.2° | state=LIFTED
+[LIVE @ 53597 ms] pitch= +23.8° roll= +14.5° yaw=  +11.3° | state=LIFTED
+[LIVE @ 54096 ms] pitch= +27.1° roll= +15.6° yaw=  +12.8° | state=LIFTED
+[DRINK] Tilt started (pitch=30.3°)
+[LIVE @ 54597 ms] pitch= +31.4° roll= +18.7° yaw=  +15.4° | state=TILTING
+[DRINK] *** SIP  detected! pitch=35.0° held 532 ms | total=3
+[LIVE @ 55097 ms] pitch= +35.1° roll= +21.5° yaw=  +19.4° | state=SIP_OK
+[FIFO] words=1660 quats=1660 ring=256 overruns=0
+[LIVE @ 55597 ms] pitch= +37.0° roll= +22.4° yaw=  +20.9° | state=SIP_OK
+[LIVE @ 56096 ms] pitch= +41.4° roll= +23.9° yaw=  +22.8° | state=SIP_OK
+[LIVE @ 56597 ms] pitch= +44.6° roll= +27.1° yaw=  +27.3° | state=SIP_OK
+[LIVE @ 57096 ms] pitch= +48.9° roll= +30.2° yaw=  +32.7° | state=SIP_OK
+[LIVE @ 57597 ms] pitch= +51.3° roll= +34.0° yaw=  +37.9° | state=SIP_OK
+[LIVE @ 58096 ms] pitch= +40.9° roll= +25.6° yaw=  +25.6° | state=SIP_OK
+[LIVE @ 58597 ms] pitch= +16.1° roll= +17.6° yaw=   +9.9° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 59096 ms] pitch=  +1.9° roll= +14.7° yaw=   +1.7° | state=IDLE
+[LIVE @ 59597 ms] pitch=  -4.5° roll= +15.7° yaw=   -2.9° | state=IDLE
+[LIVE @ 60097 ms] pitch=  -3.4° roll= +16.3° yaw=   -1.9° | state=IDLE
+[FIFO] words=1811 quats=1811 ring=256 overruns=0
+[LIVE @ 60597 ms] pitch=  -1.8° roll= +16.9° yaw=   -0.5° | state=IDLE
+[LIVE @ 61097 ms] pitch=  -0.6° roll= +17.0° yaw=   +0.4° | state=IDLE
+[LIVE @ 61597 ms] pitch=  +0.7° roll= +16.9° yaw=   +0.8° | state=IDLE
+[LIVE @ 62097 ms] pitch=  +4.1° roll= +16.9° yaw=   +1.2° | state=IDLE
+[LIVE @ 62597 ms] pitch=  +7.0° roll= +17.1° yaw=   +3.2° | state=IDLE
+[LIVE @ 63097 ms] pitch= +10.7° roll= +18.0° yaw=   +5.4° | state=IDLE
+[LIVE @ 63597 ms] pitch= +13.9° roll= +19.8° yaw=   +8.9° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.3°)
+[LIVE @ 64097 ms] pitch= +17.6° roll= +20.6° yaw=  +10.6° | state=LIFTED
+[LIVE @ 64597 ms] pitch= +19.9° roll= +21.1° yaw=  +12.4° | state=LIFTED
+[LIVE @ 65096 ms] pitch= +22.4° roll= +21.5° yaw=  +13.8° | state=LIFTED
+[FIFO] words=1962 quats=1962 ring=256 overruns=0
+[LIVE @ 65597 ms] pitch= +25.9° roll= +22.6° yaw=  +16.4° | state=LIFTED
+[LIVE @ 66097 ms] pitch= +28.7° roll= +23.7° yaw=  +18.5° | state=LIFTED
+[DRINK] Tilt started (pitch=30.3°)
+[LIVE @ 66597 ms] pitch= +33.2° roll= +25.5° yaw=  +21.8° | state=TILTING
+[DRINK] *** SIP  detected! pitch=35.5° held 500 ms | total=4
+[LIVE @ 67096 ms] pitch= +37.0° roll= +28.9° yaw=  +26.7° | state=SIP_OK
+[LIVE @ 67597 ms] pitch= +39.8° roll= +31.1° yaw=  +30.0° | state=SIP_OK
+[LIVE @ 68096 ms] pitch= +44.4° roll= +32.6° yaw=  +34.0° | state=SIP_OK
+[LIVE @ 68596 ms] pitch= +48.2° roll= +34.1° yaw=  +38.0° | state=SIP_OK
+[LIVE @ 69097 ms] pitch= +49.4° roll= +35.3° yaw=  +39.7° | state=SIP_OK
+[LIVE @ 69597 ms] pitch= +31.6° roll= +24.0° yaw=  +20.9° | state=SIP_OK
+[LIVE @ 70096 ms] pitch= +14.9° roll= +19.7° yaw=   +7.9° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[FIFO] words=2113 quats=2113 ring=256 overruns=0
+[LIVE @ 70597 ms] pitch=  +3.0° roll= +18.9° yaw=   +0.2° | state=IDLE
+[LIVE @ 71097 ms] pitch=  -1.2° roll= +18.8° yaw=   -2.6° | state=IDLE
+[LIVE @ 71597 ms] pitch=  +1.2° roll= +20.3° yaw=   -2.3° | state=IDLE
+[LIVE @ 72097 ms] pitch=  +2.4° roll= +20.8° yaw=   -3.4° | state=IDLE
+[LIVE @ 72596 ms] pitch=  +5.6° roll= +21.3° yaw=   -7.9° | state=IDLE
+[LIVE @ 73096 ms] pitch=  +7.5° roll= +22.0° yaw=  -11.3° | state=IDLE
+[LIVE @ 73597 ms] pitch=  +9.0° roll= +22.3° yaw=  -14.0° | state=IDLE
+[LIVE @ 74097 ms] pitch= +10.9° roll= +22.0° yaw=  -17.8° | state=IDLE
+[LIVE @ 74596 ms] pitch= +11.8° roll= +21.9° yaw=  -22.4° | state=IDLE
+[LIVE @ 75097 ms] pitch= +12.0° roll= +21.7° yaw=  -27.3° | state=IDLE
+[FIFO] words=2264 quats=2264 ring=256 overruns=0
+[LIVE @ 75597 ms] pitch= +12.9° roll= +21.1° yaw=  -31.2° | state=IDLE
+[LIVE @ 76097 ms] pitch= +13.6° roll= +20.3° yaw=  -35.1° | state=IDLE
+[LIVE @ 76596 ms] pitch= +14.5° roll= +19.4° yaw=  -38.4° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.0°)
+[LIVE @ 77097 ms] pitch= +15.1° roll= +17.9° yaw=  -42.8° | state=LIFTED
+[LIVE @ 77597 ms] pitch= +14.6° roll= +18.0° yaw=  -47.5° | state=LIFTED
+[LIVE @ 78096 ms] pitch= +14.9° roll= +17.9° yaw=  -49.6° | state=LIFTED
+[LIVE @ 78597 ms] pitch= +14.5° roll= +17.9° yaw=  -49.6° | state=LIFTED
+[LIVE @ 79097 ms] pitch= +17.4° roll= +19.0° yaw=  -49.4° | state=LIFTED
+[LIVE @ 79597 ms] pitch= +20.2° roll= +20.0° yaw=  -48.4° | state=LIFTED
+[LIVE @ 80097 ms] pitch= +22.7° roll= +20.0° yaw=  -48.1° | state=LIFTED
+[FIFO] words=2415 quats=2415 ring=256 overruns=0
+[LIVE @ 80597 ms] pitch= +24.5° roll= +19.5° yaw=  -48.2° | state=LIFTED
+[LIVE @ 81096 ms] pitch= +25.4° roll= +19.5° yaw=  -48.2° | state=LIFTED
+[LIVE @ 81597 ms] pitch= +24.0° roll= +19.6° yaw=  -50.0° | state=LIFTED
+[LIVE @ 82097 ms] pitch= +14.0° roll= +19.7° yaw=  -51.8° | state=LIFTED
+[LIVE @ 82597 ms] pitch=  +9.1° roll= +34.9° yaw=  -14.2° | state=IDLE
+[LIVE @ 83097 ms] pitch=  +8.6° roll= +32.7° yaw=   +9.8° | state=IDLE
+[LIVE @ 83597 ms] pitch=  +4.1° roll= +29.3° yaw=  +14.4° | state=IDLE
+[LIVE @ 84097 ms] pitch=  +2.2° roll= +27.5° yaw=   +9.9° | state=IDLE
+[LIVE @ 84597 ms] pitch=  +1.3° roll= +33.4° yaw=   +4.5° | state=IDLE
+[LIVE @ 85097 ms] pitch= +12.3° roll= +43.1° yaw=   -5.1° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.3°)
+[FIFO] words=2566 quats=2566 ring=256 overruns=0
+[LIVE @ 85597 ms] pitch= +20.1° roll= +42.5° yaw=  -14.4° | state=LIFTED
+[LIVE @ 86097 ms] pitch= +17.4° roll= +42.9° yaw=  -10.6° | state=LIFTED
+[LIVE @ 86597 ms] pitch=  +9.4° roll= +36.1° yaw=   -0.4° | state=IDLE
+[LIVE @ 87097 ms] pitch=  +7.7° roll= +23.6° yaw=   +4.4° | state=IDLE
+[LIVE @ 87596 ms] pitch=  +2.9° roll= +13.4° yaw=   +4.0° | state=IDLE
+[LIVE @ 88097 ms] pitch=  +1.1° roll= +10.8° yaw=   +3.5° | state=IDLE
+[LIVE @ 88597 ms] pitch=  +0.3° roll=  +9.0° yaw=   +3.4° | state=IDLE
+[LIVE @ 89097 ms] pitch=  +0.3° roll=  +3.3° yaw=   +3.3° | state=IDLE
+[LIVE @ 89597 ms] pitch=  -1.9° roll=  +1.1° yaw=   -2.9° | state=IDLE
+[LIVE @ 90096 ms] pitch=  -6.0° roll=  +2.2° yaw=   -2.0° | state=IDLE
+[FIFO] words=2717 quats=2717 ring=256 overruns=0
+[LIVE @ 90597 ms] pitch=  -4.1° roll=  +2.1° yaw=   +5.8° | state=IDLE
+[LIVE @ 91097 ms] pitch=  -3.7° roll=  +1.9° yaw=   +4.8° | state=IDLE
+[LIVE @ 91597 ms] pitch=  -3.3° roll=  +1.9° yaw=   +4.1° | state=IDLE
+[LIVE @ 92097 ms] pitch=  -3.3° roll=  +1.8° yaw=   +3.9° | state=IDLE
+[LIVE @ 92597 ms] pitch=  -4.0° roll=  +1.7° yaw=   +4.1° | state=IDLE
+[LIVE @ 93097 ms] pitch=  +4.7° roll=  +1.3° yaw=   +6.1° | state=IDLE
+[LIVE @ 93597 ms] pitch=  +4.5° roll=  +1.1° yaw=   +6.6° | state=IDLE
+[LIVE @ 94097 ms] pitch=  -1.6° roll=  +1.3° yaw=   -2.0° | state=IDLE
+[LIVE @ 94597 ms] pitch=  -3.1° roll=  +1.6° yaw=   -0.7° | state=IDLE
+[LIVE @ 95097 ms] pitch=  -2.4° roll=  +1.4° yaw=   -0.8° | state=IDLE
+[FIFO] words=2868 quats=2868 ring=256 overruns=0
+[LIVE @ 95597 ms] pitch=  -2.9° roll=  +1.1° yaw=   -0.6° | state=IDLE
+[LIVE @ 96096 ms] pitch=  -2.8° roll=  +1.2° yaw=   +0.1° | state=IDLE
+[LIVE @ 96596 ms] pitch=  -3.0° roll=  +1.3° yaw=   +0.5° | state=IDLE
+[LIVE @ 97097 ms] pitch=  -3.4° roll=  +1.4° yaw=   +0.6° | state=IDLE

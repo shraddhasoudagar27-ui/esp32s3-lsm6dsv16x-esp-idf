@@ -1,0 +1,962 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x18 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379322
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0a8h ( 45224) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b0d0 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e1b4 vaddr=40374000 size=01e64h (  7780) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1513ch ( 86332) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=00035164 vaddr=40375e64 size=0b6f8h ( 46840) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00040864 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (172) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (176) app_init: Compile time:     Apr 16 2026 13:08:10[0m
+[0;32mI (181) app_init: ELF file SHA256:  e3aa90bb5...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC97D20 len 000519F0 (326 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+
+=== Smart Hydration Bottle — LSM6DSV16X SFLP ===
+[BOOT] Found LSM6DSV16X @ 0x6B (WHO_AM_I=0x70)
+EMB_FUNC_FIFO_EN_A readback = 0x03 (expected 0x03)
+EMB_FUNC_EN_A = 0x0A
+[IMU] SFLP game rotation @ 30 Hz, watermark=32, stream mode
+[IMU] Events: wake-up | sleep | free-fall | emb-tilt → INT1
+[IMU] Thresholds: sip>30° (500ms) | chug>60° (1500ms)
+[IMU] Register readback:
+  0x10 = 0x04
+  0x11 = 0x04
+  0x12 = 0x44
+  0x15 = 0x04
+  0x17 = 0x01
+  0x07 = 0x20
+  0x08 = 0x00
+  0x09 = 0x00
+  0x0A = 0x06
+  0x0D = 0x08
+  0x5E = 0xAA
+  0x54 = 0xB1
+  0x55 = 0x02
+  0x5B = 0x82
+  0x5D = 0x33
+[IMU] Waiting for initial SFLP data...
+[IMU] Initial FIFO fill detected after 0 ms
+[FIFO] drain entry
+[FIFO] st=[0x01 0x00] INT1=0
+[FIFO] words=1
+tag=0x13
+quats=1
+[FIFO] st=[0x01 0x00] INT1=0
+[FIFO] words=1
+tag=0x13
+quats=2
+[FIFO] st=[0x00 0x00] INT1=0
+[FIFO] drain entry
+[BOOT] INT1 already high — initial service triggered
+[FIFO] st=[0x01 0x00] INT1=1
+[FIFO] words=1
+[BOOT] Pipeline armed. Monitoring for drinking events.
+
+tag=0x13
+quats=3
+[FIFO] st=[0x00 0x00] INT1=1
+[0;32mI (390) main_task: Returned from app_main()[0m
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=   +5.4° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=   +5.4° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=   +5.4° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=   +5.4° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=4
+tag=0x13
+quats=5
+tag=0x13
+quats=6
+tag=0x13
+quats=7
+tag=0x13
+quats=8
+tag=0x13
+quats=9
+tag=0x13
+quats=10
+tag=0x13
+quats=11
+tag=0x13
+quats=12
+tag=0x13
+quats=13
+tag=0x13
+quats=14
+tag=0x13
+quats=15
+tag=0x13
+quats=16
+tag=0x13
+quats=17
+tag=0x13
+quats=18
+tag=0x13
+quats=19
+tag=0x13
+quats=20
+tag=0x13
+quats=21
+tag=0x13
+quats=22
+tag=0x13
+quats=23
+tag=0x13
+quats=24
+tag=0x13
+quats=25
+tag=0x13
+quats=26
+tag=0x13
+quats=27
+tag=0x13
+quats=28
+tag=0x13
+quats=29
+tag=0x13
+quats=30
+tag=0x13
+quats=31
+tag=0x13
+quats=32
+tag=0x13
+quats=33
+tag=0x13
+quats=34
+tag=0x13
+quats=35
+tag=0x13
+quats=36
+tag=0x13
+quats=37
+tag=0x13
+quats=38
+tag=0x13
+quats=39
+tag=0x13
+quats=40
+tag=0x13
+quats=41
+tag=0x13
+quats=42
+tag=0x13
+quats=43
+tag=0x13
+quats=44
+tag=0x13
+quats=45
+tag=0x13
+quats=46
+tag=0x13
+quats=47
+tag=0x13
+quats=48
+tag=0x13
+quats=49
+tag=0x13
+quats=50
+tag=0x13
+quats=51
+tag=0x13
+quats=52
+tag=0x13
+quats=53
+tag=0x13
+quats=54
+tag=0x13
+quats=55
+tag=0x13
+quats=56
+tag=0x13
+quats=57
+tag=0x13
+quats=58
+tag=0x13
+quats=59
+tag=0x13
+quats=60
+tag=0x13
+quats=61
+tag=0x13
+quats=62
+tag=0x13
+quats=63
+[FIFO] st=[0x03 0x00] INT1=1
+[FIFO] words=3
+tag=0x13
+quats=64
+tag=0x13
+quats=65
+tag=0x13
+quats=66
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x01 0x00] INT1=1
+[FIFO] words=1
+tag=0x13
+quats=67
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.8° roll=  +0.9° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +0.9° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +0.9° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +0.9° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=68
+tag=0x13
+quats=69
+tag=0x13
+quats=70
+tag=0x13
+quats=71
+tag=0x13
+quats=72
+tag=0x13
+quats=73
+tag=0x13
+quats=74
+tag=0x13
+quats=75
+tag=0x13
+quats=76
+tag=0x13
+quats=77
+tag=0x13
+quats=78
+tag=0x13
+quats=79
+tag=0x13
+quats=80
+tag=0x13
+quats=81
+tag=0x13
+quats=82
+tag=0x13
+quats=83
+tag=0x13
+quats=84
+tag=0x13
+quats=85
+tag=0x13
+quats=86
+tag=0x13
+quats=87
+tag=0x13
+quats=88
+tag=0x13
+quats=89
+tag=0x13
+quats=90
+tag=0x13
+quats=91
+tag=0x13
+quats=92
+tag=0x13
+quats=93
+tag=0x13
+quats=94
+tag=0x13
+quats=95
+tag=0x13
+quats=96
+tag=0x13
+quats=97
+tag=0x13
+quats=98
+tag=0x13
+quats=99
+tag=0x13
+quats=100
+tag=0x13
+quats=101
+tag=0x13
+quats=102
+tag=0x13
+quats=103
+tag=0x13
+quats=104
+tag=0x13
+quats=105
+tag=0x13
+quats=106
+tag=0x13
+quats=107
+tag=0x13
+quats=108
+tag=0x13
+quats=109
+tag=0x13
+quats=110
+tag=0x13
+quats=111
+tag=0x13
+quats=112
+tag=0x13
+quats=113
+tag=0x13
+quats=114
+tag=0x13
+quats=115
+tag=0x13
+quats=116
+tag=0x13
+quats=117
+tag=0x13
+quats=118
+tag=0x13
+quats=119
+tag=0x13
+quats=120
+tag=0x13
+quats=121
+tag=0x13
+quats=122
+tag=0x13
+quats=123
+tag=0x13
+quats=124
+tag=0x13
+quats=125
+tag=0x13
+quats=126
+tag=0x13
+quats=127
+[FIFO] st=[0x03 0x00] INT1=1
+[FIFO] words=3
+tag=0x13
+quats=128
+tag=0x13
+quats=129
+tag=0x13
+quats=130
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=131
+tag=0x13
+quats=132
+tag=0x13
+quats=133
+tag=0x13
+quats=134
+tag=0x13
+quats=135
+tag=0x13
+quats=136
+tag=0x13
+quats=137
+tag=0x13
+quats=138
+tag=0x13
+quats=139
+tag=0x13
+quats=140
+tag=0x13
+quats=141
+tag=0x13
+quats=142
+tag=0x13
+quats=143
+tag=0x13
+quats=144
+tag=0x13
+quats=145
+tag=0x13
+quats=146
+tag=0x13
+quats=147
+tag=0x13
+quats=148
+tag=0x13
+quats=149
+tag=0x13
+quats=150
+tag=0x13
+quats=151
+tag=0x13
+quats=152
+tag=0x13
+quats=153
+tag=0x13
+quats=154
+tag=0x13
+quats=155
+tag=0x13
+quats=156
+tag=0x13
+quats=157
+tag=0x13
+quats=158
+tag=0x13
+quats=159
+tag=0x13
+quats=160
+tag=0x13
+quats=161
+tag=0x13
+quats=162
+tag=0x13
+quats=163
+tag=0x13
+quats=164
+tag=0x13
+quats=165
+tag=0x13
+quats=166
+tag=0x13
+quats=167
+tag=0x13
+quats=168
+tag=0x13
+quats=169
+tag=0x13
+quats=170
+tag=0x13
+quats=171
+tag=0x13
+quats=172
+tag=0x13
+quats=173
+tag=0x13
+quats=174
+tag=0x13
+quats=175
+tag=0x13
+quats=176
+tag=0x13
+quats=177
+tag=0x13
+quats=178
+tag=0x13
+quats=179
+tag=0x13
+quats=180
+tag=0x13
+quats=181
+tag=0x13
+quats=182
+tag=0x13
+quats=183
+tag=0x13
+quats=184
+tag=0x13
+quats=185
+tag=0x13
+quats=186
+tag=0x13
+quats=187
+tag=0x13
+quats=188
+tag=0x13
+quats=189
+tag=0x13
+quats=190
+[FIFO] words=190 quats=190 ring=190 overruns=0
+[FIFO] st=[0x04 0x00] INT1=1
+[FIFO] words=4
+tag=0x13
+quats=191
+tag=0x13
+quats=192
+tag=0x13
+quats=193
+tag=0x13
+quats=194
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=195
+tag=0x13
+quats=196
+tag=0x13
+quats=197
+tag=0x13
+quats=198
+tag=0x13
+quats=199
+tag=0x13
+quats=200
+tag=0x13
+quats=201
+tag=0x13
+quats=202
+tag=0x13
+quats=203
+tag=0x13
+quats=204
+tag=0x13
+quats=205
+tag=0x13
+quats=206
+tag=0x13
+quats=207
+tag=0x13
+quats=208
+tag=0x13
+quats=209
+tag=0x13
+quats=210
+tag=0x13
+quats=211
+tag=0x13
+quats=212
+tag=0x13
+quats=213
+tag=0x13
+quats=214
+tag=0x13
+quats=215
+tag=0x13
+quats=216
+tag=0x13
+quats=217
+tag=0x13
+quats=218
+tag=0x13
+quats=219
+tag=0x13
+quats=220
+tag=0x13
+quats=221
+tag=0x13
+quats=222
+tag=0x13
+quats=223
+tag=0x13
+quats=224
+tag=0x13
+quats=225
+tag=0x13
+quats=226
+tag=0x13
+quats=227
+tag=0x13
+quats=228
+tag=0x13
+quats=229
+tag=0x13
+quats=230
+tag=0x13
+quats=231
+tag=0x13
+quats=232
+tag=0x13
+quats=233
+tag=0x13
+quats=234
+tag=0x13
+quats=235
+tag=0x13
+quats=236
+tag=0x13
+quats=237
+tag=0x13
+quats=238
+tag=0x13
+quats=239
+tag=0x13
+quats=240
+tag=0x13
+quats=241
+tag=0x13
+quats=242
+tag=0x13
+quats=243
+tag=0x13
+quats=244
+tag=0x13
+quats=245
+tag=0x13
+quats=246
+tag=0x13
+quats=247
+tag=0x13
+quats=248
+tag=0x13
+quats=249
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+tag=0x13
+quats=250
+tag=0x13
+quats=251
+tag=0x13
+quats=252
+tag=0x13
+quats=253
+tag=0x13
+quats=254
+[FIFO] st=[0x03 0x00] INT1=1
+[FIFO] words=3
+tag=0x13
+quats=255
+tag=0x13
+quats=256
+tag=0x13
+quats=257
+[FIFO] st=[0x01 0x00] INT1=1
+[FIFO] words=1
+tag=0x13
+quats=258
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=259
+tag=0x13
+quats=260
+tag=0x13
+quats=261
+tag=0x13
+quats=262
+tag=0x13
+quats=263
+tag=0x13
+quats=264
+tag=0x13
+quats=265
+tag=0x13
+quats=266
+tag=0x13
+quats=267
+tag=0x13
+quats=268
+tag=0x13
+quats=269
+tag=0x13
+quats=270
+tag=0x13
+quats=271
+tag=0x13
+quats=272
+tag=0x13
+quats=273
+tag=0x13
+quats=274
+tag=0x13
+quats=275
+tag=0x13
+quats=276
+tag=0x13
+quats=277
+tag=0x13
+quats=278
+tag=0x13
+quats=279
+tag=0x13
+quats=280
+tag=0x13
+quats=281
+tag=0x13
+quats=282
+tag=0x13
+quats=283
+tag=0x13
+quats=284
+tag=0x13
+quats=285
+tag=0x13
+quats=286
+tag=0x13
+quats=287
+tag=0x13
+quats=288
+tag=0x13
+quats=289
+tag=0x13
+quats=290
+tag=0x13
+quats=291
+tag=0x13
+quats=292
+tag=0x13
+quats=293
+tag=0x13
+quats=294
+tag=0x13
+quats=295
+tag=0x13
+quats=296
+tag=0x13
+quats=297
+tag=0x13
+quats=298
+tag=0x13
+quats=299
+tag=0x13
+quats=300
+tag=0x13
+quats=301
+tag=0x13
+quats=302
+tag=0x13
+quats=303
+tag=0x13
+quats=304
+tag=0x13
+quats=305
+tag=0x13
+quats=306
+tag=0x13
+quats=307
+tag=0x13
+quats=308
+tag=0x13
+quats=309
+tag=0x13
+quats=310
+tag=0x13
+quats=311
+tag=0x13
+quats=312
+tag=0x13
+quats=313
+tag=0x13
+quats=314
+tag=0x13
+quats=315
+tag=0x13
+quats=316
+tag=0x13
+quats=317
+tag=0x13
+quats=318
+[FIFO] st=[0x03 0x00] INT1=1
+[FIFO] words=3
+tag=0x13
+quats=319
+tag=0x13
+quats=320
+tag=0x13
+quats=321
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x01 0x00] INT1=1
+[FIFO] words=1
+tag=0x13
+quats=322
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[FIFO] drain entry
+[FIFO] st=[0x3C 0x80] INT1=1
+[FIFO] words=60
+tag=0x13
+quats=323
+tag=0x13
+quats=324
+tag=0x13
+quats=325
+tag=0x13
+quats=326
+tag=0x13
+quats=327
+tag=0x13
+quats=328
+tag=0x13
+quats=329
+tag=0x13
+quats=330
+tag=0x13
+quats=331
+tag=0x13
+quats=332
+tag=0x13
+quats=333
+tag=0x13
+quats=334
+tag=0x13
+quats=335
+tag=0x13
+quats=336
+tag=0x13
+quats=337
+tag=0x13
+quats=338
+tag=0x13
+quats=339
+tag=0x13
+quats=340
+tag=0x13
+quats=341
+tag=0x13
+quats=342
+tag=0x13
+quats=343
+tag=0x13
+quats=344
+tag=0x13
+quats=345
+tag=0x13
+quats=346
+tag=0x13
+quats=347
+tag=0x13
+quats=348
+tag=0x13
+quats=349
+tag=0x13
+quats=350
+tag=0x13
+quats=351
+tag=0x13
+quats=352
+tag=0x13
+quats=353
+tag=0x13
+quats=354
+tag=0x13
+quats=355
+tag=0x13
+quats=356
+tag=0x13
+quats=357
+tag=0x13
+quats=358
+tag=0x13
+quats=359
+tag=0x13
+quats=360
+tag=0x13
+quats=361
+tag=0x13
+quats=362
+tag=0x13
+quats=363
+tag=0x13
+quats=364
+tag=0x13
+quats=365
+tag=0x13
+quats=366
+tag=0x13
+quats=367
+tag=0x13
+quats=368
+tag=0x13
+quats=369
+tag=0x13
+quats=370
+tag=0x13
+quats=371
+tag=0x13
+quats=372
+tag=0x13
+quats=373
+tag=0x13
+quats=374
+tag=0x13
+quats=375
+tag=0x13
+quats=376
+tag=0x13
+quats=377
+tag=0x13
+quats=378
+tag=0x13
+quats=379
+tag=0x13
+quats=380
+tag=0x13
+quats=381
+tag=0x13
+quats=382
+[FIFO] words=382 quats=382 ring=256 overruns=0
+[FIFO] st=[0x03 0x00] INT1=1
+[FIFO] words=3
+tag=0x13
+quats=383
+tag=0x13
+quats=384
+tag=0x13
+quats=385
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x01 0x00] INT1=1
+[FIFO] words=1
+tag=0x13
+quats=386
+[FIFO] st=[0x00 0x00] INT1=1
+[FIFO] drain entry
+[FIFO] st=[0x00 0x00] INT1=1
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.7° roll=  +1.0° yaw=   +5.5° | state=IDLE | sips=0 chugs=0

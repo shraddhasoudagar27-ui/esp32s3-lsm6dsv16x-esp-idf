@@ -1,0 +1,4 @@
+idf_py_stdout_output_*
+*.log
+*.csv
+build/

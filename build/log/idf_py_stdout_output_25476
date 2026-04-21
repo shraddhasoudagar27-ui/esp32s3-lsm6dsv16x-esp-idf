@@ -1,0 +1,5156 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x18 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40377bab
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ad18h ( 44312) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001ad40 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001de24 vaddr=40374000 size=021f4h (  8692) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=149dch ( 84444) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=00034a04 vaddr=403761f4 size=0b308h ( 45832) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0003fd14 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (160) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (171) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (175) app_init: Compile time:     Apr  9 2026 13:12:20[0m
+[0;32mI (180) app_init: ELF file SHA256:  443e97b94...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC96D20 len 000529F0 (330 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (246) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (256) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (262) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+LSM6DSV16X at 0x6B (WHO_AM_I=0x70)
+[STATE] UNKNOWN @ 54 ms
+[MOTION] FLAT
+[LABEL] HOLD
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[MOTION] FLAT
+[FIFO] Drained 51 words, ring depth=17, samples=17
+[MOTION] FLAT
+[MOTION] FLAT
+[FIFO] Drained 6 words, ring depth=19, samples=19
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=20, samples=20
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=21, samples=21
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=22, samples=22
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=23, samples=23
+IMU write failed: CTRL3_REG (0x12) = 0x01: ESP_ERR_TIMEOUT
+ERROR: IMU configure failed
+[0;32mI (379) main_task: Returned from app_main()[0m
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=24, samples=24
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=25, samples=25
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=26, samples=26
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=27, samples=27
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=28, samples=28
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=29, samples=29
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=30, samples=30
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=31, samples=31
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=32, samples=32
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=33, samples=33
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=34, samples=34
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=35, samples=35
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=36, samples=36
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=37, samples=37
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=38, samples=38
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=39, samples=39
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=40, samples=40
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=41, samples=41
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=42, samples=42
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=43, samples=43
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=44, samples=44
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=45, samples=45
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=46, samples=46
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=47, samples=47
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=48, samples=48
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=49, samples=49
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=50, samples=50
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=51, samples=51
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=52, samples=52
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=53, samples=53
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=54, samples=54
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=55, samples=55
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=56, samples=56
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=57, samples=57
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=58, samples=58
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=59, samples=59
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=60, samples=60
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=61, samples=61
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=62, samples=62
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=63, samples=63
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=64, samples=64
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=65, samples=65
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=66, samples=66
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=67, samples=67
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=68, samples=68
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=69, samples=69
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=70, samples=70
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=71, samples=71
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=72, samples=72
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=73, samples=73
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=74, samples=74
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=75, samples=75
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=76, samples=76
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=77, samples=77
+[LIVE] AX=0.137 AY=0.378 AZ=0.931 | GX=-0.368 GY=-0.210 GZ=0.166 | t=1039 ms
+[STATE] HOLD @ 1052 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=78, samples=78
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=79, samples=79
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=80, samples=80
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=81, samples=81
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=82, samples=82
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=83, samples=83
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=84, samples=84
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=85, samples=85
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=86, samples=86
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=87, samples=87
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=88, samples=88
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=89, samples=89
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=90, samples=90
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=91, samples=91
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=92, samples=92
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=93, samples=93
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=94, samples=94
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=95, samples=95
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=96, samples=96
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=97, samples=97
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=98, samples=98
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=99, samples=99
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=100, samples=100
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=101, samples=101
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=102, samples=102
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=103, samples=103
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=104, samples=104
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=105, samples=105
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=106, samples=106
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=107, samples=107
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=108, samples=108
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=109, samples=109
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=110, samples=110
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=111, samples=111
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=112, samples=112
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=113, samples=113
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=114, samples=114
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=115, samples=115
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=116, samples=116
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=117, samples=117
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=118, samples=118
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=119, samples=119
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=120, samples=120
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=121, samples=121
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=122, samples=122
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=123, samples=123
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=124, samples=124
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=125, samples=125
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=126, samples=126
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=127, samples=127
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=128, samples=128
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=129, samples=129
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=130, samples=130
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=131, samples=131
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=132, samples=132
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=133, samples=133
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=134, samples=134
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=135, samples=135
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=136, samples=136
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=137, samples=137
+[LIVE] AX=0.137 AY=0.379 AZ=0.933 | GX=-2.074 GY=0.394 GZ=0.026 | t=2037 ms
+[STATE] HOLD @ 2052 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=138, samples=138
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=139, samples=139
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=140, samples=140
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=141, samples=141
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=142, samples=142
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=143, samples=143
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=144, samples=144
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=145, samples=145
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=146, samples=146
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=147, samples=147
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=148, samples=148
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=149, samples=149
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=150, samples=150
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=151, samples=151
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=152, samples=152
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=153, samples=153
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=154, samples=154
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=155, samples=155
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=156, samples=156
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=157, samples=157
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=158, samples=158
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=159, samples=159
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=160, samples=160
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=161, samples=161
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=162, samples=162
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=163, samples=163
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=164, samples=164
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=165, samples=165
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=166, samples=166
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=167, samples=167
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=168, samples=168
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=169, samples=169
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=170, samples=170
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=171, samples=171
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=172, samples=172
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=173, samples=173
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=174, samples=174
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=175, samples=175
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=176, samples=176
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=177, samples=177
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=178, samples=178
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=179, samples=179
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=180, samples=180
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=181, samples=181
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=182, samples=182
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=183, samples=183
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=184, samples=184
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=185, samples=185
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=186, samples=186
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=187, samples=187
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=188, samples=188
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=189, samples=189
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=190, samples=190
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=191, samples=191
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=192, samples=192
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=193, samples=193
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=194, samples=194
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=195, samples=195
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=196, samples=196
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=197, samples=197
+[LIVE] AX=0.137 AY=0.377 AZ=0.930 | GX=-0.157 GY=-0.236 GZ=0.149 | t=3035 ms
+[STATE] HOLD @ 3052 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=198, samples=198
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=199, samples=199
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=200, samples=200
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=201, samples=201
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=202, samples=202
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=203, samples=203
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=204, samples=204
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=205, samples=205
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=206, samples=206
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=207, samples=207
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=208, samples=208
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=209, samples=209
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=210, samples=210
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=211, samples=211
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=212, samples=212
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=213, samples=213
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=214, samples=214
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=215, samples=215
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=216, samples=216
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=217, samples=217
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=218, samples=218
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=219, samples=219
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=220, samples=220
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=221, samples=221
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=222, samples=222
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=223, samples=223
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=224, samples=224
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=225, samples=225
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=226, samples=226
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=227, samples=227
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=228, samples=228
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=229, samples=229
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=230, samples=230
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=231, samples=231
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=232, samples=232
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=233, samples=233
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=234, samples=234
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=235, samples=235
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=236, samples=236
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=237, samples=237
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=238, samples=238
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=239, samples=239
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=240, samples=240
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=241, samples=241
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=242, samples=242
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=243, samples=243
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=244, samples=244
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=245, samples=245
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=246, samples=246
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=247, samples=247
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=248, samples=248
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=249, samples=249
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=250, samples=250
+[FIFO] Drained 2 words, ring depth=250, samples=250
+[MOTION] FLAT
+[FIFO] Drained 1 words, ring depth=251, samples=251
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=252, samples=252
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=253, samples=253
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=254, samples=254
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=255, samples=255
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=256
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=257
+[LIVE] AX=0.137 AY=0.378 AZ=0.931 | GX=-0.350 GY=-0.201 GZ=0.166 | t=4034 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=258
+[STATE] HOLD @ 4051 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=259
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=260
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=261
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=262
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=263
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=264
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=265
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=266
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=267
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=268
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=269
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=270
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=271
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=272
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=273
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=274
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=275
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=276
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=277
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=278
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=279
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=280
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=281
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=282
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=283
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=284
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=285
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=286
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=287
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=288
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=289
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=290
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=291
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=292
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=293
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=294
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=295
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=296
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=297
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=298
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=299
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=300
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=301
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=302
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=303
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=304
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=305
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=306
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=307
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=308
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=309
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=310
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=311
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=312
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=313
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=314
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=315
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=316
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=317
+[LIVE] AX=0.070 AY=0.639 AZ=0.786 | GX=286.685 GY=-20.265 GZ=-16.161 | t=5033 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=318
+[STATE] LIFT @ 5051 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=319
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=320
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=321
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=322
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=323
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=324
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=325
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=326
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=327
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=328
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=329
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=330
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=331
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=332
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=333
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=334
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=335
+[MOTION] LIFTED
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=457
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=458
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=459
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=460
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=461
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=462
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=463
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=464
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=465
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=466
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=467
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=468
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=469
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=470
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=471
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=472
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=473
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=474
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=475
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=476
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=477
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=478
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=479
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=480
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=481
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=482
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=483
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=484
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=485
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=486
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=487
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=488
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=489
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=490
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=491
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=492
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=493
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=494
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=495
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=496
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=497
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=498
+[LIVE] AX=0.372 AY=0.102 AZ=0.948 | GX=-36.146 GY=-8.076 GZ=-19.618 | t=8045 ms
+[STATE] LIFT @ 8062 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=499
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=500
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=501
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=502
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=503
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=504
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=505
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=506
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=507
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=508
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=509
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=510
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=511
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=512
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=513
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=514
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=515
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=516
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=517
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=518
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=519
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=520
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=521
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=522
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=523
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=524
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=525
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=526
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=527
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=528
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=529
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=530
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=531
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=532
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=533
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=534
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=535
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=536
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=537
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=538
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=539
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=540
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=541
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=542
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=543
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=544
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=545
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=546
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=547
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=548
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=549
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=550
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=551
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=552
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=553
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=554
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=555
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=556
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=557
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=558
+[LIVE] AX=0.152 AY=0.897 AZ=0.495 | GX=216.965 GY=-24.194 GZ=-36.549 | t=9043 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=559
+[STATE] LIFT @ 9061 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=560
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=561
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=562
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=563
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=564
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=565
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=566
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1411
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1412
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1413
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1414
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1415
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1416
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1417
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1418
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1419
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1420
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1421
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=1422
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1423
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1424
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1425
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1426
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1427
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1428
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1429
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1430
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1431
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1432
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1433
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1434
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1435
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1436
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1437
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1438
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1439
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1440
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1441
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1442
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1443
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1444
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1445
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1446
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1447
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1448
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1449
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1450
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1451
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1452
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1453
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1454
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1455
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1456
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1457
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1458
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1459
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1460
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1461
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1462
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1463
+[LIVE] AX=0.367 AY=0.440 AZ=0.895 | GX=-24.771 GY=13.440 GZ=80.325 | t=24104 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1464
+[STATE] LIFT @ 24121 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1465
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1466
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1467
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1468
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1469
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1470
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1471
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1472
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1473
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1474
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1475
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1476
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1477
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1478
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1479
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1480
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1481
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1482
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1483
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1484
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1485
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1486
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1487
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1488
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1489
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1490
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1491
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1492
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1493
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1494
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1495
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1496
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1497
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1498
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1499
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1500
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1501
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1502
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1503
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1504
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1505
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1506
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1507
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1508
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1509
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1510
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1511
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1512
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1513
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1514
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1515
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1516
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1517
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1518
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1519
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1520
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1521
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1522
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1523
+[LIVE] AX=0.463 AY=0.262 AZ=0.889 | GX=147.753 GY=-23.380 GZ=7.997 | t=25103 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1524
+[STATE] LIFT @ 25121 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1525
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1526
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1527
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1528
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1529
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1530
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1531
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1532
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1533
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1534
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1535
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1536
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1537
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1538
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1539
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1540
+[FIFO] Drained 2 words, ring depth=256, samples=1540
+[MOTION] LIFTED
+[FIFO] Drained 1 words, ring depth=256, samples=1541
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1542
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1543
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1544
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1545
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1546
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1547
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1548
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1549
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1550
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1551
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1552
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1553
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1554
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1555
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1556
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1557
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1558
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1559
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1560
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1561
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1562
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1563
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1564
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1565
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1566
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1567
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1568
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1569
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1570
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1571
+[FIFO] Drained 2 words, ring depth=256, samples=1571
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 1 words, ring depth=256, samples=1572
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1573
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1574
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1575
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1576
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1577
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1578
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1579
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1580
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1581
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1582
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1583
+[LIVE] AX=0.141 AY=0.000 AZ=1.004 | GX=-6.099 GY=21.140 GZ=18.944 | t=26101 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1584
+[STATE] LIFT @ 26120 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1585
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1586
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1587
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1588
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1589
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1590
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1591
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1592
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1593
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1594
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1595
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1596
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1597
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1598
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1599
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1600
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1601
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1602
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1603
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1604
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1605
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1606
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1607
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1608
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1609
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1610
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1611
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1612
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1613
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1614
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1615
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1616
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1617
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1618
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1619
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1620
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1621
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1622
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1623
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1624
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1625
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1626
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1627
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1628
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1629
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1630
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1631
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1632
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1633
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1634
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1635
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1636
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1637
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1638
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1639
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1640
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1641
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1642
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1643
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1644
+[LIVE] AX=-0.002 AY=-0.007 AZ=1.020 | GX=-0.061 GY=4.305 GZ=8.461 | t=27116 ms
+[STATE] HOLD @ 27122 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1645
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1646
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1647
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1648
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1649
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1650
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1651
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1652
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1653
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1654
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1655
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1656
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1657
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1658
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1659
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1660
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1661
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1662
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1663
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1664
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1665
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1666
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1667
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1668
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1669
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1670
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1671
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1672
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1673
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1674
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1675
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1676
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1677
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1678
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1679
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1680
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1681
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1682
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1683
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1684
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1685
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1686
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1687
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1688
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1689
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1690
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1691
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1692
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1693
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1694
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1695
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1696
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1697
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1698
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1699
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1700
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1701
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1702
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1703
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1704
+[LIVE] AX=-0.007 AY=-0.013 AZ=1.024 | GX=-1.934 GY=0.061 GZ=2.433 | t=28115 ms
+[STATE] HOLD @ 28128 ms
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1705
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1706
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1707
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1708
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1709
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1710
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1711
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1712
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1713
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1714
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1715
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1716
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1717
+[FIFO] Drained 1 words, ring depth=256, samples=1717
+[MOTION] FLAT
+[FIFO] Drained 2 words, ring depth=256, samples=1718
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1719
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1720
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1721
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1722
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1723
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1724
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1725
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1726
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1727
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1728
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1729
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1730
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1731
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1732
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1733
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1734
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1735
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1736
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1737
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1738
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1739
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1740
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1741
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1742
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1743
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1744
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1745
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1746
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1747
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1748
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1749
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1750
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1751
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1752
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1753
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1754
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1755
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1756
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1757
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1758
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1759
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1760
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1761
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1762
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1763
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1764
+[LIVE] AX=-0.010 AY=-0.011 AZ=1.020 | GX=-0.149 GY=-0.245 GZ=0.026 | t=29113 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1765
+[STATE] HOLD @ 29131 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1766
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1767
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1768
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1769
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1770
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1771
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1772
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1773
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1774
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1775
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1776
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1777
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1778
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1779
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1780
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1781
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1782
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1783
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1784
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1785
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1786
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1787
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1788
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1789
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1790
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1791
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1792
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1793
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1794
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1795
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1796
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1797
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1798
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1799
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1800
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1801
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1802
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1803
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1804
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1805
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1806
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1807
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1808
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1809
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1810
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1811
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1812
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1813
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1814
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1815
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1816
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1817
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1818
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1819
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1820
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1821
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1822
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1823
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1824
+[LIVE] AX=-0.016 AY=-0.011 AZ=1.019 | GX=-0.184 GY=-0.280 GZ=-2.056 | t=30112 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1825
+[STATE] HOLD @ 30131 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1826
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1827
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1828
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1829
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1830
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1831
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1832
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1833
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1834
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1835
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1836
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1837
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1838
+[FIFO] Drained 2 words, ring depth=256, samples=1838
+[MOTION] LIFTED
+[FIFO] Drained 1 words, ring depth=256, samples=1839
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1840
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1841
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1842
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1843
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1844
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1845
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1846
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1847
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1848
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1849
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1850
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1851
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1852
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1853
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1854
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1855
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1856
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1857
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1858
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1859
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1860
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1861
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1862
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1863
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1864
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1865
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1866
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1867
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1868
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1869
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1870
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1871
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1872
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1873
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1874
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1875
+[FIFO] Drained 1 words, ring depth=256, samples=1875
+[MOTION] FLAT
+[FIFO] Drained 2 words, ring depth=256, samples=1876
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1877
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1878
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1879
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1880
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1881
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1882
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1883
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1884
+[LIVE] AX=-0.020 AY=0.145 AZ=1.012 | GX=2.056 GY=-3.360 GZ=2.835 | t=31111 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1885
+[STATE] HOLD @ 31129 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1886
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1887
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1888
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1889
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1890
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1891
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1892
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1893
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1894
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1895
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1896
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1897
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1898
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1899
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1900
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1901
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1902
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1903
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1904
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1905
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1906
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1907
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1908
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1909
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1910
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1911
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1912
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1913
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1914
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1915
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1916
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1917
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1918
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1919
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1920
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1921
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1922
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1923
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1924
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1925
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1926
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1927
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1928
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1929
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1930
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1931
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1932
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1933
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1934
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1935
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1936
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1937
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1938
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1939
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1940
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1941
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1942
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1943
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1944
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1945
+[LIVE] AX=0.063 AY=0.201 AZ=1.039 | GX=8.811 GY=-15.636 GZ=4.156 | t=32126 ms
+[STATE] HOLD @ 32132 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1946
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1947
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1948
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1949
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1950
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1951
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1952
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1953
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1954
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1955
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1956
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1957
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1958
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1959
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1960
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1961
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1962
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1963
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1964
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1965
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1966
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1967
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1968
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1969
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1970
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1971
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1972
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1973
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1974
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1975
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1976
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1977
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1978
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=1979
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=1980
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=1981
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=1982
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1983
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1984
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1985
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1986
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1987
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1988
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1989
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1990
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1991
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1992
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1993
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1994
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=1995
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1996
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1997
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1998
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=1999
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2000
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2001
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2002
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2003
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2004
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2005
+[LIVE] AX=0.665 AY=0.097 AZ=0.742 | GX=-41.361 GY=-22.085 GZ=-2.634 | t=33124 ms
+[STATE] LIFT @ 33132 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2006
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2007
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2008
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2009
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2010
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2011
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2012
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2013
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2014
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2015
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2016
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2017
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2018
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2019
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2020
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2021
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2022
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2023
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2024
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2025
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2026
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2027
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2028
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2029
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2030
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2031
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2032
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2033
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2034
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2035
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2036
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2037
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2038
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2039
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2040
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2041
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2042
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2043
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2044
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2045
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2046
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2047
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2048
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2049
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2050
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2051
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2052
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2053
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2054
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2055
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2056
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2057
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2058
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2059
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2060
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2061
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2062
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2063
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2064
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2065
+[LIVE] AX=0.061 AY=-0.766 AZ=-0.596 | GX=2.161 GY=6.011 GZ=102.882 | t=34123 ms
+[STATE] LIFT @ 34132 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2066
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2067
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2068
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2069
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2070
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2071
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2072
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2073
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2074
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2075
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2076
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2077
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2078
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2079
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2080
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2081
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2082
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2083
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2084
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2085
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2086
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2087
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2088
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2089
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2090
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2091
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2092
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2093
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2094
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2095
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2096
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2097
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2098
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2099
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2100
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2101
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2102
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2103
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2104
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2105
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2106
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2107
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2108
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2109
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2110
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2111
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2112
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2113
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2114
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2115
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2116
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2117
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2118
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2119
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2120
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2121
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2122
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2123
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2124
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2125
+[LIVE] AX=0.101 AY=-0.926 AZ=-0.354 | GX=-71.103 GY=69.895 GZ=17.167 | t=35121 ms
+[STATE] LIFT @ 35132 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2126
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2127
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2128
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2129
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2130
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2131
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2132
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2133
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2134
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2135
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2136
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2137
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2138
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2139
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2140
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2141
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2142
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2143
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2144
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2145
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2146
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2147
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2148
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2149
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2150
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2151
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2152
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2153
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2154
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2155
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2156
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2157
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2158
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2159
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2160
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2161
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2162
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2163
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2164
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2165
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2166
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2167
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2168
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2169
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2170
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2171
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2172
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2173
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2174
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2175
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2176
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2177
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2178
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2179
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2180
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2181
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2182
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2183
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2184
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2185
+[LIVE] AX=0.111 AY=-0.893 AZ=-0.427 | GX=-1.409 GY=1.820 GZ=0.245 | t=36120 ms
+[STATE] TILT @ 36136 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2186
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2187
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2188
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2189
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2190
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2191
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2192
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2193
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2194
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2195
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2196
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2197
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2198
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2199
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2200
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2201
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2202
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2203
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2204
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2205
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2206
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2207
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2208
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2209
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2210
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2211
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2212
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2213
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2214
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2215
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2216
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2217
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2218
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2219
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2220
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2221
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2222
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2223
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2224
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2225
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2226
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2227
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2228
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2229
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2230
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2231
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2232
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2233
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2234
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2235
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2236
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2237
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2238
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2239
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2240
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2241
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2242
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2243
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2244
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2245
+[LIVE] AX=0.127 AY=-0.867 AZ=-0.469 | GX=1.654 GY=-1.094 GZ=-0.306 | t=37118 ms
+[STATE] TILT @ 37132 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2246
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2247
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2248
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2249
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2250
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2251
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2252
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2253
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2254
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2255
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2256
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2257
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2258
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2259
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2260
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2261
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2262
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2263
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2264
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2265
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2266
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2267
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2268
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2269
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2270
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2271
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2272
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2273
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2274
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2275
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2276
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2277
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2278
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2279
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2280
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2281
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2282
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2283
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2284
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2285
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2286
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2287
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2288
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2289
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2290
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2291
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2292
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2293
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2294
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2295
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2296
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2297
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2298
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2299
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2300
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2301
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2302
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2303
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2304
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2305
+[LIVE] AX=0.081 AY=-0.875 AZ=-0.471 | GX=-1.426 GY=-14.149 GZ=-30.809 | t=38117 ms
+[STATE] LIFT @ 38132 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2306
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2307
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2308
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2309
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2310
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2311
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2312
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2313
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2314
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2315
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2316
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2317
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2318
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2319
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2320
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2321
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2322
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2323
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2324
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2325
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2326
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2327
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2328
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2329
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2330
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2331
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2332
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2333
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2334
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2335
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2336
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2337
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2338
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2339
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2340
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2341
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2342
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2343
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2344
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2345
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2346
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2347
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2348
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2349
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2350
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2351
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2352
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2353
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2354
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2355
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2356
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2357
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2358
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2359
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2360
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2361
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2362
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2363
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2364
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2365
+[LIVE] AX=0.001 AY=-0.981 AZ=-0.194 | GX=8.960 GY=6.387 GZ=1.452 | t=39115 ms
+[STATE] TILT @ 39132 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2366
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2367
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2368
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2369
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2370
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2371
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2372
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2373
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2374
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2375
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2376
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2377
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2378
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2379
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2380
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2381
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2382
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2383
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2384
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2385
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2386
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2387
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2388
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2389
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2390
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2391
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2392
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2393
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2394
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2395
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2396
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2397
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2398
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2399
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2400
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2401
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2402
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2403
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2404
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2405
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2406
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2407
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2408
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2409
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2410
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2411
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2412
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2413
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2414
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2415
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2416
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2417
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2418
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2419
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2420
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2421
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2422
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2423
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2424
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2425
+[LIVE] AX=0.002 AY=-0.998 AZ=-0.111 | GX=9.039 GY=-0.245 GZ=0.079 | t=40114 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2426
+[STATE] TILT @ 40131 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2427
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2428
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2429
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2430
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2431
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2432
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2433
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2434
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2435
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2436
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2437
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2438
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2439
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2440
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2441
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2442
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2443
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2444
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2445
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2446
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2447
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2448
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2449
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2450
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2451
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2452
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2453
+[FIFO] Drained 1 words, ring depth=256, samples=2453
+[MOTION] TILTED
+[FIFO] Drained 2 words, ring depth=256, samples=2454
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2455
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2456
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2457
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2458
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2459
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2460
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2461
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2462
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2463
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2464
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2465
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2466
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2467
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2468
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2469
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2470
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2471
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2472
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2473
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2474
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2475
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2476
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2477
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2478
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2479
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2480
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2481
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2482
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2483
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2484
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2485
+[LIVE] AX=0.001 AY=-0.991 AZ=-0.151 | GX=-10.920 GY=15.243 GZ=2.870 | t=41112 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2486
+[STATE] TILT @ 41131 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2487
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2488
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2489
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2490
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2491
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2492
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2493
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2494
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2495
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2496
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2497
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2498
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2499
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2500
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2501
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2502
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2503
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2504
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2505
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2506
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2507
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2508
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2509
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2510
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2511
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2512
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2513
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2514
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2515
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2516
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2517
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2518
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2519
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2520
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2521
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2522
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2523
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2524
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2525
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2526
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2527
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2528
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2529
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2530
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2531
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2532
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2533
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2534
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2535
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2536
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2537
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2538
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2539
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2540
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2541
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2542
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2543
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2544
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2545
+[LIVE] AX=0.068 AY=-0.958 AZ=-0.198 | GX=2.529 GY=-3.561 GZ=-0.630 | t=42110 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2546
+[STATE] LIFT @ 42131 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2547
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2548
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2549
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2550
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2551
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2552
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2553
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2554
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2555
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2556
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2557
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2558
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2559
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2560
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2561
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2562
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2563
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2564
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2565
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2566
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2567
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2568
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2569
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2570
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2571
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2572
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2573
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2574
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2575
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2576
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2577
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2578
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2579
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2580
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2581
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2582
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2583
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2584
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2585
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2586
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2587
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2588
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2589
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2590
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2591
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2592
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2593
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2594
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2595
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2596
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2597
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2598
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2599
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2600
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2601
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2602
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2603
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2604
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2605
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2606
+[LIVE] AX=-0.020 AY=-1.022 AZ=-0.076 | GX=-16.275 GY=-38.062 GZ=-5.451 | t=43126 ms
+[STATE] LIFT @ 43139 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2607
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2608
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2609
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2610
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2611
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2612
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2613
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2614
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2615
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2616
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2617
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2618
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2619
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2620
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2621
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2622
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2623
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2624
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2625
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2626
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2627
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2628
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2629
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2630
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2631
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2632
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2633
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2634
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2635
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2636
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2637
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2638
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2639
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2640
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2641
+[FIFO] Drained 1 words, ring depth=256, samples=2641
+[MOTION] LIFTED
+[FIFO] Drained 2 words, ring depth=256, samples=2642
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2643
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2644
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2645
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2646
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2647
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2648
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2649
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2650
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2651
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2652
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2653
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2654
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2655
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2656
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2657
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2658
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2659
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2660
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2661
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2662
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2663
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2664
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2665
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2666
+[LIVE] AX=0.003 AY=-1.013 AZ=-0.179 | GX=19.154 GY=0.280 GZ=0.271 | t=44125 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2667
+[STATE] TILT @ 44141 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2668
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2669
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2670
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2671
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2672
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2673
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2674
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2675
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2676
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2677
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2678
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2679
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2680
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2681
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2682
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2683
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2684
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2685
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2686
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2687
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2688
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2689
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2690
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2691
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2692
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2693
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2694
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2695
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2696
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2697
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2698
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=2699
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2700
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2701
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2702
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2703
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2704
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2705
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=2706
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2707
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2708
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2709
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2710
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2711
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2712
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2713
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2714
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2715
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2716
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2717
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2718
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2719
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2720
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2721
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2722
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2723
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2724
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2725
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2726
+[LIVE] AX=0.003 AY=-1.020 AZ=-0.099 | GX=1.207 GY=-0.315 GZ=0.157 | t=45123 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2727
+[STATE] TILT @ 45141 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2728
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2729
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2730
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2731
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2732
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2733
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2734
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2735
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2736
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2737
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2738
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2739
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2740
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2741
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2742
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2743
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2744
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2745
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2746
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2747
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2748
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2749
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2750
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2751
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2752
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2753
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2754
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2755
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2756
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2757
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2758
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2759
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2760
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2761
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2762
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2763
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2764
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2765
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2766
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2767
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2768
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2769
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2770
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2771
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2772
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2773
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2774
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2775
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2776
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2777
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2778
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2779
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2780
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2781
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2782
+[FIFO] Drained 2 words, ring depth=256, samples=2782
+[MOTION] TILTED
+[FIFO] Drained 1 words, ring depth=256, samples=2783
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2784
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2785
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2786
+[LIVE] AX=0.001 AY=-1.019 AZ=-0.110 | GX=-1.794 GY=-0.551 GZ=0.053 | t=46121 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2787
+[STATE] TILT @ 46140 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2788
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2789
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2790
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2791
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2792
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2793
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2794
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2795
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2796
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2797
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2798
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2799
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2800
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2801
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2802
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2803
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2804
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2805
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2806
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2807
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2808
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2809
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2810
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2811
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2812
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2813
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2814
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2815
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2816
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2817
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2818
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2819
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2820
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2821
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2822
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2823
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2824
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2825
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2826
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2827
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2828
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2829
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2830
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2831
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2832
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2833
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2834
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2835
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2836
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2837
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2838
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2839
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2840
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2841
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2842
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2843
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2844
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2845
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2846
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2847
+[LIVE] AX=-0.001 AY=-1.021 AZ=-0.104 | GX=-0.070 GY=-0.499 GZ=0.053 | t=47136 ms
+[STATE] TILT @ 47142 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2848
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2849
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2850
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2851
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2852
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2853
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2854
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2855
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2856
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2857
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2858
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2859
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2860
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2861
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2862
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2863
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2864
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2865
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2866
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2867
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2868
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2869
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2870
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2871
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2872
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2873
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2874
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2875
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2876
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2877
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2878
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2879
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2880
+[FIFO] Drained 2 words, ring depth=256, samples=2880
+[MOTION] TILTED
+[FIFO] Drained 1 words, ring depth=256, samples=2881
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2882
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2883
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2884
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2885
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2886
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2887
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2888
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2889
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2890
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2891
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2892
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2893
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2894
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2895
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2896
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2897
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2898
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2899
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2900
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2901
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2902
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2903
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2904
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2905
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2906
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2907
+[LIVE] AX=0.001 AY=-1.021 AZ=-0.103 | GX=1.820 GY=-0.525 GZ=0.070 | t=48135 ms
+[STATE] TILT @ 48142 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2908
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2909
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2910
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2911
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2912
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2913
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2914
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2915
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2916
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2917
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2918
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2919
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2920
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2921
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2922
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2923
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2924
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2925
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2926
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2927
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2928
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2929
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2930
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2931
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2932
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2933
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2934
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2935
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2936
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2937
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2938
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2939
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2940
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2941
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2942
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2943
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2944
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2945
+[FIFO] Drained 2 words, ring depth=256, samples=2945
+[MOTION] TILTED
+[FIFO] Drained 1 words, ring depth=256, samples=2946
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2947
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2948
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2949
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2950
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2951
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2952
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2953
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2954
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2955
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2956
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2957
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2958
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2959
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2960
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2961
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2962
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2963
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2964
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2965
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2966
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2967
+[LIVE] AX=0.000 AY=-1.021 AZ=-0.105 | GX=0.604 GY=-0.499 GZ=0.070 | t=49133 ms
+[STATE] TILT @ 49142 ms
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2968
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2969
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2970
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2971
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2972
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2973
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2974
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2975
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2976
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2977
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2978
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2979
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2980
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2981
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2982
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2983
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2984
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2985
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2986
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2987
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2988
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2989
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2990
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2991
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=2992
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2993
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2994
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2995
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2996
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2997
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2998
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=2999
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3000
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3001
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3002
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3003
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3004
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3005
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3006
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3007
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3008
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3009
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3010
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3011
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3012
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3013
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3014
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3015
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3016
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3017
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3018
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3019
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3020
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3021
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3022
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3023
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3024
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3025
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3026
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3027
+[LIVE] AX=-0.002 AY=-1.021 AZ=-0.105 | GX=2.004 GY=-0.577 GZ=0.061 | t=50132 ms
+[STATE] TILT @ 50148 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3028
+[FIFO] Drained 2 words, ring depth=256, samples=3028
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 1 words, ring depth=256, samples=3029
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3030
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3031
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3032
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3033
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3034
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3035
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3036
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3037
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3038
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3039
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3040
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3041
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3042
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3043
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3044
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3045
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3046
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3047
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3048
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3049
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3050
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3051
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3052
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3053
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3054
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3055
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3056
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3057
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3058
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3059
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3060
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3061
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3062
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3063
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3064
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3065
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3066
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3067
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3068
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3069
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3070
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3071
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3072
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3073
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3074
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3075
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3076
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3077
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3078
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3079
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3080
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3081
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3082
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3083
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3084
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3085
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3086
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3087
+[LIVE] AX=0.000 AY=-1.022 AZ=-0.091 | GX=0.577 GY=-0.499 GZ=0.053 | t=51130 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3088
+[STATE] TILT @ 51150 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3089
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3090
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3091
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3092
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3093
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3094
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3095
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3096
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3097
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3098
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3099
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3100
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3101
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3102
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3103
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3104
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3105
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3106
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3107
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3108
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3109
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3110
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3111
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3112
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3113
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3114
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3115
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3116
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3117
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3118
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3119
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3120
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3121
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3122
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3123
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3124
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3125
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3126
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3127
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3128
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3129
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3130
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3131
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3132
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3133
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3134
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3135
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3136
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3137
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3138
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3139
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3140
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3141
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3142
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3143
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3144
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3145
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3146
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3147
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3148
+[LIVE] AX=0.001 AY=-1.025 AZ=-0.053 | GX=3.605 GY=-0.534 GZ=0.070 | t=52146 ms
+[STATE] TILT @ 52158 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3149
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3150
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3151
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3152
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3153
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3154
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3155
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3156
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3157
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3158
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3159
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3160
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3161
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3162
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3163
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3164
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3165
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3166
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3167
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3168
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3169
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3170
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3171
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3172
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3173
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3174
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3175
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3176
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3177
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3178
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3179
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3180
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3181
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3182
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3183
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3184
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3185
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3186
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3187
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3188
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3189
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3190
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3191
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3192
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3193
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3194
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3195
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3196
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3197
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3198
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3199
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3200
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3201
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3202
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3203
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3204
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3205
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3206
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3207
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3208
+[LIVE] AX=0.003 AY=-1.009 AZ=0.180 | GX=133.989 GY=-0.271 GZ=-0.604 | t=53144 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3209
+[STATE] LIFT @ 53161 ms
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3210
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3211
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3212
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3213
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3214
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3215
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3216
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3217
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3218
+[FIFO] Drained 1 words, ring depth=256, samples=3218
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 2 words, ring depth=256, samples=3219
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3220
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3221
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3222
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3223
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3224
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3225
+[MOTION] TILTED
+[LABEL] TILT
+[FIFO] Drained 3 words, ring depth=256, samples=3226
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3227
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=256, samples=3228
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3229
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3230
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3231
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3232
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3233
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3234
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3235
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3236
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3237
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=3238
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3239
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3240
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3241
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3242
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3243
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3244
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3245
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3246
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3247
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3248
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3249
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3250
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3251
+[MOTION] FLAT
+[LABEL] HOLD
+[FIFO] Drained 3 words, ring depth=256, samples=3252
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3253
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3254
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3255
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3256
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3257
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3258
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3259
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3260
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3261
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3262
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3263
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3264
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3265
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3266
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3267
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3268
+[LIVE] AX=-0.007 AY=-0.023 AZ=1.011 | GX=0.114 GY=-0.411 GZ=0.105 | t=54143 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3269
+[STATE] HOLD @ 54161 ms
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3270
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3271
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3272
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3273
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3274
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3275
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3276
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3277
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3278
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3279
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3280
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3281
+[MOTION] FLAT
+[FIFO] Drained 3 words, ring depth=256, samples=3282
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3283
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3284
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3285
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3286
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3287
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3288
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3289
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3290
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3291
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3292
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3293
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3294
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3295
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3296
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3297
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3298
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3299
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3300
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3301
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3302
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3303
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3304
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3305
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3306
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3307
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3308
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3309
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3310
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3311
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3312
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3313
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3314
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3315
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3316
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3317
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3318
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3319
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3320
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3321
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3322
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3323
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3324
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3325
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3326
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3327
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3328
+[LIVE] AX=0.709 AY=-0.923 AZ=-0.130 | GX=21.236 GY=-32.086 GZ=-30.450 | t=55141 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3329
+[STATE] LIFT @ 55161 ms
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3330
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3331
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3332
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3333
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3334
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3335
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3336
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3337
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3338
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3339
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3340
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3341
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3342
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3343
+[MOTION] LIFTED
+[LABEL] LIFT
+[FIFO] Drained 3 words, ring depth=256, samples=3344
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3345
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3346
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3347
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3348
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3349
+[MOTION] LIFTED
+[FIFO] Drained 3 words, ring depth=256, samples=3350

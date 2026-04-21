@@ -1,0 +1,440 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM7'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x18 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379302
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a998h ( 43416) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001a9c0 vaddr=3fc91300 size=030cch ( 12492) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001da94 vaddr=40374000 size=02584h (  9604) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=143bch ( 82876) map[0m
+[0;32mI (123) esp_image: segment 4: paddr=000343e4 vaddr=40376584 size=0ad20h ( 44320) load[0m
+[0;32mI (133) esp_image: segment 5: paddr=0003f10c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (151) cpu_start: Multicore app[0m
+[0;32mI (160) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (162) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (170) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (175) app_init: Compile time:     Apr  9 2026 13:12:20[0m
+[0;32mI (180) app_init: ELF file SHA256:  d3833cc5b...[0m
+[0;32mI (184) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC95710 len 00054000 (336 KiB): RAM[0m
+[0;32mI (211) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (216) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (246) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (255) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (262) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+Scanning I2C bus...
+Found device at 0x36
+Found device at 0x6B
+Scan complete.
+WHO_AM_I read failed at 0x6A: ESP_FAIL
+WHO_AM_I @ 0x6B = 0x70
+LSM6DSV16X detected at 0x6B (WHO_AM_I=0x70)
+[FIFO] Configured: 60 Hz accel+gyro, watermark=60 words, continuous mode
+FIFO reader running. Waiting for INT1 watermark interrupts...
+[0;32mI (319) main_task: Returned from app_main()[0m
+[FIFO] Draining 90 words  (WTM=1 OVR=0 FULL=0)
+[FIFO] Draining 93 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 2  [TILTED] ──────────────────────
+  mean_pitch   :   79.5 °
+  max_pitch    :   80.8 °
+  tilt_duration:  1.000
+  accel_rms    :  9.737 m/s²
+  gyro_rms     :    0.9 dps
+  gyro_peak    :    1.5 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 3  [TILTED] ──────────────────────
+  mean_pitch   :   79.3 °
+  max_pitch    :   80.3 °
+  tilt_duration:  1.000
+  accel_rms    :  9.737 m/s²
+  gyro_rms     :    1.0 dps
+  gyro_peak    :    1.5 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 4  [TILTED] ──────────────────────
+  mean_pitch   :   79.3 °
+  max_pitch    :   80.1 °
+  tilt_duration:  1.000
+  accel_rms    :  9.736 m/s²
+  gyro_rms     :    1.0 dps
+  gyro_peak    :    1.4 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 5  [TILTED] ──────────────────────
+  mean_pitch   :   79.3 °
+  max_pitch    :   79.9 °
+  tilt_duration:  1.000
+  accel_rms    :  9.735 m/s²
+  gyro_rms     :    0.8 dps
+  gyro_peak    :    1.4 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 6  [TILTED] ──────────────────────
+  mean_pitch   :   79.3 °
+  max_pitch    :   80.1 °
+  tilt_duration:  1.000
+  accel_rms    :  9.736 m/s²
+  gyro_rms     :    0.7 dps
+  gyro_peak    :    1.1 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 7  [TILTED] ──────────────────────
+  mean_pitch   :   79.4 °
+  max_pitch    :   80.2 °
+  tilt_duration:  1.000
+  accel_rms    :  9.738 m/s²
+  gyro_rms     :    0.7 dps
+  gyro_peak    :    1.1 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 8  [TILTED] ──────────────────────
+  mean_pitch   :   79.4 °
+  max_pitch    :   80.2 °
+  tilt_duration:  1.000
+  accel_rms    :  9.737 m/s²
+  gyro_rms     :    0.8 dps
+  gyro_peak    :    1.1 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 9  [TILTED] ──────────────────────
+  mean_pitch   :   79.4 °
+  max_pitch    :   80.2 °
+  tilt_duration:  1.000
+  accel_rms    :  9.738 m/s²
+  gyro_rms     :    0.8 dps
+  gyro_peak    :    1.1 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 10  [TILTED] ──────────────────────
+  mean_pitch   :   79.5 °
+  max_pitch    :   80.3 °
+  tilt_duration:  1.000
+  accel_rms    :  9.737 m/s²
+  gyro_rms     :    0.8 dps
+  gyro_peak    :    1.1 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 11  [TILTED] ──────────────────────
+  mean_pitch   :   79.6 °
+  max_pitch    :   80.8 °
+  tilt_duration:  1.000
+  accel_rms    :  9.737 m/s²
+  gyro_rms     :    0.8 dps
+  gyro_peak    :    1.2 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 12  [TILTED] ──────────────────────
+  mean_pitch   :   79.5 °
+  max_pitch    :   80.8 °
+  tilt_duration:  1.000
+  accel_rms    :  9.738 m/s²
+  gyro_rms     :    0.9 dps
+  gyro_peak    :    1.5 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 13  [TILTED] ──────────────────────
+  mean_pitch   :   79.5 °
+  max_pitch    :   80.6 °
+  tilt_duration:  1.000
+  accel_rms    :  9.735 m/s²
+  gyro_rms     :    0.9 dps
+  gyro_peak    :    1.5 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 14  [LIFTED] ──────────────────────
+  mean_pitch   :   73.9 °
+  max_pitch    :   82.0 °
+  tilt_duration:  0.967
+  accel_rms    : 10.113 m/s²
+  gyro_rms     :   34.3 dps
+  gyro_peak    :  115.2 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 15  [LIFTED] ──────────────────────
+  mean_pitch   :   -5.1 °
+  max_pitch    :   87.3 °
+  tilt_duration:  0.900
+  accel_rms    : 10.030 m/s²
+  gyro_rms     :  101.0 dps
+  gyro_peak    :  154.2 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 16  [LIFTED] ──────────────────────
+  mean_pitch   :  -85.9 °
+  max_pitch    :  100.5 °
+  tilt_duration:  1.000
+  accel_rms    :  9.614 m/s²
+  gyro_rms     :  102.3 dps
+  gyro_peak    :  154.2 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 17  [LIFTED] ──────────────────────
+  mean_pitch   :  -99.5 °
+  max_pitch    :  105.3 °
+  tilt_duration:  1.000
+  accel_rms    :  9.931 m/s²
+  gyro_rms     :   41.5 dps
+  gyro_peak    :   91.6 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 18  [LIFTED] ──────────────────────
+  mean_pitch   : -103.5 °
+  max_pitch    :  105.3 °
+  tilt_duration:  1.000
+  accel_rms    : 10.026 m/s²
+  gyro_rms     :   17.7 dps
+  gyro_peak    :   53.4 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 19  [TILTED] ──────────────────────
+  mean_pitch   : -104.0 °
+  max_pitch    :  104.8 °
+  tilt_duration:  1.000
+  accel_rms    : 10.013 m/s²
+  gyro_rms     :    4.2 dps
+  gyro_peak    :    8.4 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 20  [TILTED] ──────────────────────
+  mean_pitch   : -104.5 °
+  max_pitch    :  105.9 °
+  tilt_duration:  1.000
+  accel_rms    : 10.010 m/s²
+  gyro_rms     :    4.5 dps
+  gyro_peak    :    6.3 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 21  [TILTED] ──────────────────────
+  mean_pitch   : -105.6 °
+  max_pitch    :  107.1 °
+  tilt_duration:  1.000
+  accel_rms    :  9.991 m/s²
+  gyro_rms     :    4.0 dps
+  gyro_peak    :    6.3 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 22  [TILTED] ──────────────────────
+  mean_pitch   : -106.5 °
+  max_pitch    :  107.7 °
+  tilt_duration:  1.000
+  accel_rms    :  9.972 m/s²
+  gyro_rms     :    4.9 dps
+  gyro_peak    :   16.0 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 23  [LIFTED] ──────────────────────
+  mean_pitch   : -102.6 °
+  max_pitch    :  109.6 °
+  tilt_duration:  1.000
+  accel_rms    :  9.646 m/s²
+  gyro_rms     :  137.3 dps
+  gyro_peak    :  324.5 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 24  [LIFTED] ──────────────────────
+  mean_pitch   :  -28.5 °
+  max_pitch    :  109.6 °
+  tilt_duration:  0.917
+  accel_rms    :  9.829 m/s²
+  gyro_rms     :  161.9 dps
+  gyro_peak    :  324.5 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 25  [LIFTED] ──────────────────────
+  mean_pitch   :   61.2 °
+  max_pitch    :  105.4 °
+  tilt_duration:  0.917
+  accel_rms    : 10.122 m/s²
+  gyro_rms     :   74.3 dps
+  gyro_peak    :  187.4 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 26  [LIFTED] ──────────────────────
+  mean_pitch   :   73.4 °
+  max_pitch    :   84.9 °
+  tilt_duration:  1.000
+  accel_rms    :  9.874 m/s²
+  gyro_rms     :   10.4 dps
+  gyro_peak    :   60.5 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 27  [TILTED] ──────────────────────
+  mean_pitch   :   72.9 °
+  max_pitch    :   73.9 °
+  tilt_duration:  1.000
+  accel_rms    :  9.714 m/s²
+  gyro_rms     :    1.6 dps
+  gyro_peak    :    4.0 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 28  [TILTED] ──────────────────────
+  mean_pitch   :   72.8 °
+  max_pitch    :   73.5 °
+  tilt_duration:  1.000
+  accel_rms    :  9.716 m/s²
+  gyro_rms     :    1.2 dps
+  gyro_peak    :    4.0 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 29  [LIFTED] ──────────────────────
+  mean_pitch   :   59.3 °
+  max_pitch    :   96.6 °
+  tilt_duration:  0.967
+  accel_rms    : 10.216 m/s²
+  gyro_rms     :   94.4 dps
+  gyro_peak    :  217.3 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 30  [LIFTED] ──────────────────────
+  mean_pitch   :  -31.4 °
+  max_pitch    :  103.2 °
+  tilt_duration:  0.967
+  accel_rms    :  9.959 m/s²
+  gyro_rms     :  141.2 dps
+  gyro_peak    :  217.3 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 31  [LIFTED] ──────────────────────
+  mean_pitch   : -102.1 °
+  max_pitch    :  116.4 °
+  tilt_duration:  1.000
+  accel_rms    :  9.692 m/s²
+  gyro_rms     :   96.3 dps
+  gyro_peak    :  181.1 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 32  [LIFTED] ──────────────────────
+  mean_pitch   : -114.8 °
+  max_pitch    :  119.1 °
+  tilt_duration:  1.000
+  accel_rms    :  9.904 m/s²
+  gyro_rms     :   37.9 dps
+  gyro_peak    :   78.8 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 33  [TILTED] ──────────────────────
+  mean_pitch   : -117.7 °
+  max_pitch    :  119.1 °
+  tilt_duration:  1.000
+  accel_rms    :  9.937 m/s²
+  gyro_rms     :    3.7 dps
+  gyro_peak    :    8.7 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 34  [LIFTED] ──────────────────────
+  mean_pitch   : -117.6 °
+  max_pitch    :  118.7 °
+  tilt_duration:  1.000
+  accel_rms    :  9.916 m/s²
+  gyro_rms     :   13.9 dps
+  gyro_peak    :   78.2 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 35  [LIFTED] ──────────────────────
+  mean_pitch   : -104.5 °
+  max_pitch    :  118.6 °
+  tilt_duration:  1.000
+  accel_rms    :  9.686 m/s²
+  gyro_rms     :  167.4 dps
+  gyro_peak    :  351.4 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 36  [LIFTED] ──────────────────────
+  mean_pitch   :  -28.6 °
+  max_pitch    :  112.9 °
+  tilt_duration:  0.850
+  accel_rms    :  9.939 m/s²
+  gyro_rms     :  169.1 dps
+  gyro_peak    :  351.4 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 37  [LIFTED] ──────────────────────
+  mean_pitch   :   54.6 °
+  max_pitch    :   82.4 °
+  tilt_duration:  0.900
+  accel_rms    : 10.047 m/s²
+  gyro_rms     :   42.3 dps
+  gyro_peak    :   87.9 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 38  [LIFTED] ──────────────────────
+  mean_pitch   :   72.5 °
+  max_pitch    :   82.4 °
+  tilt_duration:  1.000
+  accel_rms    :  9.734 m/s²
+  gyro_rms     :    9.6 dps
+  gyro_peak    :   41.9 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 39  [TILTED] ──────────────────────
+  mean_pitch   :   72.1 °
+  max_pitch    :   72.9 °
+  tilt_duration:  1.000
+  accel_rms    :  9.704 m/s²
+  gyro_rms     :    1.1 dps
+  gyro_peak    :    1.7 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 40  [TILTED] ──────────────────────
+  mean_pitch   :   71.7 °
+  max_pitch    :   72.5 °
+  tilt_duration:  1.000
+  accel_rms    :  9.718 m/s²
+  gyro_rms     :    1.3 dps
+  gyro_peak    :    5.3 dps
+[FIFO] Draining 99 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 41  [TILTED] ──────────────────────
+  mean_pitch   :   73.1 °
+  max_pitch    :   78.8 °
+  tilt_duration:  1.000
+  accel_rms    :  9.702 m/s²
+  gyro_rms     :    3.2 dps
+  gyro_peak    :    9.1 dps
+[FIFO] Draining 96 words  (WTM=1 OVR=0 FULL=0)
+
+── Window 42  [TILTED] ──────────────────────
+  mean_pitch   :   73.5 °
+  max_pitch    :   78.3 °
+  tilt_duration:  1.000
+  accel_rms    :  9.698 m/s²
+  gyro_rms     :    3.0 dps
+  gyro_peak    :    4.9 dps

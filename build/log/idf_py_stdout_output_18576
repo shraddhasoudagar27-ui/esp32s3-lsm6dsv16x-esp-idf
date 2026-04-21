@@ -1,0 +1,105 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM7'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x38 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40379322
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ac68h ( 44136) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001ac90 vaddr=3fc91600 size=030cch ( 12492) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001dd64 vaddr=40374000 size=022b4h (  8884) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=147d4h ( 83924) map[0m
+[0;32mI (123) esp_image: segment 4: paddr=000347fc vaddr=403762b4 size=0b248h ( 45640) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0003fa4c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (160) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (171) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (175) app_init: Compile time:     Apr  9 2026 13:12:20[0m
+[0;32mI (180) app_init: ELF file SHA256:  2497c14a4...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (188) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (192) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (196) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (200) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (206) heap_init: At 3FC96D00 len 00052A10 (330 KiB): RAM[0m
+[0;32mI (211) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (222) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (246) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (256) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (262) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (279) main_task: Calling app_main()[0m
+LSM6DSV16X at 0x6B (WHO_AM_I=0x70)
+[IMU] Active profile: accel+gyro batched at 60 Hz
+[IMU] FIFO continuous mode, WTM(active)=2 word(s), WTM(idle)=6 words
+[IMU] Hardware events: wake-up, sleep-change, 6D, free-fall, tap → INT1
+[IMU] Register readback after init:
+  reg 0x10 = 0x05
+  reg 0x11 = 0x05
+  reg 0x12 = 0x44
+  reg 0x07 = 0x02
+  reg 0x08 = 0x00
+  reg 0x09 = 0x55
+  reg 0x0A = 0x46
+  reg 0x0D = 0x08
+  reg 0x5E = 0xFC
+  reg 0x54 = 0xB1
+  reg 0x55 = 0x02
+  reg 0x56 = 0x5F
+  reg 0x59 = 0x48
+  reg 0x5A = 0x7F
+  reg 0x5B = 0x82
+  reg 0x5C = 0x02
+  reg 0x5D = 0x33
+[IMU] INT1 already high at arm; forced initial service
+[IMU] AX=0.477 AY=-0.627 AZ=-0.211 | GX=0.954 GY=-1.067 GZ=0.464 | t=108 ms
+[MOTION] TILTED
+[IMU] AX=0.579 AY=-0.764 AZ=-0.254 | GX=0.630 GY=0.420 GZ=1.155 | t=119 ms
+[MOTION] TILTED
+[FIFO] Drained 6 words, ring depth=2, samples=2
+IMU pipeline armed.
+[IMU] AX=0.580 AY=-0.771 AZ=-0.253 | GX=0.796 GY=0.123 GZ=1.286 | t=133 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=3, samples=3
+[0;32mI (369) main_task: Returned from app_main()[0m
+[IMU] AX=0.580 AY=-0.775 AZ=-0.253 | GX=0.507 GY=-0.315 GZ=0.228 | t=147 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=4, samples=4
+[IMU] AX=0.579 AY=-0.776 AZ=-0.254 | GX=-0.035 GY=-0.403 GZ=-1.523 | t=163 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=5, samples=5
+[IMU] AX=0.580 AY=-0.775 AZ=-0.255 | GX=-0.551 GY=-0.140 GZ=-3.159 | t=176 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=6, samples=6
+[IMU] AX=0.581 AY=-0.769 AZ=-0.257 | GX=-0.858 GY=0.219 GZ=-4.095 | t=188 ms
+[MOTION] TILTED
+[FIFO] Drained 3 words, ring depth=7, samples=7

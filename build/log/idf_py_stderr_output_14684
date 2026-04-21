@@ -1,0 +1,19 @@
+Command: ninja all
+info: Default value for I2C_SUPPRESS_DEPRECATE_WARN in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+Configuration Report                                                           
++-----------------------------------------------------------------------------+
+|  Parser Version: 1                                                          |
+|  Verbosity: default                                                         |
+|  Defaults policy: sdkconfig                                                 |
+|  Status: Finished with notifications                                        |
+|                                                                             |
+| Default Value Mismatch                                                      |
+| +-------------------------------------------------------------------------+ |
+| | Using sdkconfig default values                                       |  | |
+| | Config symbols with different default value between sdkconfig and    |  | |
+| | Kconfig                                                              |  | |
+| | I2C_SUPPRESS_DEPRECATE_WARN: Kconfig default value: n, sdkconfig     |  | |
+| | default value: y                                                     |  | |
+| +-------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------+

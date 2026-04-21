@@ -1,0 +1,649 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x18 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403740d8
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0e8h ( 45288) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b110 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e1f4 vaddr=40374000 size=01e24h (  7716) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=152e0h ( 86752) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=00035308 vaddr=40375e24 size=0b738h ( 46904) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00040a48 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (172) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (176) app_init: Compile time:     Apr 16 2026 13:08:10[0m
+[0;32mI (181) app_init: ELF file SHA256:  222edd9c8...[0m
+[0;32mI (186) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC98950 len 00050DC0 (323 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;33mW (235) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+
+=== Smart Hydration Bottle — LSM6DSV16X SFLP ===
+[BOOT] Found LSM6DSV16X @ 0x6B (WHO_AM_I=0x70)
+[IMU] Active: accel+gyro+SFLP @ 30 Hz
+[IMU] SFLP game rotation @ 30 Hz, watermark=32, stream mode
+[IMU] Events: wake-up | sleep | 6D | free-fall | tap | emb-tilt → INT1
+[IMU] Thresholds: sip>30° (500ms) | chug>60° (1500ms)
+[IMU] Register readback:
+  0x10 = 0x04
+  0x11 = 0x04
+  0x12 = 0x44
+  0x15 = 0x04
+  0x17 = 0x01
+  0x07 = 0x20
+  0x08 = 0x00
+  0x09 = 0x00
+  0x0A = 0x06
+  0x0D = 0x08
+  0x5E = 0xFC
+  0x54 = 0xB1
+  0x55 = 0x02
+  0x59 = 0x48
+  0x5B = 0x82
+  0x5D = 0x33
+[BOOT] INT1 already high — initial service triggered
+[BOOT] Pipeline armed. Monitoring for drinking events.
+
+[0;32mI (340) main_task: Returned from app_main()[0m
+[LIVE] pitch=  -5.9° roll=  +2.2° yaw=   +5.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.1° yaw=   +5.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.0° yaw=   +5.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.1° yaw=   +5.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.1° yaw=   +5.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.1° yaw=   +5.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.1° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=150 quats=150 ring=150 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=301 quats=301 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=452 quats=452 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.1° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.2° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=603 quats=603 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=754 quats=754 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=905 quats=905 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1056 quats=1056 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1207 quats=1207 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1358 quats=1358 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1509 quats=1509 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1660 quats=1660 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1811 quats=1811 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=1962 quats=1962 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2113 quats=2113 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2264 quats=2264 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2415 quats=2415 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.4° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2566 quats=2566 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.8° roll=  +2.3° yaw=   +5.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2717 quats=2717 ring=256 overruns=0
+[LIVE] pitch=  -6.1° roll=  +2.0° yaw=   +7.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -6.3° roll=  +0.2° yaw=   +7.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +1.3° yaw=   +7.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -8.1° roll=  +5.8° yaw=  +15.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -6.7° roll= +12.8° yaw=  +23.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +0.5° roll= +13.4° yaw=  +25.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +2.1° roll= +12.4° yaw=  +24.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +4.4° roll= +11.0° yaw=  +23.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +5.3° roll= +10.7° yaw=  +22.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +5.5° roll= +10.8° yaw=  +22.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=2868 quats=2868 ring=256 overruns=0
+[LIVE] pitch=  +5.7° roll= +10.8° yaw=  +23.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +6.8° roll= +10.8° yaw=  +22.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +6.4° roll= +10.5° yaw=  +23.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +7.0° roll=  +9.4° yaw=  +22.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +4.4° roll=  +6.1° yaw=  +21.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +5.3° roll= +11.7° yaw=  +21.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.4° roll=  +6.5° yaw=  +12.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +4.3° roll=  +5.4° yaw=  +12.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +4.4° roll= +10.7° yaw=  +16.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +5.3° roll=  +6.4° yaw=  +14.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-17.9°)
+[FIFO] words=3019 quats=3019 ring=256 overruns=0
+[LIVE] pitch= -25.7° roll= -17.7° yaw=  -39.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -27.7° roll= -14.1° yaw=  -51.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -13.4° roll=  +4.9° yaw=  -60.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  -0.7° roll=  +3.4° yaw=  -60.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.5° roll=  +5.2° yaw=  -61.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -2.0° roll=  +5.7° yaw=  -62.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -6.9° roll=  +5.1° yaw=  -62.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-16.2°)
+[LIVE] pitch= -21.6° roll= -38.1° yaw=  -62.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.7° roll= -41.4° yaw=  -63.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -22.7° roll= -30.7° yaw=  -65.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=3170 quats=3170 ring=256 overruns=0
+[LIVE] pitch= -19.2° roll=  +6.7° yaw=  -57.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  -5.0° roll=  +5.8° yaw=  -50.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -5.9° roll=  +6.2° yaw=  -49.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -6.2° roll=  +6.0° yaw=  -50.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= +11.7° roll= +76.1° yaw=  -68.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=16.1°)
+[LIVE] pitch= +22.4° roll=+117.5° yaw=  -68.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +14.4° roll=+102.6° yaw=  -67.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +13.2° roll=+101.3° yaw=  -67.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[DRINK] Tilt started (pitch=30.9°)
+[LIVE] pitch= +35.7° roll=+148.9° yaw=  -63.0° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=0 chugs=0
+[DRINK] Tilt aborted after 300 ms (peak=35.7°)
+[LIVE] pitch= +11.2° roll=+175.6° yaw=  -42.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=3321 quats=3321 ring=256 overruns=0
+[LIVE] pitch=  +9.9° roll=-177.7° yaw=  -40.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +8.7° roll=+176.7° yaw=  -41.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +9.7° roll=+179.0° yaw=  -41.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +9.5° roll=+178.2° yaw=  -41.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +8.5° roll=+176.7° yaw=  -41.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +7.9° roll=+175.3° yaw=  -42.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= +13.0° roll=+144.7° yaw=  -52.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= +11.9° roll=+141.0° yaw=  -52.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= +13.8° roll=+115.1° yaw=  -55.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=16.4°)
+[LIVE] pitch= +27.8° roll= +46.4° yaw=  -59.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=3472 quats=3472 ring=256 overruns=0
+[LIVE] pitch= +18.0° roll= +27.7° yaw=  -67.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  +8.4° roll= +42.2° yaw=  -65.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=15.7°)
+[DRINK] Tilt started (pitch=30.6°)
+[LIVE] pitch= +33.5° roll=+106.8° yaw=  -76.4° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=0 chugs=0
+[DRINK] Tilt aborted after 166 ms (peak=33.5°)
+[LIVE] pitch= +11.2° roll=+156.1° yaw=  -50.3° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  +4.8° roll=+161.4° yaw=  -48.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  +3.5° roll=+161.5° yaw=  -49.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -1.9° roll=+144.3° yaw=  -62.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch=  -6.9° roll= +98.7° yaw=  -97.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= -10.1° roll= +26.0° yaw=  -97.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[LIVE] pitch= -12.0° roll= +26.1° yaw=  -96.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[FIFO] words=3623 quats=3623 ring=256 overruns=0
+[LIVE] pitch= -12.6° roll= +22.7° yaw= -100.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-15.1°)
+[LIVE] pitch= -18.9° roll= +17.8° yaw=  -98.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -19.6° roll= +16.5° yaw=  -98.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -19.4° roll= +14.6° yaw= -100.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -19.9° roll= +17.5° yaw=  -99.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -21.9° roll= +12.6° yaw=  -94.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -23.9° roll=  +7.6° yaw=  -90.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -26.1° roll=  +4.9° yaw=  -85.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -25.8° roll=  +3.5° yaw=  -87.2° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= -25.7° roll= +12.5° yaw=  -89.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[FIFO] words=3774 quats=3774 ring=256 overruns=0
+[LIVE] pitch= -15.4° roll= +24.1° yaw=  -93.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch=  +5.5° roll= +42.1° yaw=  -99.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=15.1°)
+[DRINK] Tilt started (pitch=31.5°)
+[LIVE] pitch= +33.2° roll=+119.6° yaw=  -72.3° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=0 chugs=0
+[DRINK] Tilt aborted after 433 ms (peak=33.5°)
+[LIVE] pitch= +21.1° roll=+161.6° yaw=  -47.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +23.5° roll=+154.8° yaw=  -47.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +21.1° roll=+146.0° yaw=  -53.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +19.6° roll= +71.0° yaw=  -93.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[LIVE] pitch= +21.2° roll= +24.9° yaw=  -91.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[DRINK] Bottle lifted (pitch=-15.3°)
+[LIVE] pitch= -20.6° roll= -33.2° yaw=  -66.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=0 chugs=0
+[DRINK] Tilt started (pitch=-32.7°)
+[LIVE] pitch= -42.1° roll=-139.5° yaw=   -8.4° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=0 chugs=0
+[DRINK] *** SIP  detected! pitch=47.4° held 500 ms | total=1
+[FIFO] words=3925 quats=3925 ring=256 overruns=0
+[LIVE] pitch= -39.0° roll=-155.2° yaw=  +11.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -37.3° roll= -69.4° yaw=  -52.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -32.1° roll= -71.7° yaw=  -55.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -33.0° roll= -73.3° yaw=  -57.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[LIVE] pitch= -16.5° roll=  -4.2° yaw=  -90.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=1 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -2.8° roll=  +2.7° yaw=  -83.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -2.9° roll=  +2.0° yaw=  -75.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -2.9° roll=  +2.6° yaw=  -70.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.0° roll=  +2.1° yaw=  -65.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.1° roll=  +2.0° yaw=  -54.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4076 quats=4076 ring=256 overruns=0
+[LIVE] pitch=  -3.7° roll=  +1.7° yaw=  -34.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  +0.4° yaw=  -34.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  +0.3° yaw=  -35.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  +0.3° yaw=  -35.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  +0.2° yaw=  -35.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -8.8° roll=  -1.2° yaw=  -37.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[DRINK] Bottle lifted (pitch=-16.0°)
+[LIVE] pitch= -27.4° roll= -13.5° yaw=  -46.6° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch= -26.8° roll= -15.9° yaw=  -45.5° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch= -26.2° roll= -16.0° yaw=  -45.9° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch= -25.4° roll= -15.8° yaw=  -46.0° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[FIFO] words=4227 quats=4227 ring=256 overruns=0
+[LIVE] pitch= -23.2° roll= -13.0° yaw=  -47.8° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch= -15.6° roll=  +1.8° yaw=  -50.4° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch=  -8.9° roll=  +0.4° yaw=  -41.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.9° roll=  +0.8° yaw=  -36.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  +0.2° yaw=  -35.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.0° yaw=  -35.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.1° yaw=  -35.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=  -35.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=  -36.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=  -36.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4378 quats=4378 ring=256 overruns=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=  -36.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.2° yaw=  -36.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -6.1° roll=  -0.6° yaw=  -39.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -6.3° roll=  -0.5° yaw=  -39.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.8° roll=  -0.8° yaw=  -41.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.4° roll=  -0.2° yaw=  -42.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  -0.3° yaw=  -42.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch= -13.4° roll=  -5.6° yaw=  -39.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.8° roll=  -8.2° yaw=  -35.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -9.9° roll=  +0.6° yaw=  -33.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4529 quats=4529 ring=256 overruns=0
+[LIVE] pitch=  -8.3° roll=  +1.0° yaw=  -37.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.9° roll=  -0.3° yaw=  -39.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -6.2° roll=  +0.4° yaw=  -37.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.5° roll=  +0.2° yaw=  -36.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.9° roll=  +1.4° yaw=  -33.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.4° roll=  +0.2° yaw=  -32.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -6.0° roll=  +0.1° yaw=  -35.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.8° roll=  +0.0° yaw=  -35.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.1° yaw=  -35.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -4.3° roll=  -0.5° yaw=  -35.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4680 quats=4680 ring=256 overruns=0
+[LIVE] pitch=  -4.9° roll=  +0.5° yaw=  -36.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[DRINK] Bottle lifted (pitch=-16.3°)
+[LIVE] pitch= -18.3° roll=  -5.8° yaw=  -49.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[DRINK] Tilt started (pitch=-30.1°)
+[DRINK] Tilt aborted after 67 ms (peak=30.1°)
+[LIVE] pitch= -22.5° roll=  -9.8° yaw=  -48.1° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=1 chugs=0
+[LIVE] pitch=  +0.0° roll=  +8.3° yaw=  -51.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -1.7° roll=  +2.7° yaw=  -41.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.4° roll=  -0.7° yaw=  -38.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -4.9° roll=  +0.6° yaw=  -46.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.7° roll=  -2.5° yaw=  -45.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.8° roll=  -1.5° yaw=  -48.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.1° roll=  -2.6° yaw=  -48.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4831 quats=4831 ring=256 overruns=0
+[LIVE] pitch=  -6.7° roll=  -2.4° yaw=  -48.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -6.8° roll=  -2.2° yaw=  -47.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.4° roll=  -2.3° yaw=  -47.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.7° roll=  -2.2° yaw=  -47.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.7° roll=  -2.2° yaw=  -47.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.8° roll=  -2.3° yaw=  -48.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.8° roll=  -2.5° yaw=  -48.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.7° roll=  -2.4° yaw=  -48.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -7.9° roll=  -2.2° yaw=  -48.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -8.6° roll=  -3.4° yaw=  -48.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=4982 quats=4982 ring=256 overruns=0
+[LIVE] pitch=  -2.0° roll=  -2.7° yaw=  -53.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.2° roll=  -2.5° yaw=  -53.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.2° roll=  +0.4° yaw=  -53.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -2.1° roll=  -4.6° yaw=  -50.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -3.0° roll=  +0.3° yaw=  -50.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.6° roll=  -0.2° yaw=  -51.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.3° roll=  -0.0° yaw=  -51.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.2° roll=  +0.1° yaw=  -50.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.2° roll=  +0.1° yaw=  -50.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.4° roll=  -0.3° yaw=  -49.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[FIFO] words=5133 quats=5133 ring=256 overruns=0
+[LIVE] pitch=  -5.4° roll=  -0.3° yaw=  -48.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.4° roll=  -0.4° yaw=  -48.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.6° yaw=  -51.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[LIVE] pitch= +14.7° roll= -14.3° yaw=  -50.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=1 chugs=0
+[DRINK] Bottle lifted (pitch=17.5°)
+[DRINK] Tilt started (pitch=30.2°)
+[LIVE] pitch= +33.6° roll= -23.1° yaw=  -49.1° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=1 chugs=0
+[DRINK] *** SIP  detected! pitch=34.4° held 500 ms | total=2
+[LIVE] pitch= +33.7° roll= -27.3° yaw=  -49.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +32.2° roll= -25.3° yaw=  -48.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +33.1° roll= -24.2° yaw=  -46.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +32.4° roll= -22.4° yaw=  -46.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +30.6° roll= -25.0° yaw=  -44.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[FIFO] words=5284 quats=5284 ring=256 overruns=0
+[LIVE] pitch= +30.0° roll= -26.4° yaw=  -44.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +26.5° roll= -15.9° yaw=  -34.2° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +23.9° roll=  -8.3° yaw=  -41.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +42.7° roll=  -9.9° yaw=  -39.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +44.0° roll=  -4.3° yaw=  -38.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[LIVE] pitch= +21.7° roll=  +2.0° yaw=  -41.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=2 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -0.2° roll=  +3.2° yaw=  -50.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.1° roll=  -0.4° yaw=  -55.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.2° roll=  -0.5° yaw=  -56.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.1° roll=  -0.5° yaw=  -56.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=5435 quats=5435 ring=256 overruns=0
+[LIVE] pitch=  -5.1° roll=  -0.6° yaw=  -56.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.1° roll=  -0.6° yaw=  -56.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.1° roll=  -0.6° yaw=  -56.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.2° roll=  -0.6° yaw=  -56.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -6.0° roll=  -0.1° yaw=  -45.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.8° roll=  -0.4° yaw=  -43.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.6° yaw=  -43.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -7.9° roll=  +2.4° yaw=  -44.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -1.4° roll=  -1.4° yaw=  -39.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +2.9° roll=  -6.2° yaw=  -24.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=5586 quats=5586 ring=256 overruns=0
+[LIVE] pitch=  +6.4° roll=  -7.9° yaw=  -13.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +3.1° roll=  -4.8° yaw=  -11.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +2.7° roll=  -4.6° yaw=  -10.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +2.4° roll=  -4.2° yaw=  -10.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +3.2° roll=  -4.5° yaw=  -10.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -1.2° roll=  -8.6° yaw=   -7.9° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -3.5° roll=  -7.0° yaw=  -37.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -9.4° roll=  -1.8° yaw=  -42.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.3° yaw=  -42.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.5° roll=  -0.4° yaw=  -41.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=5737 quats=5737 ring=256 overruns=0
+[LIVE] pitch=  -5.8° roll=  -0.7° yaw=  -38.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -7.7° roll= -10.8° yaw=  -33.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +1.9° roll= -43.3° yaw=  -27.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +3.7° roll= -46.4° yaw=  -26.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  +3.7° roll= -47.4° yaw=  -26.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -9.6° roll=  -3.2° yaw=  -38.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -7.4° roll= -78.9° yaw=  -34.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch= -12.4° roll= -52.1° yaw=  -26.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[DRINK] Bottle lifted (pitch=-15.7°)
+[LIVE] pitch=  -2.8° roll=  -2.3° yaw=  -17.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -2.8° roll=  -1.3° yaw=  -17.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=5888 quats=5888 ring=256 overruns=0
+[LIVE] pitch=  -6.2° roll=  -0.9° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -6.1° roll=  -1.0° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -6.0° roll=  -1.0° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.9° roll=  -1.0° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.9° roll=  -1.1° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.9° roll=  -1.1° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -5.9° roll=  -1.1° yaw=  -17.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch= -11.7° roll=  -0.5° yaw=  -22.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -9.1° roll=  -0.9° yaw=  -25.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[LIVE] pitch=  -6.5° roll=  -1.0° yaw=  -25.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[FIFO] words=6039 quats=6039 ring=256 overruns=0
+[LIVE] pitch=  -6.1° roll=  -0.9° yaw=  -25.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=2 chugs=0
+[DRINK] Bottle lifted (pitch=-15.5°)
+[LIVE] pitch= -18.1° roll=  -2.6° yaw=  -30.7° | gbias=(+0.000 +0.000 +0.000) dps | state=LIFTED | sips=2 chugs=0
+[DRINK] Tilt started (pitch=-30.6°)
+[LIVE] pitch= -58.4° roll= +16.9° yaw=  -46.9° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=2 chugs=0
+[DRINK] *** SIP  detected! pitch=58.8° held 532 ms | total=3
+[LIVE] pitch= -57.9° roll= +18.3° yaw=  -49.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -57.0° roll= +18.1° yaw=  -49.7° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -55.2° roll= +17.7° yaw=  -49.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[LIVE] pitch= -37.3° roll=  +7.5° yaw=  -37.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=3 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -9.0° roll=  +3.8° yaw=  -20.3° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[LIVE] pitch=  -5.5° roll=  -0.3° yaw=  -15.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[LIVE] pitch=  -6.0° roll=  -0.5° yaw=  -15.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=3 chugs=0
+[DRINK] Bottle lifted (pitch=-15.5°)
+[FIFO] words=6190 quats=6190 ring=256 overruns=0
+[DRINK] Tilt started (pitch=-33.0°)
+[LIVE] pitch= -39.9° roll=  +2.9° yaw=  -25.6° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=3 chugs=0
+[DRINK] *** SIP  detected! pitch=58.3° held 532 ms | total=4
+[LIVE] pitch= -58.2° roll= +14.3° yaw=  -39.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -52.9° roll= +12.8° yaw=  -38.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[LIVE] pitch= -15.9° roll=  -6.2° yaw=  -20.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=4 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -7.9° roll=  -1.3° yaw=  -26.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  -5.4° roll=  -0.0° yaw=  -26.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  -5.7° roll=  -0.6° yaw=  -25.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[LIVE] pitch=  -0.1° roll=  -1.1° yaw=  -33.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=4 chugs=0
+[DRINK] Bottle lifted (pitch=16.3°)
+[DRINK] Tilt started (pitch=32.5°)
+[LIVE] pitch= +32.5° roll=  -7.7° yaw=  -40.0° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=4 chugs=0
+[LIVE] pitch= +37.6° roll=  -8.9° yaw=  -41.3° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=4 chugs=0
+[DRINK] *** SIP  detected! pitch=38.0° held 532 ms | total=5
+[FIFO] words=6341 quats=6341 ring=256 overruns=0
+[LIVE] pitch= +36.8° roll=  -9.4° yaw=  -40.9° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=5 chugs=0
+[LIVE] pitch= +31.3° roll=  -3.3° yaw=  -37.9° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=5 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  +1.8° roll= +11.9° yaw=  -36.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=5 chugs=0
+[LIVE] pitch=  -9.4° roll=  -0.9° yaw=  -27.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=5 chugs=0
+[LIVE] pitch=  -6.7° roll=  +0.3° yaw=  -23.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=5 chugs=0
+[LIVE] pitch=  -5.8° roll=  -0.8° yaw=  -22.8° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=5 chugs=0
+[LIVE] pitch=  +1.2° roll=  -0.6° yaw=  -37.7° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=5 chugs=0
+[DRINK] Bottle lifted (pitch=16.1°)
+[DRINK] Tilt started (pitch=32.2°)
+[LIVE] pitch= +43.9° roll=  -9.3° yaw=  -50.9° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=5 chugs=0
+[DRINK] *** SIP  detected! pitch=44.5° held 500 ms | total=6
+[LIVE] pitch= +44.7° roll= -10.6° yaw=  -51.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=6 chugs=0
+[LIVE] pitch= +45.9° roll= -13.1° yaw=  -53.1° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=6 chugs=0
+[FIFO] words=6492 quats=6492 ring=256 overruns=0
+[LIVE] pitch= +45.7° roll= -14.1° yaw=  -54.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=6 chugs=0
+[LIVE] pitch= +21.9° roll=  +6.4° yaw=  -39.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=6 chugs=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  -5.8° roll=  +2.6° yaw=  -31.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.7° yaw=  -22.1° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.1° yaw=  -21.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.2° yaw=  -21.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.1° yaw=  -21.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.1° yaw=  -21.6° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.2° yaw=  -21.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[LIVE] pitch=  -7.2° roll=  -1.9° yaw=  -28.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=6 chugs=0
+[DRINK] Bottle lifted (pitch=15.2°)
+[FIFO] words=6643 quats=6643 ring=256 overruns=0
+[DRINK] Tilt started (pitch=31.9°)
+[LIVE] pitch= +31.9° roll=  -7.7° yaw=  -49.9° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=6 chugs=0
+[LIVE] pitch= +47.1° roll= -10.4° yaw=  -56.1° | gbias=(+0.000 +0.000 +0.000) dps | state=TILTING | sips=6 chugs=0
+[DRINK] *** SIP  detected! pitch=47.3° held 533 ms | total=7
+[LIVE] pitch= +52.8° roll= -14.2° yaw=  -60.6° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +54.8° roll= -16.3° yaw=  -63.3° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +57.2° roll= -18.0° yaw=  -65.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +59.3° roll= -19.9° yaw=  -67.5° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +61.5° roll= -22.8° yaw=  -70.4° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +63.9° roll= -25.8° yaw=  -72.8° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +66.1° roll= -28.5° yaw=  -74.9° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[LIVE] pitch= +61.0° roll= -14.7° yaw=  -61.0° | gbias=(+0.000 +0.000 +0.000) dps | state=RETURNING | sips=7 chugs=0
+[FIFO] words=6794 quats=6794 ring=256 overruns=0
+[DRINK] Bottle returned to rest
+[LIVE] pitch=  +9.8° roll=  +7.8° yaw=  -28.0° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -6.4° roll=  -2.1° yaw=  -11.2° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.0° yaw=  -14.5° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.2° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.3° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.5° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.6° roll=  -1.5° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[FIFO] words=6945 quats=6945 ring=256 overruns=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.7° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.8° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.8° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.8° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0
+[LIVE] pitch=  -5.8° roll=  -1.4° yaw=  -14.4° | gbias=(+0.000 +0.000 +0.000) dps | state=IDLE | sips=7 chugs=0

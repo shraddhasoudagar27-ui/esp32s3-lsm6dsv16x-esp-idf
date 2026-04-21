@@ -1,0 +1,924 @@
+Command: C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe C:\esp_idf\.espressif\v6.0\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\LSM6D_intern\imu_demo_lsm6d\build\imu_demo_lsm6d.elf C:\LSM6D_intern\imu_demo_lsm6d\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe' 'C:\esp_idf\.espressif\v6.0\esp-idf\tools\idf.py' '-p' 'COM3'
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x38 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037b952
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  9 2026 13:14:12[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b0a8h ( 45224) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b0d0 vaddr=3fc91600 size=030dch ( 12508) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001e1b4 vaddr=40374000 size=01e64h (  7780) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=15270h ( 86640) map[0m
+[0;32mI (124) esp_image: segment 4: paddr=00035298 vaddr=40375e64 size=0b6f8h ( 46840) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=00040998 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     imu_demo_lsm6d[0m
+[0;32mI (172) app_init: App version:      a469f5e-dirty[0m
+[0;32mI (176) app_init: Compile time:     Apr 16 2026 13:08:10[0m
+[0;32mI (181) app_init: ELF file SHA256:  9f8995077...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.0[0m
+[0;32mI (189) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (193) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (197) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (201) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (207) heap_init: At 3FC98950 len 00050DC0 (323 KiB): RAM[0m
+[0;32mI (212) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (217) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;33mW (235) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (247) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (257) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (263) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (280) main_task: Calling app_main()[0m
+
+=== Smart Hydration Bottle — LSM6DSV16X SFLP ===
+[BOOT] Found LSM6DSV16X @ 0x6B (WHO_AM_I=0x70)
+[IMU] Active: accel+gyro+SFLP @ 30 Hz
+[IMU] SFLP game rotation @ 30 Hz, watermark=32, stream mode
+[IMU] Events: wake-up | sleep | 6D | free-fall | tap | emb-tilt → INT1
+[IMU] Thresholds: sip>30° (500ms) | chug>60° (1500ms)
+[IMU] Register readback:
+  0x10 = 0x04
+  0x11 = 0x04
+  0x12 = 0x44
+  0x15 = 0x04
+  0x17 = 0x01
+  0x07 = 0x20
+  0x08 = 0x00
+  0x09 = 0x00
+  0x0A = 0x06
+  0x0D = 0x08
+  0x5E = 0xFC
+  0x54 = 0xB1
+  0x55 = 0x02
+  0x59 = 0x48
+  0x5B = 0x82
+  0x5D = 0x33
+[BOOT] INT1 already high — initial service triggered
+[BOOT] Pipeline armed. Monitoring for drinking events.
+
+[0;32mI (340) main_task: Returned from app_main()[0m
+[LIVE @ 597 ms] pitch=  -0.3° roll=  -0.0° yaw=   +0.1° | state=IDLE
+[LIVE @ 1097 ms] pitch=  -0.8° roll=  +0.1° yaw=   +0.1° | state=IDLE
+[LIVE @ 1597 ms] pitch=  -1.0° roll=  +0.1° yaw=   +0.2° | state=IDLE
+[LIVE @ 2097 ms] pitch=  -1.4° roll=  +0.0° yaw=   +0.5° | state=IDLE
+[LIVE @ 2597 ms] pitch=  -1.4° roll=  +0.1° yaw=   +0.7° | state=IDLE
+[LIVE @ 3097 ms] pitch=  -1.3° roll=  +0.2° yaw=   +0.8° | state=IDLE
+[LIVE @ 3597 ms] pitch=  -1.3° roll=  +0.2° yaw=   +0.8° | state=IDLE
+[LIVE @ 4097 ms] pitch=  -1.3° roll=  +0.1° yaw=   +0.9° | state=IDLE
+[LIVE @ 4597 ms] pitch=  -1.3° roll=  +0.1° yaw=   +1.0° | state=IDLE
+[FIFO] words=149 quats=149 ring=149 overruns=0
+[LIVE @ 5097 ms] pitch=  -1.4° roll=  +0.1° yaw=   +1.0° | state=IDLE
+[LIVE @ 5597 ms] pitch= -10.8° roll=  -0.7° yaw=   -3.3° | state=IDLE
+[LIVE @ 6097 ms] pitch=  -7.9° roll=  -1.8° yaw=   -5.0° | state=IDLE
+[LIVE @ 6597 ms] pitch=  -7.2° roll=  +0.1° yaw=   -5.2° | state=IDLE
+[LIVE @ 7097 ms] pitch=  -7.4° roll=  +0.2° yaw=   -5.0° | state=IDLE
+[LIVE @ 7597 ms] pitch=  -7.6° roll=  +0.1° yaw=   -4.9° | state=IDLE
+[LIVE @ 8097 ms] pitch=  -7.2° roll=  +0.1° yaw=   -4.9° | state=IDLE
+[LIVE @ 8597 ms] pitch=  -6.9° roll=  -0.1° yaw=   -4.7° | state=IDLE
+[LIVE @ 9097 ms] pitch=  -6.0° roll=  -0.4° yaw=   -4.7° | state=IDLE
+[LIVE @ 9597 ms] pitch=  -2.3° roll=  +2.3° yaw=   -5.1° | state=IDLE
+[FIFO] words=300 quats=300 ring=256 overruns=0
+[LIVE @ 10097 ms] pitch=  -0.6° roll=  -0.2° yaw=   -7.1° | state=IDLE
+[LIVE @ 10597 ms] pitch=  -4.0° roll=  +1.7° yaw=   -7.8° | state=IDLE
+[LIVE @ 11097 ms] pitch=  -9.1° roll= -13.3° yaw=   -6.5° | state=IDLE
+[LIVE @ 11597 ms] pitch=  -9.9° roll=  -9.7° yaw=   -7.5° | state=IDLE
+[LIVE @ 12097 ms] pitch=  -9.2° roll=  -8.0° yaw=   -7.8° | state=IDLE
+[LIVE @ 12596 ms] pitch=  -6.8° roll=  -2.0° yaw=   -9.5° | state=IDLE
+[LIVE @ 13097 ms] pitch=  +3.0° roll=  +2.3° yaw=   -9.9° | state=IDLE
+[DRINK] Bottle lifted (pitch=-15.2°)
+[LIVE @ 13597 ms] pitch= -15.2° roll=  -2.3° yaw=  -12.1° | state=LIFTED
+[LIVE @ 14097 ms] pitch= -16.4° roll= -12.3° yaw=  -12.9° | state=LIFTED
+[LIVE @ 14597 ms] pitch= -15.1° roll= -14.8° yaw=  -13.1° | state=LIFTED
+[FIFO] words=451 quats=451 ring=256 overruns=0
+[LIVE @ 15096 ms] pitch= -14.1° roll= -14.5° yaw=  -14.0° | state=LIFTED
+[LIVE @ 15597 ms] pitch=  -7.7° roll=  +0.5° yaw=  -19.9° | state=IDLE
+[LIVE @ 16097 ms] pitch=  -1.5° roll=  +1.0° yaw=  -19.9° | state=IDLE
+[LIVE @ 16597 ms] pitch=  -1.5° roll=  -0.2° yaw=  -20.8° | state=IDLE
+[LIVE @ 17097 ms] pitch= -13.8° roll= -17.7° yaw=  -18.2° | state=IDLE
+[LIVE @ 17597 ms] pitch= -13.8° roll= -14.8° yaw=  -20.5° | state=IDLE
+[LIVE @ 18097 ms] pitch=  -9.2° roll=  -6.6° yaw=  -19.9° | state=IDLE
+[LIVE @ 18597 ms] pitch=  -0.9° roll=  +0.9° yaw=  -21.4° | state=IDLE
+[LIVE @ 19097 ms] pitch=  -0.5° roll=  +0.2° yaw=  -22.2° | state=IDLE
+[LIVE @ 19597 ms] pitch=  -4.6° roll=  -6.9° yaw=  -21.6° | state=IDLE
+[FIFO] words=602 quats=602 ring=256 overruns=0
+[LIVE @ 20097 ms] pitch= -11.3° roll=  +4.5° yaw=  -21.7° | state=IDLE
+[DRINK] Bottle lifted (pitch=-15.9°)
+[LIVE @ 22597 ms] pitch=  +0.2° roll= -15.5° yaw=  -19.8° | state=IDLE
+[LIVE @ 23097 ms] pitch=  -0.1° roll= -19.6° yaw=  -21.5° | state=IDLE
+[LIVE @ 23597 ms] pitch=  -1.2° roll=  -5.2° yaw=   -0.2° | state=IDLE
+[LIVE @ 24097 ms] pitch=  +0.3° roll=  -0.3° yaw=   -5.3° | state=IDLE
+[LIVE @ 24597 ms] pitch=  -1.4° roll=  +0.5° yaw=   -7.9° | state=IDLE
+[LIVE @ 25097 ms] pitch=  -0.9° roll=  +0.1° yaw=   -7.8° | state=IDLE
+[FIFO] words=753 quats=753 ring=256 overruns=0
+[LIVE @ 25597 ms] pitch=  -0.6° roll=  -0.0° yaw=   -9.0° | state=IDLE
+[LIVE @ 26097 ms] pitch=  +0.2° roll=  +0.3° yaw=  -11.8° | state=IDLE
+[LIVE @ 26597 ms] pitch=  +2.7° roll=  +1.6° yaw=  -11.6° | state=IDLE
+[DRINK] Bottle lifted (pitch=16.8°)
+[LIVE @ 27097 ms] pitch= +24.4° roll= -21.7° yaw=  -27.5° | state=LIFTED
+[LIVE @ 27597 ms] pitch= +28.2° roll= -30.4° yaw=  -32.6° | state=LIFTED
+[LIVE @ 28097 ms] pitch= +28.9° roll= -30.6° yaw=  -32.1° | state=LIFTED
+[DRINK] Tilt started (pitch=30.7°)
+[LIVE @ 28597 ms] pitch= +33.2° roll= -48.2° yaw=  -44.8° | state=TILTING
+[DRINK] *** SIP  detected! pitch=34.8° held 500 ms | total=2
+[LIVE @ 29097 ms] pitch= +34.5° roll= -53.2° yaw=  -47.0° | state=SIP_OK
+[LIVE @ 29597 ms] pitch= +34.9° roll= -52.7° yaw=  -46.1° | state=SIP_OK
+[LIVE @ 30097 ms] pitch= +37.0° roll= -56.2° yaw=  -47.8° | state=SIP_OK
+[FIFO] words=904 quats=904 ring=256 overruns=0
+[LIVE @ 30597 ms] pitch= +37.3° roll= -56.4° yaw=  -47.5° | state=SIP_OK
+[LIVE @ 31097 ms] pitch= +37.4° roll= -56.3° yaw=  -47.1° | state=SIP_OK
+[LIVE @ 31597 ms] pitch= +37.6° roll= -56.0° yaw=  -46.7° | state=SIP_OK
+[LIVE @ 32097 ms] pitch= +36.5° roll= -47.9° yaw=  -39.5° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 32597 ms] pitch=  -3.8° roll= +12.3° yaw=  -14.6° | state=IDLE
+[LIVE @ 33097 ms] pitch=  -8.7° roll= -20.5° yaw=   -6.9° | state=IDLE
+[LIVE @ 33597 ms] pitch=  -9.2° roll= -43.2° yaw=   -2.3° | state=IDLE
+[LIVE @ 34097 ms] pitch=  -7.4° roll= -54.6° yaw=   +3.0° | state=IDLE
+[LIVE @ 34597 ms] pitch=  -6.5° roll= -56.4° yaw=   +3.6° | state=IDLE
+[LIVE @ 35096 ms] pitch=  -6.0° roll= -57.5° yaw=   +3.4° | state=IDLE
+[FIFO] words=1055 quats=1055 ring=256 overruns=0
+[LIVE @ 35596 ms] pitch=  -6.0° roll= -58.1° yaw=   +3.5° | state=IDLE
+[LIVE @ 36097 ms] pitch=  -5.9° roll= -58.4° yaw=   +3.5° | state=IDLE
+[LIVE @ 36596 ms] pitch=  -5.8° roll= -59.0° yaw=   +3.4° | state=IDLE
+[LIVE @ 37096 ms] pitch=  -5.4° roll= -59.6° yaw=   +3.5° | state=IDLE
+[LIVE @ 37597 ms] pitch=  -5.7° roll= -60.2° yaw=   +3.2° | state=IDLE
+[LIVE @ 38097 ms] pitch=  -7.2° roll= -57.4° yaw=   +3.9° | state=IDLE
+[LIVE @ 38597 ms] pitch=  -1.4° roll=  +6.7° yaw=  -17.7° | state=IDLE
+[LIVE @ 39097 ms] pitch=  -4.7° roll= -10.4° yaw=  -16.4° | state=IDLE
+[LIVE @ 39596 ms] pitch=  -9.0° roll= -39.9° yaw=   -7.9° | state=IDLE
+[LIVE @ 40096 ms] pitch= -14.6° roll= -64.0° yaw=   +3.5° | state=IDLE
+[FIFO] words=1206 quats=1206 ring=256 overruns=0
+[LIVE @ 40596 ms] pitch= -12.1° roll= -67.4° yaw=   +5.0° | state=IDLE
+[LIVE @ 41097 ms] pitch= -12.2° roll= -64.8° yaw=   +5.3° | state=IDLE
+[DRINK] Bottle lifted (pitch=-15.2°)
+[LIVE @ 41597 ms] pitch= -17.4° roll= -20.0° yaw=   -7.3° | state=LIFTED
+[LIVE @ 42097 ms] pitch=  -4.0° roll=  +0.9° yaw=  -18.7° | state=IDLE
+[LIVE @ 42597 ms] pitch= -13.2° roll= -27.9° yaw=   -6.9° | state=IDLE
+[LIVE @ 43096 ms] pitch= -11.4° roll= -48.8° yaw=   -0.5° | state=IDLE
+[LIVE @ 43597 ms] pitch= -10.5° roll= -58.7° yaw=   +2.5° | state=IDLE
+[LIVE @ 44097 ms] pitch=  -9.3° roll= -61.3° yaw=   +3.5° | state=IDLE
+[LIVE @ 44597 ms] pitch=  -9.0° roll= -57.0° yaw=   +3.0° | state=IDLE
+[LIVE @ 45096 ms] pitch=  -7.8° roll= -59.3° yaw=   +3.7° | state=IDLE
+[FIFO] words=1357 quats=1357 ring=256 overruns=0
+[LIVE @ 45596 ms] pitch=  -9.6° roll= -54.5° yaw=   +3.8° | state=IDLE
+[LIVE @ 46096 ms] pitch= -13.1° roll= -19.8° yaw=   -8.9° | state=IDLE
+[LIVE @ 46597 ms] pitch=  -5.3° roll=  -3.8° yaw=  -15.3° | state=IDLE
+[LIVE @ 47097 ms] pitch= -13.4° roll= -25.3° yaw=  -10.2° | state=IDLE
+[LIVE @ 47597 ms] pitch=  -8.5° roll= -53.4° yaw=   -0.7° | state=IDLE
+[LIVE @ 48097 ms] pitch= -10.0° roll= -52.0° yaw=   -1.0° | state=IDLE
+[LIVE @ 48597 ms] pitch=  -6.7° roll= -27.3° yaw=   -1.8° | state=IDLE
+[LIVE @ 49097 ms] pitch=  -3.6° roll= -12.2° yaw=   -5.8° | state=IDLE
+[LIVE @ 49597 ms] pitch=  -5.9° roll= -11.8° yaw=   -4.5° | state=IDLE
+[LIVE @ 50097 ms] pitch=  +1.2° roll=  +1.2° yaw=   -7.5° | state=IDLE
+[FIFO] words=1508 quats=1508 ring=256 overruns=0
+[LIVE @ 50597 ms] pitch= +12.7° roll= +32.7° yaw=   -9.0° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.5°)
+[LIVE @ 51096 ms] pitch= +17.3° roll= +37.4° yaw=   -7.9° | state=LIFTED
+[LIVE @ 51597 ms] pitch= +16.2° roll= +32.8° yaw=   -9.2° | state=LIFTED
+[LIVE @ 52097 ms] pitch= +15.5° roll= +32.0° yaw=   -9.4° | state=LIFTED
+[LIVE @ 52597 ms] pitch= +15.8° roll= +31.1° yaw=   -9.3° | state=LIFTED
+[LIVE @ 53097 ms] pitch= +15.1° roll= +24.9° yaw=  -12.0° | state=LIFTED
+[LIVE @ 53596 ms] pitch= +11.0° roll= +13.9° yaw=  -15.0° | state=LIFTED
+[LIVE @ 54097 ms] pitch=  -0.1° roll=  -7.1° yaw=  -15.5° | state=IDLE
+[LIVE @ 54597 ms] pitch=  -3.6° roll=  -9.8° yaw=  -17.2° | state=IDLE
+[LIVE @ 55097 ms] pitch=  -6.5° roll= -10.2° yaw=  -16.7° | state=IDLE
+[FIFO] words=1659 quats=1659 ring=256 overruns=0
+[LIVE @ 55597 ms] pitch=  -3.4° roll=  -3.3° yaw=  -20.0° | state=IDLE
+[LIVE @ 56097 ms] pitch=  -1.5° roll=  -0.6° yaw=  -21.9° | state=IDLE
+[LIVE @ 56596 ms] pitch=  -1.2° roll=  -0.4° yaw=  -22.5° | state=IDLE
+[LIVE @ 57097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -22.5° | state=IDLE
+[LIVE @ 57597 ms] pitch=  -0.8° roll=  -0.2° yaw=  -22.5° | state=IDLE
+[LIVE @ 58097 ms] pitch=  -0.8° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 58597 ms] pitch=  -0.7° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 59097 ms] pitch=  -0.7° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 59597 ms] pitch=  -0.7° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 60097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[FIFO] words=1810 quats=1810 ring=256 overruns=0
+[LIVE @ 60597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 61097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 61597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 62097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 62597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 63097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 63597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 64096 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 64597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 65097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[FIFO] words=1961 quats=1961 ring=256 overruns=0
+[LIVE @ 65597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 66097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 66597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 67097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 67597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 68097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 68597 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 69097 ms] pitch=  -0.6° roll=  -0.1° yaw=  -22.4° | state=IDLE
+[LIVE @ 69597 ms] pitch=  -0.9° roll=  +0.3° yaw=  -22.1° | state=IDLE
+[LIVE @ 70097 ms] pitch=  -4.9° roll=  -7.6° yaw=  -21.3° | state=IDLE
+[FIFO] words=2112 quats=2112 ring=256 overruns=0
+[LIVE @ 70597 ms] pitch=  -4.2° roll=  -1.1° yaw=  -22.1° | state=IDLE
+[LIVE @ 71097 ms] pitch=  -0.6° roll=  -0.5° yaw=  -23.0° | state=IDLE
+[LIVE @ 71597 ms] pitch=  +0.4° roll=  -0.5° yaw=  -23.4° | state=IDLE
+[LIVE @ 72096 ms] pitch=  -3.6° roll=  +3.1° yaw=  -20.7° | state=IDLE
+[LIVE @ 72597 ms] pitch=  -1.3° roll=  -4.0° yaw=  -21.5° | state=IDLE
+[LIVE @ 73097 ms] pitch=  +3.4° roll= -22.5° yaw=  -24.3° | state=IDLE
+[LIVE @ 73597 ms] pitch=  +6.7° roll= -30.6° yaw=  -27.5° | state=IDLE
+[LIVE @ 74097 ms] pitch=  +8.3° roll= -34.3° yaw=  -27.2° | state=IDLE
+[LIVE @ 74597 ms] pitch=  +8.5° roll= -38.4° yaw=  -28.4° | state=IDLE
+[LIVE @ 75097 ms] pitch=  +9.4° roll= -39.6° yaw=  -28.4° | state=IDLE
+[FIFO] words=2263 quats=2263 ring=256 overruns=0
+[LIVE @ 75597 ms] pitch=  +9.8° roll= -37.1° yaw=  -28.0° | state=IDLE
+[LIVE @ 76096 ms] pitch= +10.0° roll= -38.9° yaw=  -27.7° | state=IDLE
+[LIVE @ 76597 ms] pitch= +10.5° roll= -39.3° yaw=  -28.2° | state=IDLE
+[LIVE @ 77096 ms] pitch=  +9.9° roll= -35.3° yaw=  -25.8° | state=IDLE
+[LIVE @ 77597 ms] pitch=  -1.1° roll=  +4.6° yaw=   -0.5° | state=IDLE
+[LIVE @ 78096 ms] pitch=  -7.9° roll= +15.6° yaw=  +10.1° | state=IDLE
+[LIVE @ 78597 ms] pitch=  +4.5° roll= +10.2° yaw=   +9.4° | state=IDLE
+[LIVE @ 79097 ms] pitch=  +2.1° roll=  +6.8° yaw=   +8.8° | state=IDLE
+[LIVE @ 79597 ms] pitch=  -0.2° roll= +15.9° yaw=   -9.6° | state=IDLE
+[LIVE @ 80096 ms] pitch=  -8.9° roll=  +5.6° yaw=   +1.4° | state=IDLE
+[FIFO] words=2414 quats=2414 ring=256 overruns=0
+[LIVE @ 80597 ms] pitch= +12.6° roll= +17.7° yaw=  -12.8° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.6°)
+[LIVE @ 81097 ms] pitch=  +9.7° roll= +14.7° yaw=  -17.7° | state=IDLE
+[LIVE @ 81596 ms] pitch=  +6.2° roll= +14.8° yaw=   +7.9° | state=IDLE
+[LIVE @ 82097 ms] pitch=  -0.6° roll= +15.1° yaw=  +24.0° | state=IDLE
+[LIVE @ 82597 ms] pitch=  -1.3° roll= +10.3° yaw=  +13.7° | state=IDLE
+[LIVE @ 83097 ms] pitch=  -0.3° roll=  +7.2° yaw=  +13.8° | state=IDLE
+[LIVE @ 83597 ms] pitch=  -6.2° roll=  +5.0° yaw=  +21.4° | state=IDLE
+[LIVE @ 84097 ms] pitch=  -3.6° roll=  -7.8° yaw=  +33.0° | state=IDLE
+[LIVE @ 84597 ms] pitch= +13.2° roll= -23.6° yaw=  +34.1° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.2°)
+[LIVE @ 85097 ms] pitch= +16.3° roll= -26.6° yaw=  +35.4° | state=LIFTED
+[FIFO] words=2565 quats=2565 ring=256 overruns=0
+[LIVE @ 85597 ms] pitch=  +4.5° roll=  -4.2° yaw=  +34.6° | state=IDLE
+[LIVE @ 86097 ms] pitch= -10.4° roll=  -6.8° yaw=  +23.8° | state=IDLE
+[LIVE @ 86597 ms] pitch= -10.9° roll=  -8.6° yaw=  +23.7° | state=IDLE
+[LIVE @ 87097 ms] pitch=  -5.0° roll=  +0.2° yaw=  +24.1° | state=IDLE
+[LIVE @ 87597 ms] pitch= +12.7° roll= +16.8° yaw=  +11.2° | state=IDLE
+[DRINK] Bottle lifted (pitch=16.8°)
+[LIVE @ 88097 ms] pitch= +14.9° roll= +15.7° yaw=   -2.6° | state=LIFTED
+[LIVE @ 88597 ms] pitch= +13.9° roll= +17.7° yaw=   -1.0° | state=LIFTED
+[LIVE @ 89097 ms] pitch= +13.7° roll= +17.0° yaw=   -0.4° | state=IDLE
+[LIVE @ 89597 ms] pitch= +13.3° roll= +17.0° yaw=   +0.6° | state=IDLE
+[LIVE @ 90097 ms] pitch=  +9.6° roll= +15.6° yaw=   +5.6° | state=IDLE
+[FIFO] words=2716 quats=2716 ring=256 overruns=0
+[LIVE @ 90597 ms] pitch=  -1.7° roll= -11.6° yaw=  +32.8° | state=IDLE
+[LIVE @ 91097 ms] pitch=  +1.1° roll= -11.6° yaw=  +39.1° | state=IDLE
+[LIVE @ 91597 ms] pitch=  +4.2° roll= -11.2° yaw=  +40.5° | state=IDLE
+[LIVE @ 92097 ms] pitch=  -3.6° roll=  -6.6° yaw=  +27.3° | state=IDLE
+[LIVE @ 92597 ms] pitch=  -3.3° roll=  -0.8° yaw=  +10.1° | state=IDLE
+[LIVE @ 93097 ms] pitch=  -4.5° roll=  -0.3° yaw=   +7.2° | state=IDLE
+[LIVE @ 93597 ms] pitch=  -3.2° roll=  +2.6° yaw=   +1.1° | state=IDLE
+[LIVE @ 94097 ms] pitch=  -6.5° roll=  +3.0° yaw=   -3.3° | state=IDLE
+[LIVE @ 94597 ms] pitch=  -2.1° roll=  +4.1° yaw=   -3.3° | state=IDLE
+[LIVE @ 95097 ms] pitch=  +5.8° roll=  +2.1° yaw=   -7.1° | state=IDLE
+[FIFO] words=2867 quats=2867 ring=256 overruns=0
+[LIVE @ 95597 ms] pitch=  +6.1° roll=  +2.4° yaw=  -11.7° | state=IDLE
+[LIVE @ 96097 ms] pitch=  +4.0° roll=  -0.1° yaw=  -13.3° | state=IDLE
+[LIVE @ 96597 ms] pitch=  +3.4° roll=  -7.0° yaw=   +0.1° | state=IDLE
+[LIVE @ 97097 ms] pitch=  -5.9° roll=  -0.1° yaw=  +12.6° | state=IDLE
+[LIVE @ 97596 ms] pitch=  +0.3° roll=  +1.1° yaw=   +9.4° | state=IDLE
+[LIVE @ 98097 ms] pitch=  +6.6° roll=  -0.9° yaw=  +13.2° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.8°)
+[LIVE @ 98597 ms] pitch= +16.5° roll=  -2.2° yaw=  +16.9° | state=LIFTED
+[LIVE @ 99097 ms] pitch=  +9.8° roll=  +3.4° yaw=  +18.0° | state=IDLE
+[LIVE @ 99597 ms] pitch=  +9.1° roll=  +7.4° yaw=  +18.9° | state=IDLE
+[LIVE @ 100097 ms] pitch= +11.5° roll=  +7.2° yaw=  +20.0° | state=IDLE
+[FIFO] words=3018 quats=3018 ring=256 overruns=0
+[LIVE @ 100597 ms] pitch=  +7.8° roll=  +8.3° yaw=  +20.7° | state=IDLE
+[LIVE @ 101097 ms] pitch=  +9.3° roll=  +8.1° yaw=  +21.1° | state=IDLE
+[LIVE @ 101597 ms] pitch=  +9.0° roll=  +8.0° yaw=  +23.3° | state=IDLE
+[LIVE @ 102096 ms] pitch=  +9.4° roll=  +7.9° yaw=  +24.0° | state=IDLE
+[LIVE @ 102597 ms] pitch=  +9.2° roll=  +7.3° yaw=  +23.7° | state=IDLE
+[LIVE @ 103097 ms] pitch=  +8.1° roll=  +6.5° yaw=  +22.0° | state=IDLE
+[LIVE @ 103597 ms] pitch=  +9.4° roll=  +6.9° yaw=  +23.5° | state=IDLE
+[LIVE @ 104097 ms] pitch= +10.7° roll=  +6.4° yaw=  +25.0° | state=IDLE
+[LIVE @ 104597 ms] pitch= +11.1° roll=  +6.8° yaw=  +25.1° | state=IDLE
+[LIVE @ 105096 ms] pitch=  +8.8° roll=  +5.6° yaw=  +21.5° | state=IDLE
+[FIFO] words=3169 quats=3169 ring=256 overruns=0
+[LIVE @ 105597 ms] pitch=  +6.5° roll=  +5.4° yaw=  +11.8° | state=IDLE
+[LIVE @ 106096 ms] pitch=  +8.2° roll=  +5.8° yaw=  +15.6° | state=IDLE
+[LIVE @ 106597 ms] pitch=  +7.4° roll=  +5.1° yaw=  +14.0° | state=IDLE
+[LIVE @ 107096 ms] pitch=  +7.6° roll=  +4.3° yaw=  +15.2° | state=IDLE
+[LIVE @ 107597 ms] pitch=  -8.4° roll= +16.4° yaw=  +21.7° | state=IDLE
+[LIVE @ 108097 ms] pitch=  -1.4° roll= +12.3° yaw=  +30.0° | state=IDLE
+[LIVE @ 108597 ms] pitch=  +0.3° roll= +10.0° yaw=  +33.0° | state=IDLE
+[LIVE @ 109097 ms] pitch=  -8.1° roll=  +6.2° yaw=  +29.1° | state=IDLE
+[LIVE @ 109597 ms] pitch=  -2.6° roll=  -0.2° yaw=  +28.6° | state=IDLE
+[LIVE @ 110097 ms] pitch=  -8.7° roll=  +5.8° yaw=  +18.3° | state=IDLE
+[FIFO] words=3320 quats=3320 ring=256 overruns=0
+[LIVE @ 110597 ms] pitch=  -8.9° roll=  +7.6° yaw=  +18.7° | state=IDLE
+[LIVE @ 111097 ms] pitch=  -2.6° roll=  +7.2° yaw=  +22.2° | state=IDLE
+[LIVE @ 111597 ms] pitch=  -0.9° roll=  -4.6° yaw=  +20.7° | state=IDLE
+[LIVE @ 112097 ms] pitch=  +1.7° roll=  +5.5° yaw=  +10.8° | state=IDLE
+[LIVE @ 112597 ms] pitch=  +0.2° roll=  +3.4° yaw=  +15.2° | state=IDLE
+[LIVE @ 113097 ms] pitch=  +1.8° roll=  +2.5° yaw=  +15.0° | state=IDLE
+[LIVE @ 113597 ms] pitch=  -1.5° roll=  +1.4° yaw=  +15.1° | state=IDLE
+[LIVE @ 114097 ms] pitch=  +2.6° roll=  +3.0° yaw=  +14.8° | state=IDLE
+[LIVE @ 114596 ms] pitch=  +2.3° roll=  +1.9° yaw=  +14.1° | state=IDLE
+[LIVE @ 115097 ms] pitch=  +1.3° roll=  +1.7° yaw=  +13.7° | state=IDLE
+[FIFO] words=3471 quats=3471 ring=256 overruns=0
+[LIVE @ 115596 ms] pitch=  +1.9° roll=  +0.9° yaw=  +13.5° | state=IDLE
+[LIVE @ 116097 ms] pitch=  +0.9° roll=  -0.0° yaw=  +13.1° | state=IDLE
+[LIVE @ 116597 ms] pitch=  +0.8° roll=  +0.3° yaw=  +12.7° | state=IDLE
+[LIVE @ 117097 ms] pitch=  +5.4° roll=  +0.6° yaw=   +8.1° | state=IDLE
+[LIVE @ 117597 ms] pitch=  +4.9° roll=  +0.2° yaw=   +8.8° | state=IDLE
+[LIVE @ 118096 ms] pitch=  +4.5° roll=  +0.1° yaw=   +9.6° | state=IDLE
+[LIVE @ 118597 ms] pitch=  +4.6° roll=  +0.2° yaw=   +9.6° | state=IDLE
+[LIVE @ 119097 ms] pitch=  +5.6° roll=  +0.5° yaw=  +10.1° | state=IDLE
+[LIVE @ 119597 ms] pitch=  +5.3° roll=  +2.0° yaw=  +10.9° | state=IDLE
+[LIVE @ 120097 ms] pitch=  +3.4° roll=  +1.2° yaw=  +10.8° | state=IDLE
+[FIFO] words=3622 quats=3622 ring=256 overruns=0
+[LIVE @ 120597 ms] pitch=  +3.7° roll=  +0.9° yaw=  +10.7° | state=IDLE
+[LIVE @ 121096 ms] pitch=  +3.1° roll=  +0.4° yaw=  +10.5° | state=IDLE
+[LIVE @ 121597 ms] pitch=  +2.8° roll=  +0.0° yaw=  +10.3° | state=IDLE
+[LIVE @ 122096 ms] pitch=  -0.5° roll=  -1.2° yaw=   +8.0° | state=IDLE
+[LIVE @ 122597 ms] pitch=  -4.7° roll=  +1.5° yaw=   +1.8° | state=IDLE
+[LIVE @ 123097 ms] pitch=  -6.7° roll=  +1.2° yaw=   +2.7° | state=IDLE
+[LIVE @ 123597 ms] pitch=  -5.1° roll=  +2.0° yaw=   +2.2° | state=IDLE
+[LIVE @ 124097 ms] pitch= -10.5° roll=  +4.9° yaw=   +6.3° | state=IDLE
+[LIVE @ 124597 ms] pitch=  -3.6° roll=  -4.6° yaw=   +6.1° | state=IDLE
+[LIVE @ 125097 ms] pitch=  -2.9° roll=  -3.7° yaw=   +2.9° | state=IDLE
+[LIVE @ 125597 ms] pitch=  -7.3° roll=  +1.4° yaw=   +2.3° | state=IDLE
+[FIFO] words=3773 quats=3773 ring=256 overruns=0
+[LIVE @ 126096 ms] pitch=  -9.3° roll=  +7.3° yaw=   +1.7° | state=IDLE
+[LIVE @ 126596 ms] pitch=  -4.2° roll=  -4.8° yaw=   +1.5° | state=IDLE
+[LIVE @ 127097 ms] pitch=  -3.2° roll=  -5.4° yaw=   +1.5° | state=IDLE
+[LIVE @ 127597 ms] pitch=  -0.9° roll=  -1.2° yaw=   -0.3° | state=IDLE
+[LIVE @ 128097 ms] pitch=  +2.6° roll=  -6.3° yaw=   -0.2° | state=IDLE
+[LIVE @ 128597 ms] pitch=  -8.6° roll=  -6.8° yaw=   +6.8° | state=IDLE
+[DRINK] Bottle lifted (pitch=16.4°)
+[DRINK] Tilt started (pitch=30.5°)
+[LIVE @ 129097 ms] pitch= +30.7° roll=  -6.8° yaw=  -19.9° | state=TILTING
+[DRINK] Tilt aborted after 67 ms (peak=30.7°)
+[DRINK] Tilt started (pitch=30.0°)
+[DRINK] Tilt aborted after 100 ms (peak=30.7°)
+[DRINK] Tilt started (pitch=30.2°)
+[LIVE @ 129597 ms] pitch= +30.1° roll=  -2.9° yaw=  -19.8° | state=TILTING
+[DRINK] Tilt aborted after 133 ms (peak=30.7°)
+[LIVE @ 130097 ms] pitch= +16.1° roll=  -3.7° yaw=  -19.9° | state=LIFTED
+[LIVE @ 130597 ms] pitch=  +6.1° roll=  +0.7° yaw=  -14.7° | state=IDLE
+[FIFO] words=3924 quats=3924 ring=256 overruns=0
+[LIVE @ 131097 ms] pitch= -11.6° roll=  +1.5° yaw=  -20.9° | state=IDLE
+[LIVE @ 131597 ms] pitch=  -0.8° roll=  +0.3° yaw=  -25.4° | state=IDLE
+[LIVE @ 132097 ms] pitch=  +6.0° roll=  +6.7° yaw=  -20.8° | state=IDLE
+[LIVE @ 132597 ms] pitch=  +7.5° roll=  +6.4° yaw=  -21.2° | state=IDLE
+[DRINK] Bottle lifted (pitch=19.2°)
+[DRINK] Tilt started (pitch=31.3°)
+[LIVE @ 133097 ms] pitch= +34.8° roll=  -2.0° yaw=  -33.4° | state=TILTING
+[DRINK] *** SIP  detected! pitch=34.8° held 532 ms | total=3
+[LIVE @ 133597 ms] pitch= +31.9° roll=  -2.7° yaw=  -33.7° | state=SIP_OK
+[LIVE @ 134097 ms] pitch= +32.0° roll=  -3.1° yaw=  -34.1° | state=SIP_OK
+[LIVE @ 134597 ms] pitch= +33.3° roll=  -4.9° yaw=  -34.5° | state=SIP_OK
+[LIVE @ 135097 ms] pitch= +31.7° roll=  -5.1° yaw=  -34.7° | state=SIP_OK
+[LIVE @ 135597 ms] pitch= +31.1° roll=  -4.9° yaw=  -35.0° | state=SIP_OK
+[FIFO] words=4075 quats=4075 ring=256 overruns=0
+[LIVE @ 136096 ms] pitch= +35.0° roll= -12.3° yaw=  -35.9° | state=SIP_OK
+[LIVE @ 136597 ms] pitch= +16.2° roll=  -3.4° yaw=  -28.1° | state=SIP_OK
+[LIVE @ 137097 ms] pitch= +35.2° roll=  -8.6° yaw=  -37.0° | state=SIP_OK
+[LIVE @ 137597 ms] pitch= +35.9° roll= -11.5° yaw=  -40.8° | state=SIP_OK
+[LIVE @ 138097 ms] pitch= +36.1° roll= -11.9° yaw=  -40.9° | state=SIP_OK
+[LIVE @ 138597 ms] pitch= +35.4° roll= -12.0° yaw=  -40.9° | state=SIP_OK
+[LIVE @ 139096 ms] pitch= +35.1° roll= -13.0° yaw=  -40.9° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 139597 ms] pitch=  +3.8° roll=  +7.5° yaw=  -29.3° | state=IDLE
+[DRINK] Bottle lifted (pitch=-16.3°)
+[LIVE @ 140097 ms] pitch= -18.4° roll= +26.9° yaw=  -32.4° | state=LIFTED
+[LIVE @ 140596 ms] pitch= -20.2° roll= +29.8° yaw=  -34.3° | state=LIFTED
+[FIFO] words=4226 quats=4226 ring=256 overruns=0
+[LIVE @ 141097 ms] pitch= -17.6° roll= +29.3° yaw=  -36.2° | state=LIFTED
+[LIVE @ 141597 ms] pitch=  -9.2° roll= +14.1° yaw=  -35.7° | state=IDLE
+[LIVE @ 142097 ms] pitch= +11.6° roll=  +4.5° yaw=  -33.5° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.4°)
+[LIVE @ 142596 ms] pitch= +15.9° roll=  -4.7° yaw=  -36.5° | state=LIFTED
+[LIVE @ 143097 ms] pitch= +10.0° roll=  -1.3° yaw=  -33.6° | state=IDLE
+[DRINK] Bottle lifted (pitch=16.0°)
+[DRINK] Tilt started (pitch=31.3°)
+[LIVE @ 143597 ms] pitch= +36.1° roll=  -8.9° yaw=  -32.5° | state=TILTING
+[DRINK] *** SIP  detected! pitch=37.1° held 500 ms | total=4
+[LIVE @ 144097 ms] pitch= +29.7° roll=  -7.2° yaw=  -31.5° | state=SIP_OK
+[DRINK] Bottle returned to rest
+[LIVE @ 144597 ms] pitch=  -5.1° roll=  +2.0° yaw=  -28.9° | state=IDLE
+[LIVE @ 145097 ms] pitch=  -3.1° roll=  +5.0° yaw=  -35.6° | state=IDLE
+[LIVE @ 145597 ms] pitch=  -5.1° roll=  -4.0° yaw=  -39.3° | state=IDLE
+[FIFO] words=4377 quats=4377 ring=256 overruns=0
+[LIVE @ 146097 ms] pitch=  -3.4° roll=  -0.5° yaw=  -40.3° | state=IDLE
+[LIVE @ 146597 ms] pitch=  -5.3° roll=  -2.7° yaw=  -48.5° | state=IDLE
+[LIVE @ 147097 ms] pitch=  -7.1° roll=  -0.9° yaw=  -45.2° | state=IDLE
+[LIVE @ 147597 ms] pitch=  -5.0° roll=  -1.7° yaw=  -44.1° | state=IDLE
+[LIVE @ 148097 ms] pitch=  -6.0° roll=  +0.6° yaw=  -44.4° | state=IDLE
+[LIVE @ 148597 ms] pitch=  -3.1° roll=  +1.9° yaw=  -43.2° | state=IDLE
+[LIVE @ 149097 ms] pitch=  -4.6° roll=  +1.8° yaw=  -45.9° | state=IDLE
+[LIVE @ 149597 ms] pitch= -10.0° roll=  -2.0° yaw=  -43.5° | state=IDLE
+[LIVE @ 150097 ms] pitch=  -4.7° roll=  -1.4° yaw=  -48.0° | state=IDLE
+[LIVE @ 150597 ms] pitch=  -6.4° roll=  +2.3° yaw=  -47.9° | state=IDLE
+[FIFO] words=4528 quats=4528 ring=256 overruns=0
+[LIVE @ 151097 ms] pitch= -11.3° roll=  +0.1° yaw=  -45.9° | state=IDLE
+[LIVE @ 151597 ms] pitch=  -9.5° roll=  +0.9° yaw=  -46.0° | state=IDLE
+[LIVE @ 152096 ms] pitch=  -7.5° roll=  -0.1° yaw=  -46.4° | state=IDLE
+[LIVE @ 152597 ms] pitch=  +1.6° roll=  -2.6° yaw=  -46.6° | state=IDLE
+[LIVE @ 153097 ms] pitch= -11.2° roll=  -0.6° yaw=  -44.0° | state=IDLE
+[LIVE @ 153597 ms] pitch=  -0.0° roll=  -2.3° yaw=  -43.9° | state=IDLE
+[LIVE @ 154097 ms] pitch=  +1.1° roll=  +0.6° yaw=  -45.2° | state=IDLE
+[LIVE @ 154597 ms] pitch=  -7.6° roll=  -0.1° yaw=  -42.8° | state=IDLE
+[LIVE @ 155096 ms] pitch=  -3.3° roll=  -2.8° yaw=  -43.5° | state=IDLE
+[LIVE @ 155597 ms] pitch=  -0.9° roll=  -2.1° yaw=  -46.8° | state=IDLE
+[FIFO] words=4679 quats=4679 ring=256 overruns=0
+[LIVE @ 156097 ms] pitch=  -6.7° roll=  +6.2° yaw=  -44.2° | state=IDLE
+[LIVE @ 156597 ms] pitch= +13.0° roll= -27.2° yaw=  -62.3° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.2°)
+[LIVE @ 157097 ms] pitch=  +2.1° roll= +30.0° yaw=  -52.4° | state=IDLE
+[DRINK] Bottle lifted (pitch=-17.4°)
+[DRINK] Tilt started (pitch=-31.2°)
+[LIVE @ 157597 ms] pitch= -41.7° roll= -20.8° yaw=  -45.3° | state=TILTING
+[DRINK] Tilt aborted after 500 ms (peak=43.0°)
+[LIVE @ 158097 ms] pitch= -27.9° roll= -27.5° yaw=  -41.9° | state=LIFTED
+[LIVE @ 158597 ms] pitch=  +2.2° roll=  -7.4° yaw=  -53.9° | state=IDLE
+[LIVE @ 159097 ms] pitch=  +6.0° roll=  +8.1° yaw=  -55.9° | state=IDLE
+[LIVE @ 159596 ms] pitch=  +4.3° roll=  +8.3° yaw=  -56.4° | state=IDLE
+[LIVE @ 160097 ms] pitch=  +5.0° roll=  +9.7° yaw=  -57.8° | state=IDLE
+[LIVE @ 160597 ms] pitch=  +6.6° roll= +11.5° yaw=  -58.4° | state=IDLE
+[FIFO] words=4830 quats=4830 ring=256 overruns=0
+[LIVE @ 161097 ms] pitch=  +6.3° roll= +11.1° yaw=  -58.2° | state=IDLE
+[LIVE @ 161597 ms] pitch=  +1.9° roll= +10.0° yaw=  -56.8° | state=IDLE
+[LIVE @ 162097 ms] pitch=  +2.2° roll=  +9.5° yaw=  -56.7° | state=IDLE
+[LIVE @ 162597 ms] pitch=  -4.3° roll=  +1.6° yaw=  -56.7° | state=IDLE
+[LIVE @ 163096 ms] pitch=  -0.9° roll=  +0.1° yaw=  -57.5° | state=IDLE
+[LIVE @ 163597 ms] pitch=  -1.0° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 164097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 164596 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 165097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 165597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[FIFO] words=4981 quats=4981 ring=256 overruns=0
+[LIVE @ 166097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 166597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 167096 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 167597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 168097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 168597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 169097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 169596 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 170097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 170597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[FIFO] words=5132 quats=5132 ring=256 overruns=0
+[LIVE @ 171097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 171597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 172097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 172597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 173097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 173597 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 174097 ms] pitch=  -1.1° roll=  +0.2° yaw=  -57.5° | state=IDLE
+[LIVE @ 174596 ms] pitch=  -2.0° roll=  +2.6° yaw=  -50.7° | state=IDLE
+[LIVE @ 175097 ms] pitch=  -1.1° roll=  +1.0° yaw=  -50.9° | state=IDLE
+[LIVE @ 175597 ms] pitch=  -1.0° roll=  +0.4° yaw=  -51.6° | state=IDLE
+[FIFO] words=5283 quats=5283 ring=256 overruns=0
+[LIVE @ 176097 ms] pitch=  -1.1° roll=  +0.3° yaw=  -52.5° | state=IDLE
+[LIVE @ 176597 ms] pitch=  -1.1° roll=  +0.0° yaw=  -53.3° | state=IDLE
+[LIVE @ 177097 ms] pitch=  -7.2° roll=  -1.4° yaw=  -54.9° | state=IDLE
+[LIVE @ 177597 ms] pitch=  -2.9° roll=  +1.2° yaw=  -56.0° | state=IDLE
+[LIVE @ 178097 ms] pitch=  -2.2° roll=  +1.2° yaw=  -55.8° | state=IDLE
+[LIVE @ 178597 ms] pitch=  -3.6° roll=  -1.5° yaw=  -56.1° | state=IDLE
+[LIVE @ 179097 ms] pitch=  -3.5° roll=  -1.5° yaw=  -56.6° | state=IDLE
+[LIVE @ 179597 ms] pitch=  +4.1° roll= +18.4° yaw=  -55.3° | state=IDLE
+[LIVE @ 180097 ms] pitch=  +1.9° roll=  +5.0° yaw=  -61.0° | state=IDLE
+[LIVE @ 180597 ms] pitch=  +0.4° roll=  +0.3° yaw=  -59.7° | state=IDLE
+[FIFO] words=5434 quats=5434 ring=256 overruns=0
+[LIVE @ 181097 ms] pitch=  -0.7° roll=  +0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 181597 ms] pitch=  -0.9° roll=  -0.0° yaw=  -56.3° | state=IDLE
+[LIVE @ 182096 ms] pitch=  -0.9° roll=  -0.0° yaw=  -56.3° | state=IDLE
+[LIVE @ 182597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 183096 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 183597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 184096 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 184597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 185097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 185597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=5585 quats=5585 ring=256 overruns=0
+[LIVE @ 186097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 186596 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 187097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 187597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 188097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 188597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 189097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 189596 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 190097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 190597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=5736 quats=5736 ring=256 overruns=0
+[LIVE @ 191097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 191597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 192097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 192597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 193097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 193596 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 194097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 194597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 195097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 195597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=5887 quats=5887 ring=256 overruns=0
+[LIVE @ 196097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 196597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 197097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 197596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 198097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 198596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 199097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 199597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 200097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 200597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6038 quats=6038 ring=256 overruns=0
+[LIVE @ 201097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 201597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 202097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 202596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 203097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 203597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 204096 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 204597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 205097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 205597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6189 quats=6189 ring=256 overruns=0
+[LIVE @ 206097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 206597 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 207097 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 207597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 208096 ms] pitch=  -1.0° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 208597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 209097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 209597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 210097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 210597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6340 quats=6340 ring=256 overruns=0
+[LIVE @ 211097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 211597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 212097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 212597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 213097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 213597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 214096 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 214597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 215097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 215597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6491 quats=6491 ring=256 overruns=0
+[LIVE @ 216097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 216597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 217097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 217596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 218096 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 218597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 219097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 219597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 220097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 220597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 221097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6642 quats=6642 ring=256 overruns=0
+[LIVE @ 221597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 222097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 222597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 223097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 223596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 224097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 224596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 225097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 225597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 226096 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=6793 quats=6793 ring=256 overruns=0
+[LIVE @ 226597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 227097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 227596 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 228097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 228597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 229097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 229597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 230097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 230597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 231097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=6944 quats=6944 ring=256 overruns=0
+[LIVE @ 231597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 232097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 232596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 233097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 233597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 234097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 234597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 235097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 235597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 236097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=7095 quats=7095 ring=256 overruns=0
+[LIVE @ 236597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 237097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 237597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 238097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 238597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 239097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 239597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 240097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 240597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 241097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[FIFO] words=7246 quats=7246 ring=256 overruns=0
+[LIVE @ 241597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 242097 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 242597 ms] pitch=  -0.9° roll=  -0.1° yaw=  -56.3° | state=IDLE
+[LIVE @ 243096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 243597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 244097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 244596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 245097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 245596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 246097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=7397 quats=7397 ring=256 overruns=0
+[LIVE @ 246597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 247096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 247597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 248097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 248597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 249097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 249596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 250097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 250597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 251097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=7548 quats=7548 ring=256 overruns=0
+[LIVE @ 251597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 252097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 252596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 253097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 253597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 254097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 254596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 255097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 255597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 256097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=7699 quats=7699 ring=256 overruns=0
+[LIVE @ 256597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 257097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 257596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 258097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 258597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 259097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 259597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 260096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 260597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 261097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=7850 quats=7850 ring=256 overruns=0
+[LIVE @ 261597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 262097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 262597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 263097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 263597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 264097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 264597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 265097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 265597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 266097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8001 quats=8001 ring=256 overruns=0
+[LIVE @ 266597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 267097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 267597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 268097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 268597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 269097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 269597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 270097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 270597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 271097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8152 quats=8152 ring=256 overruns=0
+[LIVE @ 271597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 272097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 272597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 273096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 273597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 274097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 274597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 275097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 275597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 276096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8303 quats=8303 ring=256 overruns=0
+[LIVE @ 276597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 277097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 277597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 278096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 278596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 279097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 279597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 280097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 280597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 281097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8454 quats=8454 ring=256 overruns=0
+[LIVE @ 281597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 282097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 282596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 283097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 283597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 284097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 284597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 285097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 285597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 286097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8605 quats=8605 ring=256 overruns=0
+[LIVE @ 286597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 287097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 287596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 288097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 288596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 289097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 289597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 290097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 290597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 291097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8756 quats=8756 ring=256 overruns=0
+[LIVE @ 291597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 292096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 292597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 293097 ms] pitch=  -0.8° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 293596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 294097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 294597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 295096 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 295597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 296097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[FIFO] words=8907 quats=8907 ring=256 overruns=0
+[LIVE @ 296597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 297097 ms] pitch=  -0.8° roll=  -0.2° yaw=  -56.3° | state=IDLE
+[LIVE @ 297597 ms] pitch=  -0.8° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 298097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 298596 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 299097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 299597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 300097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 300597 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 301097 ms] pitch=  -0.9° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[FIFO] words=9058 quats=9058 ring=256 overruns=0
+[LIVE @ 301597 ms] pitch=  -0.8° roll=  -0.2° yaw=  -56.4° | state=IDLE
+[LIVE @ 302097 ms] pitch=  -1.9° roll=  -4.0° yaw=  -54.8° | state=IDLE
+[LIVE @ 302597 ms] pitch=  -1.3° roll=  +1.6° yaw=  -50.1° | state=IDLE
+[LIVE @ 303097 ms] pitch=  -4.1° roll=  +9.2° yaw=  -38.7° | state=IDLE
+[LIVE @ 303597 ms] pitch=  -0.0° roll=  +1.1° yaw=  -42.2° | state=IDLE
+[LIVE @ 304097 ms] pitch=  +0.8° roll=  +1.0° yaw=  -39.6° | state=IDLE
+[LIVE @ 304597 ms] pitch=  -8.3° roll=  +7.2° yaw=  -39.4° | state=IDLE
+[LIVE @ 305097 ms] pitch=  -2.7° roll=  -0.8° yaw=  -39.0° | state=IDLE
+[LIVE @ 305596 ms] pitch=  -3.5° roll=  -0.4° yaw=  -38.9° | state=IDLE
+[LIVE @ 306097 ms] pitch=  -5.1° roll=  -2.0° yaw=  -38.2° | state=IDLE
+[FIFO] words=9209 quats=9209 ring=256 overruns=0
+[LIVE @ 306597 ms] pitch=  -8.0° roll= -31.5° yaw=  -35.6° | state=IDLE
+[LIVE @ 307097 ms] pitch= +11.2° roll= -53.4° yaw=  -55.0° | state=IDLE
+[DRINK] Bottle lifted (pitch=15.0°)
+[LIVE @ 307597 ms] pitch= +19.3° roll= +29.2° yaw=  -43.0° | state=LIFTED
+[DRINK] Bottle lifted (pitch=-16.4°)
+[DRINK] Tilt started (pitch=-31.9°)
+[LIVE @ 308097 ms] pitch= -31.9° roll= +34.5° yaw=  -53.2° | state=TILTING
+[LIVE @ 308597 ms] pitch= -30.4° roll=  -2.4° yaw=  -45.2° | state=TILTING
+[DRINK] Tilt aborted after 533 ms (peak=36.9°)
+[DRINK] Tilt started (pitch=-30.0°)
+[LIVE @ 309096 ms] pitch= -30.3° roll=  -3.7° yaw=  -46.3° | state=TILTING
+[DRINK] Tilt aborted after 532 ms (peak=36.9°)
+[DRINK] Tilt started (pitch=-30.0°)
+[DRINK] Tilt aborted after 67 ms (peak=36.9°)
+[LIVE @ 309597 ms] pitch= -29.4° roll=  -7.9° yaw=  -45.0° | state=LIFTED
+[DRINK] Tilt started (pitch=-30.4°)
+[DRINK] Tilt aborted after 99 ms (peak=36.9°)
+[LIVE @ 310097 ms] pitch= -29.5° roll= -16.1° yaw=  -42.1° | state=LIFTED
+[LIVE @ 310597 ms] pitch=  -6.4° roll=  +2.6° yaw=  -39.2° | state=IDLE
+[LIVE @ 311096 ms] pitch=  -0.4° roll=  +0.8° yaw=  -43.1° | state=IDLE
+[FIFO] words=9360 quats=9360 ring=256 overruns=0
+[LIVE @ 311597 ms] pitch=  -0.7° roll=  +0.4° yaw=  -43.1° | state=IDLE
+[LIVE @ 312096 ms] pitch=  -0.8° roll=  +0.2° yaw=  -43.1° | state=IDLE
+[LIVE @ 312596 ms] pitch=  -0.9° roll=  +0.1° yaw=  -43.1° | state=IDLE
+[LIVE @ 313097 ms] pitch=  -0.9° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 313597 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 314097 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 314597 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 315096 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 315596 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 316097 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[FIFO] words=9511 quats=9511 ring=256 overruns=0
+[LIVE @ 316597 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 317097 ms] pitch=  -0.9° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 317596 ms] pitch=  -1.1° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 318097 ms] pitch=  -1.2° roll=  +0.2° yaw=  -43.1° | state=IDLE
+[LIVE @ 318597 ms] pitch=  -1.1° roll=  +0.1° yaw=  -43.1° | state=IDLE
+[LIVE @ 319097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 319597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 320097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 320597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 321097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 321596 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[FIFO] words=9662 quats=9662 ring=256 overruns=0
+[LIVE @ 322096 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 322597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 323097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 323597 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 324096 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 324596 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 325097 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 325597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 326096 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 326597 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[FIFO] words=9813 quats=9813 ring=256 overruns=0
+[LIVE @ 327097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 327597 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 328096 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 328596 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 329097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 329596 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 330097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 330597 ms] pitch=  -1.0° roll=  -0.0° yaw=  -43.1° | state=IDLE
+[LIVE @ 331097 ms] pitch=  -1.4° roll=  +0.7° yaw=  -43.2° | state=IDLE
+[LIVE @ 331596 ms] pitch=  -1.3° roll=  +0.6° yaw=  -43.2° | state=IDLE
+[FIFO] words=9964 quats=9964 ring=256 overruns=0
+[LIVE @ 332097 ms] pitch=  -1.1° roll=  +0.3° yaw=  -43.2° | state=IDLE
+[LIVE @ 332596 ms] pitch=  -1.1° roll=  +0.2° yaw=  -43.2° | state=IDLE
+[LIVE @ 333097 ms] pitch=  -1.0° roll=  +0.1° yaw=  -43.2° | state=IDLE
+[LIVE @ 333597 ms] pitch=  -1.0° roll=  +0.1° yaw=  -43.2° | state=IDLE
+[LIVE @ 334097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 334597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 335097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 335597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 336097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 336596 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[FIFO] words=10115 quats=10115 ring=256 overruns=0
+[LIVE @ 337097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 337597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 338097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 338597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 339096 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 339597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 340096 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 340597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 341096 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 341597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[FIFO] words=10266 quats=10266 ring=256 overruns=0
+[LIVE @ 342097 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 342597 ms] pitch=  -1.0° roll=  +0.0° yaw=  -43.2° | state=IDLE
+[LIVE @ 343096 ms] pitch=  -0.9° roll=  -0.1° yaw=  -37.3° | state=IDLE
+[LIVE @ 343597 ms] pitch=  -0.8° roll=  +0.6° yaw=  -45.2° | state=IDLE
+[LIVE @ 344097 ms] pitch=  +0.9° roll=  +4.2° yaw=  -52.0° | state=IDLE
+[LIVE @ 344596 ms] pitch=  -5.4° roll=  -0.7° yaw=  -62.9° | state=IDLE
+[LIVE @ 347197 ms] pitch=  -2.2° roll=  +0.4° yaw=  -75.6° | state=IDLE
+[LIVE @ 347697 ms] pitch=  -2.4° roll=  -1.1° yaw=  -76.7° | state=IDLE
+[LIVE @ 348196 ms] pitch=  -0.0° roll=  -2.7° yaw=  -77.5° | state=IDLE
+[LIVE @ 348697 ms] pitch=  +0.6° roll=  -2.1° yaw=  -77.4° | state=IDLE
+[LIVE @ 349196 ms] pitch=  +1.7° roll=  +0.4° yaw=  -78.5° | state=IDLE
+[LIVE @ 351197 ms] pitch=  -3.7° roll=  +1.1° yaw=  -72.4° | [LIVE @ 351746 ms] pitch=  -2.1° roll=  -0.0° yaw=  -72.3° | state=IDLE
+[FIFO] words=10568 quats=10568 ring=256 overruns=0
+[LIVE @ 352247 ms] pitch=  -2.7° roll=  +0.8° yaw=  -72.3° | state=IDLE
+[LIVE @ 353247 ms] pitch=  -4.3° roll=  +2.2° yaw=  -86.9° | state=IDLE
+[LIVE @ 353747 ms] pitch=  -4.6° roll=  +2.5° yaw=  -96.7° | state=IDLE
+[LIVE @ 354247 ms] pitch=  -4.5° roll=  +2.2° yaw= -102.9° | state=IDLE
+[LIVE @ 354746 ms] pitch=  -4.4° roll=  +2.9° yaw= -109.2° | state=IDLE
+[LIVE @ 355247 ms] pitch=  -3.9° roll=  +2.6° yaw= -111.1° | state=IDLE
+[LIVE @ 355747 ms] pitch=  -3.8° roll=  +2.4° yaw= -111.9° | state=IDLE
+[LIVE @ 356247 ms] pitch=  -4.4° roll=  +2.7° yaw= -119.1° | state=IDLE
+[LIVE @ 356747 ms] pitch=  -3.6° roll=  +0.3° yaw= -116.9° | state=IDLE
+[FIFO] words=10719 quats=10719 ring=256 overruns=0
+[LIVE @ 357247 ms] pitch=  -3.8° roll=  +0.2° yaw= -119.6° | state=IDLE
+[LIVE @ 357747 ms] pitch=  -2.8° roll=  +0.4° yaw= -121.0° | state=IDLE
+[LIVE @ 358247 ms] pitch=  -2.7° roll=  +0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 358746 ms] pitch=  -2.7° roll=  +0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 359247 ms] pitch=  -2.6° roll=  +0.0° yaw= -121.1° | state=IDLE
+[LIVE @ 359747 ms] pitch=  -2.6° roll=  -0.0° yaw= -121.1° | state=IDLE
+[LIVE @ 360246 ms] pitch=  -2.6° roll=  -0.0° yaw= -121.1° | state=IDLE
+[LIVE @ 360747 ms] pitch=  -2.6° roll=  -0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 361246 ms] pitch=  -2.6° roll=  -0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 361746 ms] pitch=  -2.5° roll=  -0.1° yaw= -121.1° | state=IDLE
+[FIFO] words=10870 quats=10870 ring=256 overruns=0
+[LIVE @ 362246 ms] pitch=  -2.6° roll=  -0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 362746 ms] pitch=  -2.6° roll=  -0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 363247 ms] pitch=  -2.6° roll=  -0.1° yaw= -121.1° | state=IDLE
+[LIVE @ 363747 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 364247 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 364747 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 365247 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 365747 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 366246 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[LIVE @ 366747 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
+[FIFO] words=11021 quats=11021 ring=256 overruns=0
+[LIVE @ 367247 ms] pitch=  -2.6° roll=  -0.2° yaw= -121.1° | state=IDLE
